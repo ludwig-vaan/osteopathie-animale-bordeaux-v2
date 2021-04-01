@@ -1,7 +1,13 @@
 import React from "react"
+import { openPopupWidget } from "react-calendly"
+
 import Header from "./header"
 
 export default function Hero() {
+  const url_calendly =
+    "https://calendly.com/osteopathe-animalier/consultation-osteopathique"
+  const onClick = () => openPopupWidget({ url: url_calendly })
+
   return (
     <div class="bg-happy-dog bg-no-repeat bg-cover bg-center h-screen w-full">
       <div
@@ -37,12 +43,12 @@ export default function Hero() {
               </p>
               <div class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
                 <div class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-                  <a
-                    href="#"
+                  <button
+                    onClick={onClick}
                     class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gold-600 bg-white hover:bg-blue-50 sm:px-8"
                   >
                     Prendre rendez-vous en cabinet
-                  </a>
+                  </button>
                   <a
                     href="#"
                     class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gold-500 hover:bg-opacity-70 sm:px-8"

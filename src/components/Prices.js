@@ -4,21 +4,29 @@ const prices = [
   {
     title: "Chien et Chat",
     description: "Consultation 50 min à 1h",
+    image:
+      "https://images.unsplash.com/photo-1450778869180-41d0601e046e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2896&q=80",
     price: "60",
   },
   {
     title: "Cheval",
     description: "Consultation d'environ 1h",
+    image:
+      "https://images.unsplash.com/photo-1566251037378-5e04e3bec343?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80",
     price: "90",
   },
   {
     title: "Vache",
     description: "Consultation d'environ 1h",
+    image:
+      "https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1621&q=80",
     price: "90",
   },
   {
     title: "N.A.C",
     description: "Consultation d'environ 30 à 40 min",
+    image:
+      "https://images.unsplash.com/photo-1551148408-9b3cc5e1add6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2704&q=80",
     price: "45",
   },
 ]
@@ -37,8 +45,13 @@ export default function Prices() {
           </p>
         </div>
         <div class="mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0 xl:grid-cols-4">
-          {prices.map(({ title, description, price }) => (
-            <Card title={title} description={description} price={price} />
+          {prices.map(({ title, description, price, image }) => (
+            <Card
+              title={title}
+              description={description}
+              price={price}
+              image={image}
+            />
           ))}
         </div>
       </div>
@@ -46,15 +59,18 @@ export default function Prices() {
   )
 }
 
-function Card({ title, description, price }) {
+function Card({ title, description, price, image }) {
   return (
-    <div class="border border-gray-200 rounded-lg shadow-sm divide-y divide-gray-200">
+    <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+      <div class="flex-shrink-0">
+        <img class="h-48 w-full object-cover" src={image} alt="" />
+      </div>
       <div class="p-6">
         <h2 class="text-lg leading-6 font-medium text-gold-600">{title}</h2>
         <p class="mt-4 text-sm text-gray-500">{description}</p>
         <p class="mt-8 text-right">
           <span class="text-4xl font-extrabold text-gold-500">{price}</span>
-          <span class="text-base font-medium text-gray-500">€</span>
+          <span class="text-base font-medium text-gold-700">€</span>
         </p>
       </div>
     </div>

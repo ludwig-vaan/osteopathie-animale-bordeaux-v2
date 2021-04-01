@@ -22,7 +22,8 @@ export default function QuiSuisJe() {
                       <div class="text-lg leading-6 font-medium space-y-1">
                         <h3>Agathe Lescout</h3>
                         <p class="text-gold-600">
-                          Ostéopathe / Professeur à l'EAO - École Aquitaine
+                          Ostéopathe / Professeur à l'EAO - École d'Aquitaine
+                          d'Ostéopathie
                         </p>
                       </div>
                       <div class="text-lg">

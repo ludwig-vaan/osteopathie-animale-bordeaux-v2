@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from "react"
-import Chien from "../icons/chien"
 import Section from "./Section"
 import SelectMenu from "./SelectMenu"
 import { configuration } from "./configutation"
@@ -11,10 +10,12 @@ export default function AnimalSection() {
 
   useEffect(() => {
     ref.current && setHeight(ref.current.clientHeight)
-  }, [ref.current])
+  }, [])
+
   const selectedStyle = "border-gold-500 border-b-2 text-gold-600"
   const unselectedStyle =
     "border-white border-b-2  text-white hover:text-gold-700 hover:border-gold-500"
+
   return (
     <div className="bg-gradient-to-r to-canard from-canard-light">
       <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
