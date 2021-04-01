@@ -33,18 +33,18 @@ const prices = [
 
 export default function Prices() {
   return (
-    <div class="bg-white">
-      <div class="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
-        <div class="sm:flex sm:flex-col sm:align-center">
-          <h1 class="text-5xl font-extrabold text-gold-500 sm:text-center">
+    <div className="bg-white">
+      <div className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
+        <div className="sm:flex sm:flex-col sm:align-center">
+          <h1 className="text-5xl font-extrabold text-gold-500 sm:text-center">
             Tarifs
           </h1>
-          <p class="mt-5 text-xl text-gray-500 sm:text-center">
+          <p className="mt-5 text-xl text-gray-500 sm:text-center">
             Consultation à domicile et en cabinet. Frais de déplacements au delà
             de 20km autour de Bordeaux
           </p>
         </div>
-        <div class="mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0 xl:grid-cols-4">
+        <div className="mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0 xl:grid-cols-4">
           {prices.map(({ title, description, price, image }) => (
             <Card
               title={title}
@@ -61,16 +61,16 @@ export default function Prices() {
 
 function Card({ title, description, price, image }) {
   return (
-    <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-      <div class="flex-shrink-0">
-        <img class="h-48 w-full object-cover" src={image} alt="" />
+    <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
+      <div className="flex-shrink-0">
+        <img className="h-48 w-full object-cover" src={image} alt="" />
       </div>
-      <div class="p-6">
-        <h2 class="text-lg leading-6 font-medium text-gold-600">{title}</h2>
-        <p class="mt-4 text-sm text-gray-500">{description}</p>
-        <p class="mt-8 text-right">
-          <span class="text-4xl font-extrabold text-gold-500">{price}</span>
-          <span class="text-base font-medium text-gold-700">€</span>
+      <div className="p-6">
+        <h2 className="text-lg leading-6 font-medium text-gold-600">{title}</h2>
+        <p className="mt-4 text-sm text-gray-500">{description}</p>
+        <p className="mt-8 text-right">
+          <span className="text-4xl font-extrabold text-gold-500">{price}</span>
+          <span className="text-base font-medium text-gold-700">€</span>
         </p>
       </div>
     </div>

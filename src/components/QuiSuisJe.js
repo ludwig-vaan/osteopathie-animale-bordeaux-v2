@@ -3,31 +3,31 @@ import Agathe from "../images/agathe.jpg"
 
 export default function QuiSuisJe() {
   return (
-    <div class="bg-gray-50">
-      <div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
-        <div class="space-y-12 ">
-          <div class="">
-            <ul class="space-y-12 sm:divide-y sm:divide-gray-200 sm:space-y-0 sm:-mt-8 lg:gap-x-8 lg:space-y-0">
-              <li class="sm:py-8">
-                <div class="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
-                  <div class="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
+    <div className="bg-gray-50">
+      <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
+        <div className="space-y-12 ">
+          <div className="">
+            <ul className="space-y-12 sm:divide-y sm:divide-gray-200 sm:space-y-0 sm:-mt-8 lg:gap-x-8 lg:space-y-0">
+              <li className="sm:py-8">
+                <div className="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
+                  <div className="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
                     <img
-                      class="object-cover shadow-lg rounded-lg"
+                      className="object-cover shadow-lg rounded-lg"
                       src={Agathe}
                       alt=""
                     />
                   </div>
-                  <div class="sm:col-span-2">
-                    <div class="space-y-4">
-                      <div class="text-lg leading-6 font-medium space-y-1">
+                  <div className="sm:col-span-2">
+                    <div className="space-y-4">
+                      <div className="text-lg leading-6 font-medium space-y-1">
                         <h3>Agathe Lescout</h3>
-                        <p class="text-gold-600">
+                        <p className="text-gold-600">
                           Ostéopathe / Professeur à l'EAO - École d'Aquitaine
                           d'Ostéopathie
                         </p>
                       </div>
-                      <div class="text-lg">
-                        <p class="text-gray-500">
+                      <div className="text-lg">
+                        <p className="text-gray-500">
                           Ostéopathe animalier en région Aquitaine, je réalise
                           des consultations à domicile sur les chiens, les
                           chats, les NAC, les chevaux et les vaches. Après un

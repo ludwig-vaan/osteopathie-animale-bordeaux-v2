@@ -3,17 +3,17 @@ import React from "react"
 export default function Footer() {
   const year = new Date().getFullYear()
   return (
-    <footer class="bg-gray-50" aria-labelledby="footerHeading">
-      <div class="max-w-7xl mx-auto pt-4 pb-4 px-4 sm:px-6 lg:pt-4 lg:px-4">
-        <div class="mt-12 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between lg:mt-16">
-          <div class="flex space-x-6 md:order-2">
+    <footer className="bg-gray-50" aria-labelledby="footerHeading">
+      <div className="max-w-7xl mx-auto pt-4 pb-4 px-4 sm:px-6 lg:pt-4 lg:px-4">
+        <div className="mt-12 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between lg:mt-16">
+          <div className="flex space-x-6 md:order-2">
             <a
               href="https://www.facebook.com/AgatheLescout/"
-              class="text-gray-400 hover:text-gold-500"
+              className="text-gray-400 hover:text-gold-500"
             >
-              <span class="sr-only">Facebook</span>
+              <span className="sr-only">Facebook</span>
               <svg
-                class="h-6 w-6"
+                className="h-6 w-6"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -26,7 +26,7 @@ export default function Footer() {
               </svg>
             </a>
           </div>
-          <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
+          <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
             &copy;{" "}
             {`${year} Agathe Lescout, Ostéopathe Animalier. Tous droits
             réservés.`}

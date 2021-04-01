@@ -6,28 +6,28 @@ function Header({ siteTitle }) {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <header>
-      <div class="relative">
-        <div class="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
-          <div class="flex justify-start lg:w-0 lg:flex-1">
+      <div className="relative">
+        <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
+          <div className="flex justify-start lg:w-0 lg:flex-1">
             {/* <a href="#">
-              <span class="sr-only">Workflow</span>
+              <span className="sr-only">Workflow</span>
               <img
-                class="h-8 w-auto sm:h-10"
+                className="h-8 w-auto sm:h-10"
                 src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg"
                 alt=""
               />
             </a> */}
           </div>
-          <div class="-mr-2 -my-2 md:hidden">
+          <div className="-mr-2 -my-2 md:hidden">
             <button
               type="button"
               onClick={() => setIsOpen(!isOpen)}
-              class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gold-400 hover:text-gold-500 hover:bg-gold-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gold-500"
+              className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gold-400 hover:text-gold-500 hover:bg-gold-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gold-500"
               aria-expanded="false"
             >
-              <span class="sr-only">Open menu</span>
+              <span className="sr-only">Open menu</span>
               <svg
-                class="h-6 w-6"
+                className="h-6 w-6"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -43,42 +43,42 @@ function Header({ siteTitle }) {
               </svg>
             </button>
           </div>
-          <nav class="hidden md:flex lg:flex space-x-10">
+          <nav className="hidden md:flex lg:flex space-x-10">
             <a
               href="#"
-              class="border-transparent border-b px-4 py-2 text-base font-medium text-white hover:text-gold-500 hover:border-b-2 hover:border-gold-500"
+              className="border-transparent border-b px-4 py-2 text-base font-medium text-white hover:text-gold-500 hover:border-b-2 hover:border-gold-500"
             >
               Animaux
             </a>
             <a
               href="#"
-              class="border-transparent border-b px-4 py-2 text-base font-medium text-white hover:text-gold-500 hover:border-b-2 hover:border-gold-500"
+              className="border-transparent border-b px-4 py-2 text-base font-medium text-white hover:text-gold-500 hover:border-b-2 hover:border-gold-500"
             >
               Quand consulter ?
             </a>
             <a
               href="#"
-              class="border-transparent border-b px-4 py-2 text-base font-medium text-white hover:text-gold-500 hover:border-b-2 hover:border-gold-500"
+              className="border-transparent border-b px-4 py-2 text-base font-medium text-white hover:text-gold-500 hover:border-b-2 hover:border-gold-500"
             >
               Tarifs
             </a>
             <a
               href="#"
-              class="border-transparent border-b px-4 py-2 text-base font-medium text-white hover:text-gold-500 hover:border-b-2 hover:border-gold-500"
+              className="border-transparent border-b px-4 py-2 text-base font-medium text-white hover:text-gold-500 hover:border-b-2 hover:border-gold-500"
             >
               Osteopathie
             </a>
           </nav>
-          <div class="hidden md:flex  lg:flex items-center justify-end md:flex-1 lg:flex-1">
+          <div className="hidden md:flex  lg:flex items-center justify-end md:flex-1 lg:flex-1">
             <a
               href="#"
-              class="whitespace-nowrap border-gold-500 border px-4 py-2 rounded-md text-base  text-gold-500 font-medium hover:text-white hover:bg-gold-500 hover:border-gold-500"
+              className="whitespace-nowrap border-gold-500 border px-4 py-2 rounded-md text-base  text-gold-500 font-medium hover:text-white hover:bg-gold-500 hover:border-gold-500"
             >
               Contact
             </a>
             <a
               href="#"
-              class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gold-500 hover:bg-opacity-70"
+              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gold-500 hover:bg-opacity-70"
             >
               Rendez-vous
             </a>
@@ -93,28 +93,28 @@ function Header({ siteTitle }) {
           leave="transition ease-in duration-75 transform"
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
-          className="absolute z-30 top-0 inset-x-0 p-2 origin-top-right md:hidden"
+          classNameName="absolute z-30 top-0 inset-x-0 p-2 origin-top-right md:hidden"
         >
-          <div class="absolute z-30 top-0 inset-x-0 p-2 origin-top-right md:hidden">
-            <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
-              <div class="pt-5 pb-6 px-5">
-                <div class="flex items-center justify-between">
+          <div className="absolute z-30 top-0 inset-x-0 p-2 origin-top-right md:hidden">
+            <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+              <div className="pt-5 pb-6 px-5">
+                <div className="flex items-center justify-between">
                   <div>
                     {/* <img
-                      class="h-8 w-auto"
+                      className="h-8 w-auto"
                       src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg"
                       alt="Workflow"
                     /> */}
                   </div>
-                  <div class="-mr-2">
+                  <div className="-mr-2">
                     <button
                       type="button"
                       onClick={() => setIsOpen(!isOpen)}
-                      class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gold-500 hover:text-gold-500 hover:bg-gold-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gold-500"
+                      className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gold-500 hover:text-gold-500 hover:bg-gold-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gold-500"
                     >
-                      <span class="sr-only">Close menu</span>
+                      <span className="sr-only">Close menu</span>
                       <svg
-                        class="h-6 w-6"
+                        className="h-6 w-6"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
@@ -131,15 +131,15 @@ function Header({ siteTitle }) {
                     </button>
                   </div>
                 </div>
-                <div class="mt-6">
-                  <nav class="grid grid-cols-1 gap-7">
+                <div className="mt-6">
+                  <nav className="grid grid-cols-1 gap-7">
                     <a
                       href="#"
-                      class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
+                      className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                     >
-                      <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-gold-400 to-gold-500  text-white">
+                      <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-gold-400 to-gold-500  text-white">
                         <svg
-                          class="h-6 w-6"
+                          className="h-6 w-6"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -154,18 +154,18 @@ function Header({ siteTitle }) {
                           />
                         </svg>
                       </div>
-                      <div class="ml-4 text-base font-medium text-gray-900">
+                      <div className="ml-4 text-base font-medium text-gray-900">
                         Animaux
                       </div>
                     </a>
 
                     <a
                       href="#"
-                      class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
+                      className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                     >
-                      <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-gold-400 to-gold-500 text-white">
+                      <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-gold-400 to-gold-500 text-white">
                         <svg
-                          class="h-6 w-6"
+                          className="h-6 w-6"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -180,18 +180,18 @@ function Header({ siteTitle }) {
                           />
                         </svg>
                       </div>
-                      <div class="ml-4 text-base font-medium text-gray-900">
+                      <div className="ml-4 text-base font-medium text-gray-900">
                         Quand consulter ?
                       </div>
                     </a>
 
                     <a
                       href="#"
-                      class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
+                      className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                     >
-                      <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-gold-400 to-gold-500 text-white">
+                      <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-gold-400 to-gold-500 text-white">
                         <svg
-                          class="h-6 w-6"
+                          className="h-6 w-6"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -206,18 +206,18 @@ function Header({ siteTitle }) {
                           />
                         </svg>
                       </div>
-                      <div class="ml-4 text-base font-medium text-gray-900">
+                      <div className="ml-4 text-base font-medium text-gray-900">
                         Tarifs
                       </div>
                     </a>
 
                     <a
                       href="#"
-                      class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
+                      className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                     >
-                      <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-gold-400 to-gold-500 text-white">
+                      <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-gold-400 to-gold-500 text-white">
                         <svg
-                          class="h-6 w-6"
+                          className="h-6 w-6"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -232,22 +232,22 @@ function Header({ siteTitle }) {
                           />
                         </svg>
                       </div>
-                      <div class="ml-4 text-base font-medium text-gray-900">
+                      <div className="ml-4 text-base font-medium text-gray-900">
                         Osteopathie
                       </div>
                     </a>
                   </nav>
                 </div>
               </div>
-              <div class="py-6 px-5">
-                <div class="mt-6">
+              <div className="py-6 px-5">
+                <div className="mt-6">
                   <a
                     href="#"
-                    class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gold-500 hover:gold-700 "
+                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gold-500 hover:gold-700 "
                   >
                     Prendre rendez-vous en cabinet
                   </a>
-                  <p class="mt-6 text-center text-base font-medium text-gray-900">
+                  <p className="mt-6 text-center text-base font-medium text-gray-900">
                     Contactez-moi
                   </p>
                 </div>

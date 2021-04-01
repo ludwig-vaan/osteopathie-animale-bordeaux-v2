@@ -46,23 +46,23 @@ const reasons = [
 
 export default function QuandConsulter() {
   return (
-    <div class="bg-gradient-to-r from-canard to-canard-light">
-      <div class="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
-        <h2 class="text-3xl font-extrabold text-white tracking-tight">
+    <div className="bg-gradient-to-r from-canard to-canard-light">
+      <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
+        <h2 className="text-3xl font-extrabold text-white tracking-tight">
           Quand consulter un ostéopathe ?
         </h2>
-        <div class="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16">
+        <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16">
           {reasons.map(({ title, description, icon }) => (
             <Reason title={title} description={description} icon={icon} />
           ))}
         </div>
       </div>
-      <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8 pb-16 sm:pb-24">
-        <div class="rounded-md bg-gold-100 p-4">
-          <div class="flex">
-            <div class="flex-shrink-0">
+      <div classNameName="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8 pb-16 sm:pb-24">
+        <div className="rounded-md bg-gold-100 p-4">
+          <div className="flex">
+            <div className="flex-shrink-0">
               <svg
-                class="h-5 w-5 text-yellow-400"
+                className="h-5 w-5 text-yellow-400"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 fill="currentColor"
@@ -75,11 +75,11 @@ export default function QuandConsulter() {
                 />
               </svg>
             </div>
-            <div class="ml-3">
-              <h3 class="text-sm font-medium text-gold-800">
+            <div className="ml-3">
+              <h3 className="text-sm font-medium text-gold-800">
                 Contre-indications
               </h3>
-              <div class="mt-2 text-sm text-gold-700">
+              <div className="mt-2 text-sm text-gold-700">
                 <p>
                   Attention, l'ostéopathie n'intervient jamais en 1ère
                   intention, si votre animal présente des signes fiévreux ou
@@ -100,9 +100,9 @@ function Reason({ title, description, icon }) {
   return (
     <div>
       <div>
-        <span class="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10">
+        <span className="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10">
           <svg
-            class="h-6 w-6 text-gold-500"
+            className="h-6 w-6 text-gold-500"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -118,9 +118,9 @@ function Reason({ title, description, icon }) {
           </svg>
         </span>
       </div>
-      <div class="mt-6">
-        <h3 class="text-lg font-medium text-gold-500">{title}</h3>
-        <p class="mt-2 text-base text-white">{description}</p>
+      <div className="mt-6">
+        <h3 className="text-lg font-medium text-gold-500">{title}</h3>
+        <p className="mt-2 text-base text-white">{description}</p>
       </div>
     </div>
   )

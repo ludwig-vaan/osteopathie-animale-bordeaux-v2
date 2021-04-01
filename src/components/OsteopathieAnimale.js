@@ -2,16 +2,16 @@ import React from "react"
 
 export default function OsteopathieAnimale() {
   return (
-    <div class="relative bg-white pt-16 pb-32 overflow-hidden">
-      <div class="relative">
-        <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
-          <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
+    <div className="relative bg-white pt-16 pb-32 overflow-hidden">
+      <div className="relative">
+        <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+          <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
             <div>
-              <div class="mt-6">
-                <h2 class="text-3xl font-extrabold tracking-tight text-gold-500">
+              <div className="mt-6">
+                <h2 className="text-3xl font-extrabold tracking-tight text-gold-500">
                   Qu'est ce que l'ostéopathie pour les animaux ?
                 </h2>
-                <p class="mt-4 text-lg text-gray-500">
+                <p className="mt-4 text-lg text-gray-500">
                   L'ostéopathie animale est une thérapie faisant appel à des
                   manipulations douces afin de soulager l'animal et rétablir
                   l'équilibre du corps. Souvent associée au "cracking", on pense
@@ -36,10 +36,10 @@ export default function OsteopathieAnimale() {
               </div>
             </div>
           </div>
-          <div class="mt-12 sm:mt-16 lg:mt-0">
-            <div class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+          <div className="mt-12 sm:mt-16 lg:mt-0">
+            <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
               <img
-                class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
                 src="https://images.unsplash.com/photo-1576873600563-bd4dbc65d58d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80"
                 alt="Inbox user interface"
               />
