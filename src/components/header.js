@@ -69,20 +69,6 @@ function Header({ siteTitle }) {
               Ostéopathie
             </a>
           </nav>
-          {/* <div className="hidden md:flex  lg:flex items-center justify-end md:flex-1 lg:flex-1">
-            <a
-              href="#"
-              className="whitespace-nowrap border-gold-500 border px-4 py-2 rounded-md text-base  text-gold-500 font-medium hover:text-white hover:bg-gold-500 hover:border-gold-500"
-            >
-              Contact
-            </a>
-            <a
-              href="#"
-              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gold-500 hover:bg-opacity-70"
-            >
-              Rendez-vous
-            </a>
-          </div> */}
         </div>
 
         <Transition
@@ -134,7 +120,7 @@ function Header({ siteTitle }) {
                 <div className="mt-6">
                   <nav className="grid grid-cols-1 gap-7">
                     <a
-                      href="#"
+                      href="#animaux"
                       className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                     >
                       <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-gold-400 to-gold-500  text-white">
@@ -160,7 +146,7 @@ function Header({ siteTitle }) {
                     </a>
 
                     <a
-                      href="#"
+                      href="#quand-consulter"
                       className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                     >
                       <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-gold-400 to-gold-500 text-white">
@@ -186,7 +172,7 @@ function Header({ siteTitle }) {
                     </a>
 
                     <a
-                      href="#"
+                      href="#tarifs"
                       className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                     >
                       <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-gold-400 to-gold-500 text-white">
@@ -212,7 +198,7 @@ function Header({ siteTitle }) {
                     </a>
 
                     <a
-                      href="#"
+                      href="#osteopathie"
                       className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                     >
                       <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-gold-400 to-gold-500 text-white">
