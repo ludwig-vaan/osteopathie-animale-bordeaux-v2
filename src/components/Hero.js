@@ -1,7 +1,7 @@
 import React from "react"
 import { openPopupWidget } from "react-calendly"
 
-import Header from "./header"
+import Header from "./Header/header"
 
 export default function Hero() {
   const url_calendly =
