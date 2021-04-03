@@ -10,6 +10,7 @@ import { FocusScope } from "@react-aria/focus"
 import { mergeProps } from "@react-aria/utils"
 import { Item } from "@react-stately/collections"
 import { useFocus } from "@react-aria/interactions"
+import { Animal, Osteopathie, Tarifs, QuandConsulter } from "../icons"
 
 function Header() {
   return (
@@ -28,10 +29,10 @@ function Header() {
           </div>
           <div className="-mr-2 -my-2 md:hidden">
             <MenuButton label="Actions">
-              <Item key="#animaux">Animaux</Item>
-              <Item key="#quand-consulter">Quand consulter ?</Item>
-              <Item key="#tarifs">Tarifs</Item>
-              <Item key="#osteopathie">Ostéopathie</Item>
+              <Item key="animaux">Animaux</Item>
+              <Item key="quand-consulter">Quand consulter ?</Item>
+              <Item key="tarifs">Tarifs</Item>
+              <Item key="osteopathie">Ostéopathie</Item>
             </MenuButton>
           </div>
           <nav className="hidden md:flex lg:flex space-x-10">
@@ -236,37 +237,29 @@ function MenuItem({ item, state, onClose }) {
     <a
       {...mergeProps(menuItemProps, focusProps)}
       ref={ref}
-      href={item.key}
-      className={`-m-3 p-3 flex flex-row items-center rounded-lg hover:bg-gold-300 ${
+      href={`#${item.key}`}
+      className={`-m-3 p-3 flex flex-row items-center rounded-lg hover:bg-gold-300 text-gold-600 hover:text-white ${
         isFocused ? "bg-gold-100" : ""
       }`}
     >
-      <NavItem name={item.rendered} />
+      <NavItem name={item.rendered} icon={item.key} />
     </a>
   )
 }
+const navigationSvg = {
+  animaux: <Animal />,
+  "quand-consulter": <QuandConsulter />,
+  tarifs: <Tarifs />,
+  osteopathie: <Osteopathie />,
+}
 
-function NavItem({ name }) {
+function NavItem({ name, icon }) {
   return (
     <>
       <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-gold-400 to-gold-500 text-white">
-        <svg
-          className="h-6 w-6"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          aria-hidden="true"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
+        {navigationSvg[icon]}
       </div>
-      <div className="ml-4 text-base font-medium text-gray-900">{name}</div>
+      <div className="ml-4 text-base font-medium ">{name}</div>
     </>
   )
 }
