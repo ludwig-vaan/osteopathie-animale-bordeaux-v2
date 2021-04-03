@@ -3,21 +3,21 @@ import React from "react"
 const prices = [
   {
     title: "Chien et Chat",
-    description: "Consultation 50 min à 1h",
+    description: "Consultation d'environ 50 min à 1h",
     image:
       "https://images.unsplash.com/photo-1450778869180-41d0601e046e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2896&q=80",
     price: "60",
   },
   {
     title: "Cheval",
-    description: "Consultation d'environ 1h",
+    description: `Consultation d'environ 1h \n `,
     image:
       "https://images.unsplash.com/photo-1566251037378-5e04e3bec343?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80",
     price: "90",
   },
   {
     title: "Vache",
-    description: "Consultation d'environ 1h",
+    description: `Consultation d'environ 1h \n `,
     image:
       "https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1621&q=80",
     price: "90",
@@ -65,13 +65,21 @@ function Card({ title, description, price, image }) {
       <div className="flex-shrink-0">
         <img className="h-48 w-full object-cover" src={image} alt="" />
       </div>
-      <div className="p-6">
-        <h2 className="text-lg leading-6 font-medium text-gold-600">{title}</h2>
-        <p className="mt-4 text-sm text-gray-500">{description}</p>
-        <p className="mt-8 text-right">
-          <span className="text-4xl font-extrabold text-gold-500">{price}</span>
-          <span className="text-base font-medium text-gold-700">€</span>
-        </p>
+      <div className="p-6  flex-1 flex flex-col">
+        <div className="flex-none">
+          <h2 className="text-lg leading-6 font-bold text-gold-500">{title}</h2>
+        </div>
+        <div className="flex-1">
+          <p className="mt-4 text-base text-gray-500 ">{description}</p>
+        </div>
+        <div className="flex-none">
+          <p className="mt-8 text-right">
+            <span className="text-4xl font-extrabold text-gold-500">
+              {price}
+            </span>
+            <span className="text-base font-medium text-gold-700">€</span>
+          </p>
+        </div>
       </div>
     </div>
   )
