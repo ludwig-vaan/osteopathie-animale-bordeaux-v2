@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { openPopupWidget } from "react-calendly"
 
 import Header from "./header"
