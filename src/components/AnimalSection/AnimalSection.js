@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react"
 import Section from "./Section"
-import SelectMenu from "./SelectMenu"
 import { configuration } from "./configutation"
+import AriaSelecMenu from "./AriaSelectMenu"
 
 export default function AnimalSection({ id }) {
   const [animal, setAnimal] = useState("chien")
@@ -26,7 +26,7 @@ export default function AnimalSection({ id }) {
           L'ostéopathie pour qui ?
         </h2>
         <div>
-          <SelectMenu animal={animal} setAnimal={setAnimal} />
+          <AriaSelecMenu initialAnimal="chien" setAnimal={setAnimal} />
           <div className="hidden sm:block">
             <nav className="-mb-px flex" aria-label="Tabs">
               <span
