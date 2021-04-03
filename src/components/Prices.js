@@ -31,9 +31,9 @@ const prices = [
   },
 ]
 
-export default function Prices() {
+export default function Prices({ id }) {
   return (
-    <div className="bg-white">
+    <div id={id} className="bg-white">
       <div className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
         <div className="sm:flex sm:flex-col sm:align-center">
           <h1 className="text-5xl font-extrabold text-gold-500 sm:text-center">

@@ -1,8 +1,8 @@
 import React from "react"
 
-export default function Contact() {
+export default function Contact({ id }) {
   return (
-    <div className="relative bg-white">
+    <div id={id} className="relative bg-white">
       <div className="absolute inset-0">
         <div className="absolute inset-y-0 left-0 w-1/2 bg-gold-50"></div>
       </div>
@@ -12,55 +12,71 @@ export default function Contact() {
             <h2 className="text-2xl font-extrabold tracking-tight text-gold-500 sm:text-3xl">
               Horaires
             </h2>
-            <p className="mt-3 text-lg leading-6 text-gray-500">
-              <span className="font-bold">Lundi au Vendredi :</span> 09h à 19h
+            <h3 className="mt-6 text-lg font-extrabold tracking-tight text-gold-500 sm:text-xl">
+              À domicile
+            </h3>
+            <p className="mt-2 text-lg leading-6 text-gray-500">
+              <span className="font-bold">Lundi au Jeudi :</span> 09h à 19h
             </p>
-            <p className="mt-3 text-lg leading-6 text-gray-500">
+            <p className="mt-2 text-lg leading-6 text-gray-500">
               <span className="font-bold">Samedi :</span> 09h à 14h
             </p>
+            <h3 className="mt-6 text-lg font-extrabold tracking-tight text-gold-500 sm:text-xl">
+              En cabinet
+            </h3>
+            <p className="mt-3 text-lg leading-6 text-gray-500">
+              <span className="font-bold">Vendredi :</span> 10h à 19h
+            </p>
             <dl className="mt-8 text-base text-gray-500">
-              <div className="mt-6">
-                <dt className="sr-only">Téléphone</dt>
-                <dd className="flex">
-                  <svg
-                    className="flex-shrink-0 h-6 w-6 text-gray-400"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                    />
-                  </svg>
-                  <span className="ml-3">0665550792</span>
-                </dd>
-              </div>
-              <div className="mt-3">
-                <dt className="sr-only">Email</dt>
-                <dd className="flex">
-                  <svg
-                    className="flex-shrink-0 h-6 w-6 text-gray-400"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
-                  <span className="ml-3">agathe.lescout.osteo@gmail.com</span>
-                </dd>
-              </div>
+              <a href="tel:+33665550792" className="text-gray-500">
+                <div className="mt-6">
+                  <dt className="sr-only">Téléphone</dt>
+                  <dd className="flex">
+                    <svg
+                      className="flex-shrink-0 h-6 w-6 text-gray-400"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                      />
+                    </svg>
+                    <span className="ml-3">0665550792</span>
+                  </dd>
+                </div>
+              </a>
+              <a
+                href="mailto:agathe.lescout.osteo@gmail.com"
+                className="text-gray-500"
+              >
+                <div className="mt-3">
+                  <dt className="sr-only">Email</dt>
+                  <dd className="flex">
+                    <svg
+                      className="flex-shrink-0 h-6 w-6 text-gray-400"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
+                    </svg>
+                    <span className="ml-3">agathe.lescout.osteo@gmail.com</span>
+                  </dd>
+                </div>
+              </a>
             </dl>
           </div>
         </div>

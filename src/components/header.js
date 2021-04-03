@@ -45,31 +45,31 @@ function Header({ siteTitle }) {
           </div>
           <nav className="hidden md:flex lg:flex space-x-10">
             <a
-              href="#"
+              href="#animaux"
               className="border-transparent border-b px-4 py-2 text-base font-medium text-white hover:text-gold-500 hover:border-b-2 hover:border-gold-500"
             >
               Animaux
             </a>
             <a
-              href="#"
+              href="#quand-consulter"
               className="border-transparent border-b px-4 py-2 text-base font-medium text-white hover:text-gold-500 hover:border-b-2 hover:border-gold-500"
             >
               Quand consulter ?
             </a>
             <a
-              href="#"
+              href="#tarifs"
               className="border-transparent border-b px-4 py-2 text-base font-medium text-white hover:text-gold-500 hover:border-b-2 hover:border-gold-500"
             >
               Tarifs
             </a>
             <a
-              href="#"
+              href="#osteopathie"
               className="border-transparent border-b px-4 py-2 text-base font-medium text-white hover:text-gold-500 hover:border-b-2 hover:border-gold-500"
             >
-              Osteopathie
+              Ostéopathie
             </a>
           </nav>
-          <div className="hidden md:flex  lg:flex items-center justify-end md:flex-1 lg:flex-1">
+          {/* <div className="hidden md:flex  lg:flex items-center justify-end md:flex-1 lg:flex-1">
             <a
               href="#"
               className="whitespace-nowrap border-gold-500 border px-4 py-2 rounded-md text-base  text-gold-500 font-medium hover:text-white hover:bg-gold-500 hover:border-gold-500"
@@ -82,7 +82,7 @@ function Header({ siteTitle }) {
             >
               Rendez-vous
             </a>
-          </div>
+          </div> */}
         </div>
 
         <Transition
@@ -93,7 +93,7 @@ function Header({ siteTitle }) {
           leave="transition ease-in duration-75 transform"
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
-          classNameName="absolute z-30 top-0 inset-x-0 p-2 origin-top-right md:hidden"
+          className="absolute z-30 top-0 inset-x-0 p-2 origin-top-right md:hidden"
         >
           <div className="absolute z-30 top-0 inset-x-0 p-2 origin-top-right md:hidden">
             <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
@@ -233,23 +233,10 @@ function Header({ siteTitle }) {
                         </svg>
                       </div>
                       <div className="ml-4 text-base font-medium text-gray-900">
-                        Osteopathie
+                        Ostéopathie
                       </div>
                     </a>
                   </nav>
-                </div>
-              </div>
-              <div className="py-6 px-5">
-                <div className="mt-6">
-                  <a
-                    href="#"
-                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gold-500 hover:gold-700 "
-                  >
-                    Prendre rendez-vous en cabinet
-                  </a>
-                  <p className="mt-6 text-center text-base font-medium text-gray-900">
-                    Contactez-moi
-                  </p>
                 </div>
               </div>
             </div>

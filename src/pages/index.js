@@ -16,14 +16,14 @@ const IndexPage = () => {
     <div>
       <main>
         <Hero />
-        <AnimalSection />
+        <AnimalSection id="animaux" />
         <NouvelleAquitaine />
-        <QuandConsulter />
-        <Prices />
+        <QuandConsulter id="quand-consulter" />
+        <Prices id="tarifs" />
         <DeroulementConsultation />
-        <OsteopathieAnimale />
+        <OsteopathieAnimale id="osteopathie" />
         <QuiSuisJe />
-        <Contact />
+        <Contact id="contact" />
       </main>
       <Footer />
     </div>

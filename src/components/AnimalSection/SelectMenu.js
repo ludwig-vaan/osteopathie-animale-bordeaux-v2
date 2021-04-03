@@ -21,7 +21,7 @@ const option = {
 export default function SelectMenu({ animal, setAnimal }) {
   const [show, setShow] = useState(false)
   return (
-    <div classNameName="sm:hidden">
+    <div className="sm:hidden">
       <label
         id="listbox-label"
         className="block text-sm font-medium text-gold-700 pt-4"
@@ -63,7 +63,7 @@ export default function SelectMenu({ animal, setAnimal }) {
           leave="transition ease-in duration-75 transform"
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
-          classNameName="absolute mt-1 w-full bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm"
+          className="absolute mt-1 w-full bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm"
         >
           <ul
             tabindex="-1"

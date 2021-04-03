@@ -1,5 +1,9 @@
 @tailwind base;
 
+html,
+body {
+  scroll-behavior: smooth;
+}
 h1 {
   @apply text-2xl;
 }

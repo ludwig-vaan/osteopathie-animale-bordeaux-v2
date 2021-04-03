@@ -32,12 +32,12 @@ export default function NouvelleAquitaine() {
               </div>
               <div className="mt-6">
                 <h2 className="text-3xl font-extrabold tracking-tight text-gold-600">
-                  Nouvelle-Aquitaine
+                  Gironde
                 </h2>
                 <p className="mt-4 text-lg text-gray-500">
                   Consultation à votre domicile sur Bordeaux ainsi que sur
-                  l'ensemble de la Gironde (33) (frais de déplacements à prévoir
-                  au delà de 20km autour de Bordeaux)
+                  l'ensemble de la Gironde - frais de déplacements à prévoir au
+                  delà de 20km autour de Bordeaux.
                 </p>
               </div>
             </div>

@@ -3,7 +3,7 @@ import Section from "./Section"
 import SelectMenu from "./SelectMenu"
 import { configuration } from "./configutation"
 
-export default function AnimalSection() {
+export default function AnimalSection({ id }) {
   const [animal, setAnimal] = useState("chien")
   const [height, setHeight] = useState(0)
   const ref = useRef(null)
@@ -17,18 +17,21 @@ export default function AnimalSection() {
     "border-white border-b-2  text-white hover:text-gold-700 hover:border-gold-500"
 
   return (
-    <div classNameName="bg-gradient-to-r to-canard from-canard-light">
-      <div classNameName="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
-        <h2 classNameName="text-3xl font-extrabold text-white tracking-tight">
+    <div
+      id={id}
+      className="bg-gradient-to-r to-canard from-canard-light overflow-hidden"
+    >
+      <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
+        <h2 className="text-3xl font-extrabold text-white tracking-tight">
           L'ostéopathie pour qui ?
         </h2>
         <div>
           <SelectMenu animal={animal} setAnimal={setAnimal} />
-          <div classNameName="hidden sm:block">
-            <nav classNameName="-mb-px flex" aria-label="Tabs">
+          <div className="hidden sm:block">
+            <nav className="-mb-px flex" aria-label="Tabs">
               <span
                 onClick={() => setAnimal("chien")}
-                classNameName={`${
+                className={`${
                   animal === "chien" ? selectedStyle : unselectedStyle
                 } w-1/4 py-4 px-1 text-center border-b-2 font-medium text-base cursor-pointer`}
                 aria-current={animal === "chien" ? "page" : undefined}
@@ -38,7 +41,7 @@ export default function AnimalSection() {
 
               <span
                 onClick={() => setAnimal("chat")}
-                classNameName={`${
+                className={`${
                   animal === "chat" ? selectedStyle : unselectedStyle
                 } w-1/4 py-4 px-1 text-center border-b-2 font-medium text-base cursor-pointer`}
                 aria-current={animal === "chat" ? "page" : undefined}
@@ -48,7 +51,7 @@ export default function AnimalSection() {
 
               <span
                 onClick={() => setAnimal("cheval")}
-                classNameName={`${
+                className={`${
                   animal === "cheval" ? selectedStyle : unselectedStyle
                 } w-1/4 py-4 px-1 text-center border-b-2 font-medium text-base cursor-pointer`}
                 aria-current={animal === "cheval" ? "page" : undefined}
@@ -58,7 +61,7 @@ export default function AnimalSection() {
 
               <span
                 onClick={() => setAnimal("vache")}
-                classNameName={`${
+                className={`${
                   animal === "vache" ? selectedStyle : unselectedStyle
                 } w-1/4 py-4 px-1 text-center border-b-2 font-medium text-base cursor-pointer`}
                 aria-current={animal === "vache" ? "page" : undefined}
@@ -67,7 +70,7 @@ export default function AnimalSection() {
               </span>
               <span
                 onClick={() => setAnimal("nac")}
-                classNameName={`${
+                className={`${
                   animal === "nac" ? selectedStyle : unselectedStyle
                 } w-1/4 py-4 px-1 text-center border-b-2 font-medium text-base cursor-pointer`}
                 aria-current={animal === "nac" ? "page" : undefined}
@@ -79,7 +82,7 @@ export default function AnimalSection() {
         </div>
         <div
           ref={ref}
-          classNameName={`mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-16 `}
+          className={`mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-16 `}
           style={{ minHeight: height !== 0 ? height : undefined }}
         >
           <Section {...configuration[animal]} />

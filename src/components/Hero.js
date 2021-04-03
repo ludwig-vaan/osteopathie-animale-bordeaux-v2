@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { openPopupWidget } from "react-calendly"
 
 import Header from "./header"
@@ -45,15 +45,15 @@ export default function Hero() {
                 <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
                   <button
                     onClick={onClick}
-                    className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gold-600 bg-white hover:bg-blue-50 sm:px-8"
+                    className="flex w-full items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gold-600 bg-white hover:bg-opacity-70 sm:px-8"
                   >
                     Prendre rendez-vous en cabinet
                   </button>
                   <a
-                    href="#"
+                    href="#contact"
                     className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gold-500 hover:bg-opacity-70 sm:px-8"
                   >
-                    Contactez-moi
+                    Prendre rendez-vous à domicile
                   </a>
                 </div>
               </div>
