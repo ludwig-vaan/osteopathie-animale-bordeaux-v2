@@ -1,6 +1,9 @@
 import React from "react"
 
 export default function Contact({ id }) {
+  const handleClear = () => {
+    document.contactForm.reset()
+  }
   return (
     <div id={id} className="relative bg-white">
       <div className="absolute inset-0">
@@ -82,18 +85,24 @@ export default function Contact({ id }) {
         </div>
         <div className="bg-white py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
           <div className="max-w-lg mx-auto lg:max-w-none">
-            <form action="#" method="POST" className="grid grid-cols-1 gap-y-6">
+            <form
+              name="contactForm"
+              action="https://getform.io/f/da75be94-0820-485f-9074-e148844d89a7"
+              target="_blank"
+              method="POST"
+              className="grid grid-cols-1 gap-y-6"
+            >
               <div>
-                <label for="full_name" className="sr-only">
+                <label for="name" className="sr-only">
                   Nom
                 </label>
                 <input
                   type="text"
-                  name="full_name"
-                  id="full_name"
+                  name="name"
+                  id="name"
                   autocomplete="name"
                   className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-gold-500 focus:border-gold-500 border-gray-300 rounded-md"
-                  placeholder="Full name"
+                  placeholder="Nom"
                 />
               </div>
               <div>
@@ -119,7 +128,7 @@ export default function Contact({ id }) {
                   id="phone"
                   autocomplete="tel"
                   className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-gold-500 focus:border-gold-500 border-gray-300 rounded-md"
-                  placeholder="Phone"
+                  placeholder="Téléphone"
                 />
               </div>
               <div>
@@ -137,6 +146,7 @@ export default function Contact({ id }) {
               <div>
                 <button
                   type="submit"
+                  onClick={handleClear}
                   className="inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-gold-500 hover:bg-gold-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gold-500"
                 >
                   Envoyer
