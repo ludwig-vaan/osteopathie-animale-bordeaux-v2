@@ -1,46 +1,54 @@
 import React from "react"
-import Chien from "./icons/chien"
+import {
+  Bilan,
+  BreakBone,
+  Articulation,
+  Grow,
+  Thunder,
+  Gate,
+  Lungs,
+} from "./icons"
 
 const reasons = [
   {
     title: "Bilan annuel",
     description:
       "Une à deux consultations par an permet de prévenir des pathologies liées à la croissance, à l'activité et à l'âge",
-    icon: () => <Chien />,
+    icon: () => <Bilan />,
   },
   {
     title: "Réeducation",
     description:
       "Post-chirurgicale ou post-traumatique (fracture, tendinite, entorse etc.)",
-    icon: () => <Chien />,
+    icon: () => <BreakBone />,
   },
   {
-    title: "Troubles oséto-articulaire",
+    title: "Troubles ostéo-articulaire",
     description:
       "Boiterie, arthrose, contracture, irrégularité d'allure, dorsalgie etc.",
-    icon: () => <Chien />,
+    icon: () => <Articulation />,
   },
   {
     title: "Croissance",
     description: "Défaut d'aplombs, malformation, dysplasie etc.",
-    icon: () => <Chien />,
+    icon: () => <Grow />,
   },
   {
     title: "Troubles du comportement",
     description: "Craintes excessives, agressivité, tics etc.",
-    icon: () => <Chien />,
+    icon: () => <Thunder />,
   },
   {
     title: "Sport",
     description:
       "Baisse des performances, préparation à la compétition et récupération",
-    icon: () => <Chien />,
+    icon: () => <Gate />,
   },
   {
     title: "Troubles fonctionnels",
     description:
       "Systèmes respiratoire, nerveux, digestif, vasculaire, reproducteur, urinaire et hormonal",
-    icon: () => <Chien />,
+    icon: () => <Lungs />,
   },
 ]
 
@@ -61,19 +69,21 @@ export default function QuandConsulter({ id }) {
         <div className="rounded-md bg-gold-100 p-4">
           <div className="flex">
             <div className="flex-shrink-0">
-              <svg
-                className="h-5 w-5 text-yellow-400"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
-                  clip-rule="evenodd"
-                />
-              </svg>
+              {
+                <svg
+                  className="h-5 w-5 text-yellow-400"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              }
             </div>
             <div className="ml-3">
               <h3 className="text-sm font-medium text-gold-800">
@@ -101,21 +111,7 @@ function Reason({ title, description, icon }) {
     <div>
       <div>
         <span className="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10">
-          <svg
-            className="h-6 w-6 text-gold-500"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"
-            />
-          </svg>
+          {icon()}
         </span>
       </div>
       <div className="mt-6">
