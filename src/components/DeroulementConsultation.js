@@ -1,5 +1,5 @@
 import React from "react"
-import Correction from "../images/correction.jpg"
+import { StaticImage } from "gatsby-plugin-image"
 
 export default function DeroulementConsultation() {
   return (
@@ -131,11 +131,11 @@ export default function DeroulementConsultation() {
                 fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)"
               />
             </svg>
-            <img
+            <StaticImage
               className="relative mx-auto rounded-lg"
               width="490"
-              src="https://images.unsplash.com/photo-1415369629372-26f2fe60c467?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80"
-              alt=""
+              src="../images/yougncat.jpeg"
+              alt="high five with yougn cat"
             />
           </div>
         </div>
@@ -254,11 +254,11 @@ export default function DeroulementConsultation() {
                   fill="url(#e80155a9-dfde-425a-b5ea-1f6fadd20131)"
                 />
               </svg>
-              <img
+              <StaticImage
                 className="relative mx-auto rounded-lg"
                 width="490"
-                src={Correction}
-                alt=""
+                src="../images/correction.jpg"
+                alt="osteopathe with horse"
               />
             </div>
           </div>

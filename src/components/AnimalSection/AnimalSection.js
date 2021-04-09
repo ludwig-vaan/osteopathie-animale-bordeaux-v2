@@ -3,7 +3,7 @@ import Section from "./Section"
 import { configuration } from "./configutation"
 import AriaSelecMenu from "./AriaSelectMenu"
 
-export default function AnimalSection({ id }) {
+export default function AnimalSection({ id, images }) {
   const [animal, setAnimal] = useState("chien")
   const [height, setHeight] = useState(0)
   const ref = useRef(null)
@@ -15,7 +15,8 @@ export default function AnimalSection({ id }) {
   const selectedStyle = "border-gold-500 border-b-2 text-gold-600"
   const unselectedStyle =
     "border-white border-b-2  text-white hover:text-gold-700 hover:border-gold-500"
-
+  const currentAnimal = configuration[animal]
+  const image = images[currentAnimal.key]
   return (
     <div
       id={id}
@@ -85,7 +86,7 @@ export default function AnimalSection({ id }) {
           className={`mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-16 `}
           style={{ minHeight: height !== 0 ? height : undefined }}
         >
-          <Section {...configuration[animal]} />
+          <Section {...configuration[animal]} image={image} />
         </div>
       </div>
     </div>

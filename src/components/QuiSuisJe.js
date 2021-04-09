@@ -1,5 +1,5 @@
 import React from "react"
-import Agathe from "../images/agathe.jpg"
+import { StaticImage } from "gatsby-plugin-image"
 
 export default function QuiSuisJe() {
   return (
@@ -11,10 +11,10 @@ export default function QuiSuisJe() {
               <li className="sm:py-8">
                 <div className="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
                   <div className="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
-                    <img
+                    <StaticImage
                       className="object-cover shadow-lg rounded-lg"
-                      src={Agathe}
-                      alt=""
+                      src="../images/agathe.jpg"
+                      alt="Agathe Lescout"
                     />
                   </div>
                   <div className="sm:col-span-2">

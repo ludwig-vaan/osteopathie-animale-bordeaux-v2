@@ -1,11 +1,7 @@
-import React from "react"
-
-import Chien from "../icons/chien"
-
 export const configuration = {
   chien: {
     name: "Le chien",
-    icon: () => <Chien />,
+    key: "sectionChien",
     text: `Tout comme nous, le corps du chien subit les contraintes de la
       vie quotidienne. Agility, canicross, simples jeux ou promenade,
       quelle que soit son activité votre chien est soumis à des
@@ -27,12 +23,10 @@ export const configuration = {
       et vous puissiez continuer à prendre du plaisir dans votre
       activité !`,
     alt: "deux chiens",
-    image:
-      "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80",
   },
   chat: {
     name: "Le chat",
-    icon: () => <Chien />,
+    key: "sectionChat",
     text: `Malgré sa souplesse légendaire, le chat est pourtant le premier
       à subir les chutes, les faux mouvements et autres petits
       traumatismes du quotidien, et il sera le dernier à montrer les
@@ -45,12 +39,10 @@ export const configuration = {
       chute, l’arthrose, les troubles respiratoires et l’insuffisance
       rénale.`,
     alt: "un chat",
-    image:
-      "https://images.unsplash.com/photo-1511275539165-cc46b1ee89bf?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80",
   },
   cheval: {
     name: "Le cheval",
-    icon: () => <Chien />,
+    key: "sectionCheval",
     text: `"Nous avons presque oublié combien il est étonnant qu'un animal
       aussi grand, aussi puissant et aussi intelligent puisse accepter
       sur son dos un autre animal tellement plus faible!" Peter Gray.
@@ -69,12 +61,10 @@ export const configuration = {
       performances. Ils peuvent également le consulter en prévention
       afin d’éviter tendinites, arthroses ou entorses à répétition.`,
     alt: "un cheval",
-    image:
-      "https://images.unsplash.com/photo-1485201567137-7771be2f710c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1866&q=80",
   },
   vache: {
     name: "La vache",
-    icon: () => <Chien />,
+    key: "sectionVache",
     text: `Qu’elle soit laitière ou allaitante la vache en milieu d’élevage
       est souvent sujette aux glissades, peut se coincer dans les
       logettes ou les cornadis et ainsi se blesser, se bloquer le dos
@@ -91,12 +81,10 @@ export const configuration = {
       respiratoires, les vêlages difficiles, la vache couchée, le veau
       qui ne tête pas ou qui ne se lève pas.`,
     alt: "une vache",
-    image:
-      "https://images.unsplash.com/photo-1610321428429-5eb3c3fec5e9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1839&q=80",
   },
   nac: {
     name: "N.A.C",
-    icon: () => <Chien />,
+    key: "sectionLapin",
     text: `Rongeurs, lapins, furets, tous ces nouveaux animaux domestiques
       font désormais partie de nos vies et subissent tout autant que
       les autres espèces les contraintes de la vie quotidienne. Ses
@@ -109,7 +97,5 @@ export const configuration = {
       troubles digestifs et respiratoires, une perte d’état général et
       un changement de comportement.`,
     alt: "un lapin",
-    image:
-      "https://images.unsplash.com/photo-1589952283406-b53a7d1347e8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80",
   },
 }

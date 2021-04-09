@@ -1,4 +1,5 @@
 import React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 
 export default function OsteopathieAnimale({ id }) {
   return (
@@ -38,10 +39,10 @@ export default function OsteopathieAnimale({ id }) {
           </div>
           <div className="mt-12 sm:mt-16 lg:mt-0">
             <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-              <img
+              <StaticImage
                 className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="https://images.unsplash.com/photo-1576873600563-bd4dbc65d58d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80"
-                alt="Inbox user interface"
+                src="../images/bulldog.jpeg"
+                alt="bulldog"
               />
             </div>
           </div>

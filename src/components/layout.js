@@ -1,5 +1,5 @@
 /**
- * Layout component that queries for data
+ * Layout component that queries htmlFor data
  * with Gatsby's useStaticQuery component
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/

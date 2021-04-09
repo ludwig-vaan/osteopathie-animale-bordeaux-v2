@@ -12,7 +12,7 @@ const navigationSvg = {
 }
 
 export default function MenuItem({ item, state, onClose }) {
-  // Get props for the menu item element
+  // Get props htmlFor the menu item element
   let ref = React.useRef()
   let { menuItemProps } = useMenuItem(
     {

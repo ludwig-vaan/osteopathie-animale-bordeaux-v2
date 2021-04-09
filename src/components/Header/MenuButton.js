@@ -9,11 +9,11 @@ export default function MenuButton(props) {
   // Create state based on the incoming props
   let state = useMenuTriggerState(props)
 
-  // Get props for the menu trigger and menu elements
+  // Get props htmlFor the menu trigger and menu elements
   let ref = React.useRef()
   let { menuTriggerProps, menuProps } = useMenuTrigger({}, state, ref)
 
-  // Get props for the button based on the trigger props from useMenuTrigger
+  // Get props htmlFor the button based on the trigger props from useMenuTrigger
   let { buttonProps } = useButton(menuTriggerProps, ref)
 
   return (
@@ -33,9 +33,9 @@ export default function MenuButton(props) {
           aria-hidden="true"
         >
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
             d="M4 6h16M4 12h16M4 18h16"
           />
         </svg>
@@ -53,7 +53,7 @@ export default function MenuButton(props) {
         <MenuPopup
           {...props}
           domProps={menuProps}
-          // autoFocus={state.focusStrategy} // The autoFocus prop should not be used, as it can reduce usability and accessibility for users
+          // autoFocus={state.focusStrategy} // The autoFocus prop should not be used, as it can reduce usability and accessibility htmlFor users
           onClose={() => state.close()}
         />
       </Transition>

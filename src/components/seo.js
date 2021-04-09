@@ -1,5 +1,5 @@
 /**
- * SEO component that queries for data with
+ * SEO component that queries htmlFor data with
  *  Gatsby's useStaticQuery React hook
  *
  * See: https://www.gatsbyjs.com/docs/use-static-query/

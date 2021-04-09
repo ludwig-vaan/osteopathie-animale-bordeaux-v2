@@ -10,7 +10,7 @@ export default function MenuPopup(props) {
   // Create menu state based on the incoming props
   let state = useTreeState({ ...props, selectionMode: "none" })
 
-  // Get props for the menu element
+  // Get props htmlFor the menu element
   let ref = React.useRef()
   let { menuProps } = useMenu(props, state, ref)
 
@@ -56,9 +56,9 @@ export default function MenuPopup(props) {
                       aria-hidden="true"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="M6 18L18 6M6 6l12 12"
                       />
                     </svg>

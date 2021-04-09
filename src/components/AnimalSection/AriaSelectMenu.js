@@ -1,21 +1,21 @@
-import { useSelectState } from "@react-stately/select"
-import { Item } from "@react-stately/collections"
+import React from "react"
+import { FocusScope } from "@react-aria/focus"
 import { HiddenSelect } from "@react-aria/select"
-import { useListBox, useOption } from "@react-aria/listbox"
+import { Item } from "@react-stately/collections"
 import { mergeProps } from "@react-aria/utils"
+import { Transition } from "@headlessui/react"
 import { useButton } from "@react-aria/button"
 import { useFocus } from "@react-aria/interactions"
-import { FocusScope } from "@react-aria/focus"
+import { useListBox, useOption } from "@react-aria/listbox"
 import { useOverlay, DismissButton } from "@react-aria/overlays"
-import React from "react"
 import { useSelect } from "@react-aria/select"
-import { Transition } from "@headlessui/react"
+import { useSelectState } from "@react-stately/select"
 
 export function Select(props) {
   // Create state based on the incoming props
   let state = useSelectState(props)
 
-  // Get props for child elements from useSelect
+  // Get props htmlFor child elements from useSelect
   let ref = React.useRef()
   let { labelProps, triggerProps, valueProps, menuProps } = useSelect(
     props,
@@ -23,7 +23,7 @@ export function Select(props) {
     ref
   )
 
-  // Get props for the button based on the trigger props from useSelect
+  // Get props htmlFor the button based on the trigger props from useSelect
   let { buttonProps } = useButton(triggerProps, ref)
   return (
     <div className="sm:hidden">
@@ -59,9 +59,9 @@ export function Select(props) {
               aria-hidden="true"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               />
             </svg>
           </span>
@@ -89,7 +89,7 @@ export function Select(props) {
 function ListBoxPopup({ state, ...otherProps }) {
   let ref = React.useRef()
 
-  // Get props for the listbox
+  // Get props htmlFor the listbox
   let { listBoxProps } = useListBox(
     {
       autoFocus: state.focusStrategy || true,
@@ -133,7 +133,7 @@ function ListBoxPopup({ state, ...otherProps }) {
 }
 
 function Option({ item, state }) {
-  // Get props for the option element
+  // Get props htmlFor the option element
   let ref = React.useRef()
   let isDisabled = state.disabledKeys.has(item.key)
   let isSelected = state.selectionManager.isSelected(item.key)
@@ -189,9 +189,9 @@ function ItemCustom({ selected, name }) {
             aria-hidden="true"
           >
             <path
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-              clip-rule="evenodd"
+              clipRule="evenodd"
             />
           </svg>
         </span>
