@@ -66,7 +66,7 @@ function Prices(props) {
 
 function Card({ title, description, price, image, alt }) {
   return (
-    <a
+    <div
       className="flex flex-col rounded-lg shadow-lg overflow-hidden"
       href="#contact"
     >
@@ -93,7 +93,7 @@ function Card({ title, description, price, image, alt }) {
           </p>
         </div>
       </div>
-    </a>
+    </div>
   )
 }
 
