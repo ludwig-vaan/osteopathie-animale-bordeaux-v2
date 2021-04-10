@@ -66,7 +66,10 @@ function Prices(props) {
 
 function Card({ title, description, price, image, alt }) {
   return (
-    <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
+    <a
+      className="flex flex-col rounded-lg shadow-lg overflow-hidden"
+      href="#contact"
+    >
       <div className="flex-shrink-0">
         <GatsbyImage
           className="h-48 w-full object-cover"
@@ -90,7 +93,7 @@ function Card({ title, description, price, image, alt }) {
           </p>
         </div>
       </div>
-    </div>
+    </a>
   )
 }
 

@@ -1,40 +1,22 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby & TailwindCSS starter
-</h1>
+# Agathe Lescout Osteophatie V3
 
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=kosvrouvas_gatsby-tailwindcss-starter&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=kosvrouvas_gatsby-tailwindcss-starter) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=kosvrouvas_gatsby-tailwindcss-starter&metric=security_rating)](https://sonarcloud.io/dashboard?id=kosvrouvas_gatsby-tailwindcss-starter) [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=kosvrouvas_gatsby-tailwindcss-starter&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=kosvrouvas_gatsby-tailwindcss-starter)
+## TODO
 
-Kick off your project with this default boilerplate with TailwindCSS. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
-
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+1. when user click on price card, scroll to contact form and pre-filled textInput
+2. Sitemap
+3. SEO
 
 ## 🚀 Quick start
-
-1.  **Create a Gatsby site.**
-
-    Use the Gatsby CLI to create a new site, specifying the default starter.
-
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/kosvrouvas/gatsby-tailwindcss-starter
-    ```
 
 1.  **Start developing.**
 
     Navigate into your new site’s directory and start it up.
 
     ```shell
-    cd my-default-starter/
     gatsby develop
     ```
 
-1.  **Open the source code and start editing!**
+2.  **Open the source code and start editing!**
 
     Your site is now running at `http://localhost:8000`!
 
@@ -92,10 +74,4 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
 
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kosvrouvas/gatsby-tailwindcss-starter)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/kosvrouvas/gatsby-tailwindcss-starter)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=kosvrouvas_gatsby-tailwindcss-starter&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=kosvrouvas_gatsby-tailwindcss-starter) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=kosvrouvas_gatsby-tailwindcss-starter&metric=security_rating)](https://sonarcloud.io/dashboard?id=kosvrouvas_gatsby-tailwindcss-starter) [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=kosvrouvas_gatsby-tailwindcss-starter&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=kosvrouvas_gatsby-tailwindcss-starter)
