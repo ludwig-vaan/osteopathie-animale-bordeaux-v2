@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react"
 import Section from "./Section"
 import { configuration } from "./configutation"
 import AriaSelecMenu from "./AriaSelectMenu"
+import AriaSelecMenuWeb from "./AriaSelectMenuWeb"
 
 export default function AnimalSection({ id, images }) {
   const [animal, setAnimal] = useState("chien")
@@ -12,11 +13,9 @@ export default function AnimalSection({ id, images }) {
     ref.current && setHeight(ref.current.clientHeight)
   }, [])
 
-  const selectedStyle = "border-gold-500 border-b-2 text-gold-600"
-  const unselectedStyle =
-    "border-white border-b-2  text-white hover:text-gold-700 hover:border-gold-500"
   const currentAnimal = configuration[animal]
   const image = images[currentAnimal.key]
+
   return (
     <div
       id={id}
@@ -28,58 +27,7 @@ export default function AnimalSection({ id, images }) {
         </h2>
         <div>
           <AriaSelecMenu initialAnimal="chien" setAnimal={setAnimal} />
-          <div className="hidden sm:block">
-            <nav className="-mb-px flex" aria-label="Tabs">
-              <span
-                onClick={() => setAnimal("chien")}
-                className={`${
-                  animal === "chien" ? selectedStyle : unselectedStyle
-                } w-1/4 py-4 px-1 text-center border-b-2 font-medium text-base cursor-pointer`}
-                aria-current={animal === "chien" ? "page" : undefined}
-              >
-                Le chien
-              </span>
-
-              <span
-                onClick={() => setAnimal("chat")}
-                className={`${
-                  animal === "chat" ? selectedStyle : unselectedStyle
-                } w-1/4 py-4 px-1 text-center border-b-2 font-medium text-base cursor-pointer`}
-                aria-current={animal === "chat" ? "page" : undefined}
-              >
-                Le chat
-              </span>
-
-              <span
-                onClick={() => setAnimal("cheval")}
-                className={`${
-                  animal === "cheval" ? selectedStyle : unselectedStyle
-                } w-1/4 py-4 px-1 text-center border-b-2 font-medium text-base cursor-pointer`}
-                aria-current={animal === "cheval" ? "page" : undefined}
-              >
-                Le cheval
-              </span>
-
-              <span
-                onClick={() => setAnimal("vache")}
-                className={`${
-                  animal === "vache" ? selectedStyle : unselectedStyle
-                } w-1/4 py-4 px-1 text-center border-b-2 font-medium text-base cursor-pointer`}
-                aria-current={animal === "vache" ? "page" : undefined}
-              >
-                La vache
-              </span>
-              <span
-                onClick={() => setAnimal("nac")}
-                className={`${
-                  animal === "nac" ? selectedStyle : unselectedStyle
-                } w-1/4 py-4 px-1 text-center border-b-2 font-medium text-base cursor-pointer`}
-                aria-current={animal === "nac" ? "page" : undefined}
-              >
-                N.A.C.
-              </span>
-            </nav>
-          </div>
+          <AriaSelecMenuWeb setAnimal={setAnimal} />
         </div>
         <div
           ref={ref}
