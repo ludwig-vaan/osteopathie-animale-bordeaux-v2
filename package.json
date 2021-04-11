@@ -5,7 +5,7 @@
   "version": "0.3.0",
   "author": "Kostas Vrouvas <hello@kosvrouvas.com>",
   "dependencies": {
-    "@headlessui/react": "^0.3.1",
+    "@headlessui/react": "^0.3.2-d950146",
     "@react-aria/button": "^3.3.1",
     "@react-aria/focus": "^3.2.4",
     "@react-aria/interactions": "^3.3.4",

@@ -67,6 +67,8 @@ export function Select(props) {
           </span>
         </button>
 
+        {/* 
+        WAIT FOR A FIX HERE
         <Transition
           show={state.isOpen}
           enter="transition ease-out duration-100 transform"
@@ -76,11 +78,13 @@ export function Select(props) {
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
           className="absolute mt-1 w-full bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm"
-        >
-          <div>
+        > */}
+        {state.isOpen && (
+          <div className="transition ease-out duration-100 transform absolute mt-1 w-full bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm">
             <ListBoxPopup {...menuProps} state={state} />
           </div>
-        </Transition>
+        )}
+        {/* </Transition> */}
       </div>
     </div>
   )
