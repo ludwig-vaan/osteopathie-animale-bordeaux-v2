@@ -3,7 +3,7 @@ import React from "react"
 export default function Footer() {
   const year = new Date().getFullYear()
   return (
-    <footer className="bg-gray-50" aria-labelledby="footerHeading">
+    <footer className="bg-gray-50">
       <div className="max-w-7xl mx-auto pt-4 pb-4 px-4 sm:px-6 lg:pt-4 lg:px-4">
         <div className="mt-12 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between lg:mt-16">
           <div className="flex space-x-6 md:order-2">
