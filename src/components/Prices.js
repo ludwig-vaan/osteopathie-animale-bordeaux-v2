@@ -75,6 +75,8 @@ function Card({ title, description, price, image, alt }) {
           className="h-48 w-full object-cover"
           image={image}
           alt={alt}
+          imgStyle={{ borderRadius: 8 }}
+          style={{ borderRadius: 8 }}
         />
       </div>
       <div className="p-6  flex-1 flex flex-col">

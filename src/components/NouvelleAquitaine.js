@@ -37,6 +37,8 @@ export default function NouvelleAquitaine() {
                 className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
                 src="../images/bordeaux.jpeg"
                 alt="picture of bordeaux"
+                imgStyle={{ borderRadius: 12 }}
+                style={{ borderRadius: 12 }}
               />
             </div>
           </div>

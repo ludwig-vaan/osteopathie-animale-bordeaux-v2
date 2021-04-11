@@ -12,9 +12,11 @@ export default function QuiSuisJe() {
                 <div className="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
                   <div className="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
                     <StaticImage
-                      className="object-cover shadow-lg rounded-lg"
+                      className="shadow-lg rounded-lg overflow-hidden"
                       src="../images/agathe.jpg"
                       alt="Agathe Lescout"
+                      imgStyle={{ borderRadius: 8 }}
+                      style={{ borderRadius: 8 }}
                     />
                   </div>
                   <div className="sm:col-span-2">

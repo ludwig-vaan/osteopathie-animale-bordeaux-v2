@@ -136,6 +136,8 @@ export default function DeroulementConsultation() {
               width="490"
               src="../images/yougncat.jpeg"
               alt="high five with yougn cat"
+              imgStyle={{ borderRadius: 8 }}
+              style={{ borderRadius: 8 }}
             />
           </div>
         </div>
@@ -259,6 +261,8 @@ export default function DeroulementConsultation() {
                 width="490"
                 src="../images/correction.jpg"
                 alt="osteopathe with horse"
+                imgStyle={{ borderRadius: 8 }}
+                style={{ borderRadius: 8 }}
               />
             </div>
           </div>

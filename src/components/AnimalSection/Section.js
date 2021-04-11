@@ -16,6 +16,8 @@ export default function Section({ name, text, image, alt = "" }) {
             className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full  lg:max-w-none"
             image={image}
             alt={alt}
+            imgStyle={{ borderRadius: 12 }}
+            style={{ borderRadius: 12 }}
           />
         </div>
       </div>
