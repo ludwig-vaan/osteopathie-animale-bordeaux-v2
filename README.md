@@ -1,11 +1,5 @@
 # Agathe Lescout Osteophatie V3
 
-## TODO
-
-1. when user click on price card, scroll to contact form and pre-filled textInput
-2. Sitemap
-3. SEO
-
 ## 🚀 Quick start
 
 1.  **Start developing.**

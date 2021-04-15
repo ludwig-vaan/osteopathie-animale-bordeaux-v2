@@ -32,7 +32,7 @@ module.exports = {
         theme_color: `#c0823f`,
         display: `standalone`,
         legacy: true, // this will add apple-touch-icon links to <head>
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-offline`,
