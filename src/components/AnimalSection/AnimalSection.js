@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from "react"
 import Section from "./Section"
 import { configuration } from "./configutation"
-import AriaSelecMenu from "./AriaSelectMenu"
+// import AriaSelecMenu from "./AriaSelectMenu"
+import AriaSelecMenu from "./NewAriaSelectMenu"
 import AriaSelecMenuWeb from "./AriaSelectMenuWeb"
 
 export default function AnimalSection({ id, images }) {

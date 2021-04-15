@@ -6,6 +6,7 @@
   "author": "Kostas Vrouvas <hello@kosvrouvas.com>",
   "dependencies": {
     "@headlessui/react": "^0.3.2-d950146",
+    "@heroicons/react": "^1.0.1",
     "@react-aria/button": "^3.3.1",
     "@react-aria/focus": "^3.2.4",
     "@react-aria/interactions": "^3.3.4",

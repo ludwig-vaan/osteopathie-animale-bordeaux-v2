@@ -83,7 +83,7 @@ export const configuration = {
     alt: "une vache",
   },
   nac: {
-    name: "N.A.C",
+    name: "Les nouveaux animaux de compagnie",
     key: "sectionLapin",
     text: `Rongeurs, lapins, furets, tous ces nouveaux animaux domestiques
       font désormais partie de nos vies et subissent tout autant que

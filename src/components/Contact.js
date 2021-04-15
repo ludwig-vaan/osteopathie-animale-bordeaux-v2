@@ -2,7 +2,9 @@ import React from "react"
 
 export default function Contact({ id }) {
   const handleClear = () => {
-    document.contactForm.reset()
+    setTimeout(() => {
+      document.contactForm.reset()
+    }, 2500)
   }
   return (
     <div id={id} className="relative bg-white">
@@ -92,66 +94,67 @@ export default function Contact({ id }) {
               method="POST"
               className="grid grid-cols-1 gap-y-6"
             >
-              <div>
-                <label htmlFor="name" className="sr-only">
-                  Nom
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  autoComplete="name"
-                  className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-gold-500 focus:border-gold-500 border-gray-300 rounded-md"
-                  placeholder="Nom"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="sr-only">
-                  Email
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-gold-500 focus:border-gold-500 border-gray-300 rounded-md"
-                  placeholder="Email"
-                />
-              </div>
-              <div>
-                <label htmlFor="phone" className="sr-only">
-                  Téléphone
-                </label>
-                <input
-                  type="text"
-                  name="phone"
-                  id="phone"
-                  autoComplete="tel"
-                  className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-gold-500 focus:border-gold-500 border-gray-300 rounded-md"
-                  placeholder="Téléphone"
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="sr-only">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-gold-500 focus:border-gold-500 border-gray-300 rounded-md"
-                  placeholder="Message"
-                ></textarea>
-              </div>
-              <div>
-                <button
-                  type="submit"
-                  onClick={handleClear}
-                  className="inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-gold-500 hover:bg-gold-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gold-500"
-                >
-                  Envoyer
-                </button>
-              </div>
+              <label htmlFor="name" className="sr-only">
+                Nom
+              </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                autoComplete="name"
+                className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-gold-500 focus:border-gold-500 border-gray-300 rounded-md"
+                placeholder="Nom"
+              />
+              <label htmlFor="name" className="sr-only">
+                Nom de l'animal
+              </label>
+              <input
+                type="text"
+                name="animal"
+                id="animal"
+                autoComplete="name"
+                className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-gold-500 focus:border-gold-500 border-gray-300 rounded-md"
+                placeholder="Nom de l'animal"
+              />
+              <label htmlFor="email" className="sr-only">
+                Email
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autoComplete="email"
+                className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-gold-500 focus:border-gold-500 border-gray-300 rounded-md"
+                placeholder="Email"
+              />
+              <label htmlFor="phone" className="sr-only">
+                Téléphone
+              </label>
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                autoComplete="tel"
+                className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-gold-500 focus:border-gold-500 border-gray-300 rounded-md"
+                placeholder="Téléphone"
+              />
+              <label htmlFor="message" className="sr-only">
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-gold-500 focus:border-gold-500 border-gray-300 rounded-md"
+                placeholder="Message"
+              ></textarea>
+              <button
+                type="submit"
+                onClick={handleClear}
+                className="inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-gold-500 hover:bg-gold-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gold-500"
+              >
+                Envoyer
+              </button>
             </form>
           </div>
         </div>
