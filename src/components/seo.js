@@ -10,7 +10,7 @@ const SEO = () => {
   const seo = {
     title: title,
     description: description,
-    siteUrl: `${url}${pathname}`,
+    siteUrl: `${siteUrl}${pathname}`,
   }
   return (
     <Helmet
