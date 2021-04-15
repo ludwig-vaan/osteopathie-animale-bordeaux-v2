@@ -6,16 +6,11 @@ import { useStaticQuery, graphql } from "gatsby"
 const SEO = ({ title, description, image, article }) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
-  const {
-    defaultTitle,
-    titleTemplate,
-    defaultDescription,
-    siteUrl,
-  } = site.siteMetadata
+  const { title, titleTemplate, description, url } = site.siteMetadata
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
-    url: `${siteUrl}${pathname}`,
+    url: `${url}${pathname}`,
   }
   return (
     <Helmet
@@ -52,10 +47,10 @@ const query = graphql`
   query SEO {
     site {
       siteMetadata {
-        defaultTitle: title
+        title
         titleTemplate
-        defaultDescription: description
-        siteUrl: url
+        description
+        url
       }
     }
   }
