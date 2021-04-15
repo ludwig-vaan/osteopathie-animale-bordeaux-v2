@@ -21,7 +21,7 @@ const SEO = () => {
       }}
     >
       <meta name="description" content={seo.description} />
-      {seo.url && <meta property="og:url" content={seo.url} />}
+      {seo.siteUrl && <meta property="og:url" content={seo.siteUrl} />}
       {seo.title && <meta property="og:title" content={seo.title} />}
       {seo.description && (
         <meta property="og:description" content={seo.description} />
