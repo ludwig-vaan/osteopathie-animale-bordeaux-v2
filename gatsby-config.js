@@ -4,7 +4,7 @@ module.exports = {
     titleTemplate: "A|O· osteopathie animale",
     description:
       "L'Ostéopathe animalier Agathe Lescout, intervenant sur Bordeaux et Gironde!",
-    url: "www.osteopathie-animale-bordeaux.fr", // No trailing slash allowed!
+    siteUrl: "www.osteopathie-animale-bordeaux.fr", // No trailing slash allowed!
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
