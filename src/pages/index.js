@@ -13,6 +13,7 @@ import OsteopathieAnimale from "../components/OsteopathieAnimale"
 import QuiSuisJe from "../components/QuiSuisJe"
 import Contact from "../components/Contact"
 import Footer from "../components/Footer"
+import Seo from "../components/seo"
 
 const IndexPage = props => {
   const images = props.data.allFile.edges
@@ -28,6 +29,7 @@ const IndexPage = props => {
   return (
     <div>
       <main>
+        <Seo />
         <Hero />
         <AnimalSection id="animaux" images={imagesTree} />
         <NouvelleAquitaine />
