@@ -24,8 +24,7 @@ module.exports = {
         "canard-light": "#215772",
       },
       backgroundImage: theme => ({
-        "happy-dog":
-          "url('https://www.osteopathie-animale-bordeaux.fr/static/dog-homepage-e6e12ce71f1798f4695d0df108a04ced.jpg')",
+        "happy-dog": "url('../images/dog-homepage.jpg')",
       }),
     },
   },

@@ -49,8 +49,13 @@ export default function QuiSuisJe() {
                           National des Vétérinaires (CNOV) et ainsi être
                           inscrite au Registre National d'Aptitude en
                           ostéopathie animale, seule liste certifiant les
-                          ostéopathes animaliers en France et visible sur le
-                          site internet du CNOV.
+                          ostéopathes animaliers en France et visible sur{" "}
+                          <a
+                            href="https://www.veterinaire.fr/les-autres-metiers/liste-des-personnes-non-veterinaires-pouvant-realiser-des-actes-dosteopathie-animale/registre-national-daptitude-rna.html"
+                            target="_blank"
+                          >
+                            le site internet du CNOV.
+                          </a>
                         </p>
                       </div>
                     </div>

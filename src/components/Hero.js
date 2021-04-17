@@ -104,7 +104,7 @@ const Hero = () => {
   const onClick = () => openPopupWidget({ url: url_calendly })
 
   return (
-    <div className="h-screen bg-no-repeat bg-cover bg-center w-full bg-happy-dog">
+    <div className="h-screen bg-happy-dog bg-no-repeat bg-cover bg-center w-full ">
       <Header />
       {/* Any content here will be centered in the component */}
       <div className="relative">
