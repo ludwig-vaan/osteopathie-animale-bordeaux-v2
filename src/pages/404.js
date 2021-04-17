@@ -1,14 +1,162 @@
-import React from "react"
-
-import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const NotFoundPage = () => (
-  <Layout>
-    <Seo title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-)
+/* This example requires Tailwind CSS v2.0+ */
+import React, { Fragment } from "react"
+import { Popover, Transition } from "@headlessui/react"
+import { MenuIcon, XIcon } from "@heroicons/react/outline"
+import * as Icons from "../components/icons"
+import { openPopupWidget } from "react-calendly"
 
-export default NotFoundPage
+const navigation = [
+  { name: "Animaux", href: "#animaux" },
+  { name: "Quand consulter ?", href: "#quand-consulter" },
+  { name: "Tarifs", href: "#tarifs" },
+  { name: "Ostéopathie", href: "#osteopathie" },
+]
+
+const navigationSvg = {
+  "#animaux": <Icons.Animal />,
+  "#quand-consulter": <Icons.QuandConsulter />,
+  "#tarifs": <Icons.Tarifs />,
+  "#osteopathie": <Icons.Osteopathie />,
+}
+
+function Hero() {
+  const url_calendly =
+    "https://calendly.com/osteopathe-animalier/consultation-osteopathique"
+  const onClick = () => openPopupWidget({ url: url_calendly })
+
+  return (
+    <div className="h-screen bg-happy-dog bg-no-repeat bg-cover bg-center w-full ">
+      <Popover className="relative pt-6 pb-16 sm:pb-24">
+        {({ open }) => (
+          <>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
+              <nav
+                className="relative flex items-center justify-between sm:h-10 md:justify-center"
+                aria-label="Global"
+              >
+                <div className="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
+                  <div className="flex items-center justify-between w-full md:w-auto">
+                    <div></div>
+                    <div className="-mr-2 flex items-center md:hidden">
+                      <Popover.Button className="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gold-500">
+                        <span className="sr-only">Open main menu</span>
+                        <MenuIcon className="h-6 w-6" aria-hidden="true" />
+                      </Popover.Button>
+                    </div>
+                  </div>
+                </div>
+                <div className="hidden md:flex md:space-x-10">
+                  {navigation.map(item => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className="font-medium text-white hover:text-gold-500"
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+                <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0"></div>
+              </nav>
+            </div>
+
+            <Transition
+              show={open}
+              as={Fragment}
+              enter="duration-150 ease-out"
+              enterFrom="opacity-0 scale-95"
+              enterTo="opacity-100 scale-100"
+              leave="duration-100 ease-in"
+              leaveFrom="opacity-100 scale-100"
+              leaveTo="opacity-0 scale-95"
+            >
+              <Popover.Panel
+                focus
+                static
+                className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+              >
+                <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+                  <div className="px-5 pt-4 flex items-center justify-between">
+                    <div></div>
+                    <div className="-mr-2">
+                      <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gold-500">
+                        <span className="sr-only">Close menu</span>
+                        <XIcon className="h-6 w-6" aria-hidden="true" />
+                      </Popover.Button>
+                    </div>
+                  </div>
+                  <div className="px-2 pt-2 pb-3">
+                    {navigation.map(item => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className={`-m-3 p-3 flex flex-row items-center rounded-lg hover:bg-gold-300 text-gold-600 hover:text-white`}
+                      >
+                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-gold-400 to-gold-500 text-white">
+                          {navigationSvg[item.href]}
+                        </div>
+                        <div className="ml-4 text-base font-medium ">
+                          {item.name}
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </Popover.Panel>
+            </Transition>
+
+            <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
+              <div className="text-center">
+                <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                  <span
+                    className="block text-white"
+                    style={{ textShadow: "#143545  1px 0 10px" }}
+                  >
+                    Agathe Lescout
+                  </span>{" "}
+                  <span
+                    className="block text-gold-500"
+                    style={{ textShadow: "#143545 1px 0 10px" }}
+                  >
+                    ostéopathe animalier
+                  </span>
+                </h1>
+                <Seo title="404: Not found" />
+                <h2>NOT FOUND</h2>
+                <p>
+                  You just hit a route that doesn&#39;t exist... the sadness.
+                </p>
+                <p
+                  className="mt-6 max-w-lg mx-auto text-center text-xl text-white sm:max-w-3xl"
+                  style={{ textShadow: "#143545 1px 0 10px" }}
+                >
+                  consultation à domicile et en cabinet
+                </p>
+                <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
+                  <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
+                    <button
+                      onClick={onClick}
+                      className="flex w-full items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gold-600 bg-white hover:bg-opacity-70 sm:px-8"
+                    >
+                      Prendre rendez-vous en cabinet
+                    </button>
+                    <a
+                      href="#contact"
+                      className="flex items-center text-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gold-500 hover:bg-opacity-70 sm:px-8"
+                    >
+                      Prendre rendez-vous à domicile
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </main>
+          </>
+        )}
+      </Popover>
+    </div>
+  )
+}
+
+export default Hero

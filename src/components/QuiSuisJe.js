@@ -53,6 +53,7 @@ export default function QuiSuisJe() {
                           <a
                             href="https://www.veterinaire.fr/les-autres-metiers/liste-des-personnes-non-veterinaires-pouvant-realiser-des-actes-dosteopathie-animale/registre-national-daptitude-rna.html"
                             target="_blank"
+                            rel="noreferrer"
                           >
                             le site internet du CNOV.
                           </a>
