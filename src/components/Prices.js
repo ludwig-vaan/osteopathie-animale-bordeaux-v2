@@ -41,8 +41,8 @@ function Prices(props) {
             Tarifs
           </h1>
           <p className="mt-5 text-xl text-gray-500 sm:text-center">
-            Consultation à domicile et en cabinet. Frais de déplacements au delà
-            de 20km autour de Bordeaux.
+            Consultation à domicile. Frais de déplacements au delà de 20km
+            autour de Bordeaux.
           </p>
         </div>
         <div className="mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0 xl:grid-cols-4">

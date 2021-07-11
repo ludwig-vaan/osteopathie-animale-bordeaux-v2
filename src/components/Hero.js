@@ -3,7 +3,7 @@ import React, { Fragment } from "react"
 import { Popover, Transition } from "@headlessui/react"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
 import * as Icons from "./icons"
-import { openPopupWidget } from "react-calendly"
+// import { openPopupWidget } from "react-calendly"
 
 const navigation = [
   { name: "Animaux", href: "#animaux" },
@@ -19,17 +19,17 @@ const navigationSvg = {
   "#osteopathie": <Icons.Osteopathie />,
 }
 
-export default function Hero() {
-  const url_calendly =
-    "https://calendly.com/osteopathe-animalier/consultation-osteopathique"
-  const onClick = () => openPopupWidget({ url: url_calendly })
+export default function Hero({ children }) {
+  // const url_calendly =
+  //   "https://calendly.com/osteopathe-animalier/consultation-osteopathique"
+  // const onClick = () => openPopupWidget({ url: url_calendly })
 
   return (
     <div className="h-screen bg-happy-dog bg-no-repeat bg-cover bg-center w-full ">
       <Popover className="relative pt-6 pb-16 sm:pb-24">
         {({ open }) => (
           <>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="sticky top-0 z-50 max-w-7xl mx-auto px-4 sm:px-6">
               <nav
                 className="relative flex items-center justify-between sm:h-10 md:justify-center"
                 aria-label="Global"
@@ -45,7 +45,7 @@ export default function Hero() {
                     </div>
                   </div>
                 </div>
-                <div className="hidden md:flex md:space-x-10">
+                <div className="hidden md:flex md:space-x-10 ">
                   {navigation.map(item => (
                     <a
                       key={item.name}
@@ -105,7 +105,7 @@ export default function Hero() {
               </Popover.Panel>
             </Transition>
 
-            <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
+            <main className=" relative mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
               <div className="text-center">
                 <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                   <span
@@ -125,25 +125,26 @@ export default function Hero() {
                   className="mt-6 max-w-lg mx-auto text-center text-xl text-white sm:max-w-3xl"
                   style={{ textShadow: "#143545 1px 0 10px" }}
                 >
-                  consultation à domicile et en cabinet
+                  consultation à domicile
                 </p>
                 <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
-                  <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-                    <button
-                      onClick={onClick}
+                  {/* <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-1 sm:gap-5"> */}
+                  {/* <button
+                      // onClick={onClick}
                       className="flex w-full items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gold-600 bg-white hover:bg-opacity-70 sm:px-8"
                     >
-                      Prendre rendez-vous en cabinet
-                    </button>
-                    <a
-                      href="#contact"
-                      className="flex items-center text-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gold-500 hover:bg-opacity-70 sm:px-8"
-                    >
                       Prendre rendez-vous à domicile
-                    </a>
-                  </div>
+                    </button> */}
+                  <a
+                    href="#contact"
+                    className="flex items-center text-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gold-500 hover:bg-opacity-70 sm:px-8"
+                  >
+                    Prendre rendez-vous à domicile
+                  </a>
+                  {/* </div> */}
                 </div>
               </div>
+              {children}
             </main>
           </>
         )}
