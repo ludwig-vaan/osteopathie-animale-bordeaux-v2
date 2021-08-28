@@ -20,13 +20,28 @@ export default function NouvelleAquitaine() {
                 </span>
               </div>
               <div className="mt-6">
-                <h2 className="text-3xl font-extrabold tracking-tight text-gold-600">
+                <h2 className="text-3xl font-extrabold tracking-tight text-gold-500">
                   Gironde
                 </h2>
                 <p className="mt-4 text-lg text-gray-500">
                   Consultation à votre domicile sur Bordeaux ainsi que sur
                   l'ensemble de la Gironde - frais de déplacements à prévoir au
                   delà de 20km autour de Bordeaux.
+                </p>
+              </div>
+            </div>
+            <div className="mt-24">
+              <div>
+                <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gold-500">
+                  <Map />
+                </span>
+              </div>
+              <div className="mt-6">
+                <h2 className="text-3xl font-extrabold tracking-tight text-gold-500">
+                  Consultation en cabinet
+                </h2>
+                <p className="mt-4 text-lg text-gray-500">
+                  5 place du 14 juillet à Bègles.
                 </p>
               </div>
             </div>

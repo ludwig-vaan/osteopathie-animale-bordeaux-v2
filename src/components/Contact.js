@@ -26,12 +26,18 @@ export default function Contact({ id }) {
             <p className="mt-2 text-lg leading-6 text-gray-500">
               <span className="font-bold">Samedi :</span> 09h à 14h
             </p>
-            {/* <h3 className="mt-6 text-lg font-extrabold tracking-tight text-gold-500 sm:text-xl">
+            <h3 className="mt-6 text-lg font-extrabold tracking-tight text-gold-500 sm:text-xl">
               En cabinet
             </h3>
             <p className="mt-3 text-lg leading-6 text-gray-500">
-              <span className="font-bold">Vendredi :</span> 10h à 19h
-            </p> */}
+              <span className="font-bold">Lundi :</span> 09h30 à 12h30
+            </p>
+            <p className="mt-2 text-lg leading-6 text-gray-500">
+              <span className="font-bold">Mardi :</span> 14h à 18h
+            </p>
+            <p className="mt-2 text-lg leading-6 text-gray-500">
+              <span className="font-bold">Vendredi :</span> 10h à 18h30
+            </p>
             <dl className="mt-8 text-base text-gray-500">
               <a href="tel:+33665550792" className="text-gray-500">
                 <div className="mt-6">
