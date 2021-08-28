@@ -5,7 +5,7 @@
   "version": "0.3.0",
   "author": "Kostas Vrouvas <hello@kosvrouvas.com>",
   "dependencies": {
-    "@headlessui/react": "^0.3.2-d950146",
+    "@headlessui/react": "^1.4.0",
     "@heroicons/react": "^1.0.1",
     "@react-aria/button": "^3.3.1",
     "@react-aria/focus": "^3.2.4",
