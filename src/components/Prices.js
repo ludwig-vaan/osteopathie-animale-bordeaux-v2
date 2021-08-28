@@ -157,23 +157,29 @@ function Card({ id, title, price, image, alt, variants, option }) {
         <div className="flex-none">
           <h2 className="text-xl leading-6 font-bold text-gold-500">{title}</h2>
         </div>
-        {id === "forfait" && (
-          <div className="mt-4">
-            <p className="text-lg leading-6 font-bold text-gray-700">
-              Éleveurs <span className="text-base">à partir de 3 animaux</span>
-            </p>
-            <p className="text-lg leading-6 font-bold text-gray-700">
-              Visite mensuelle
-            </p>
-            <p className="text-lg leading-6 font-bold text-gray-700">
-              Rééducation
-            </p>
-          </div>
-        )}
         <div className="flex flex-1 flex-col  content-end justify-end">
+          {id === "forfait" && (
+            <div className="mt-4">
+              <p className="text-lg leading-6 font-bold text-gray-700">
+                Éleveurs{" "}
+                <span className="text-base">à partir de 3 animaux</span>
+              </p>
+              <p className="mt-2 text-lg leading-6 font-bold text-gray-700">
+                Visite mensuelle
+              </p>
+              <p className="mt-2 text-lg leading-6 font-bold text-gray-700">
+                Rééducation
+              </p>
+            </div>
+          )}
           {variants ? (
-            variants.map(({ description, basePrice, domicilePrice }) => (
-              <p className="mt-8 text-right">
+            variants.map(({ description, basePrice, domicilePrice }, index) => (
+              <p
+                className={classNames(
+                  "mt-4 text-right",
+                  index === variants.lenght ? "mt-4" : "mt-2"
+                )}
+              >
                 <span className="text-lg font-bold text-gray-700">
                   {description}
                   {"   "}
@@ -185,7 +191,7 @@ function Card({ id, title, price, image, alt, variants, option }) {
               </p>
             ))
           ) : (
-            <p className="mt-8 text-right ">
+            <p className="mt-4 text-right ">
               <span className="text-4xl font-extrabold text-gold-500">
                 {price}
               </span>
