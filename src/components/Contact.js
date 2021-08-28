@@ -23,9 +23,6 @@ export default function Contact({ id }) {
             <p className="mt-2 text-lg leading-6 text-gray-500">
               <span className="font-bold">Lundi au Vendredi :</span> 09h à 19h
             </p>
-            <p className="mt-2 text-lg leading-6 text-gray-500">
-              <span className="font-bold">Samedi :</span> 09h à 14h
-            </p>
             <h3 className="mt-6 text-lg font-extrabold tracking-tight text-gold-500 sm:text-xl">
               En cabinet
             </h3>
