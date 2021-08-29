@@ -46,7 +46,6 @@ function classNames(...classes) {
 }
 
 function Prices(props) {
-  console.log({ props })
   const [option, setOption] = useState("cabinet")
   const [displayedPrestation, setDisplayedPrestation] = useState(prestations)
 

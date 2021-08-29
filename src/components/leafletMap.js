@@ -14,7 +14,7 @@ const Leaflet = () => {
 
   return (
     <MapContainer
-      className="w-full h-full"
+      className="w-full h-full rounded-xl"
       center={[44.807147, -0.548706]}
       zoom={12}
       scrollWheelZoom={false}
