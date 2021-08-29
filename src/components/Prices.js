@@ -1,5 +1,4 @@
-import React, { useEffect, useState, Fragment } from "react"
-import { Transition } from "@headlessui/react"
+import React, { useEffect, useState } from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 const prestations = [

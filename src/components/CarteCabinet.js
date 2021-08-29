@@ -1,7 +1,7 @@
 import React from "react"
 
 import { Map } from "./icons"
-// import Leaflet from "./leafletMap"
+import Leaflet from "./leafletMap"
 
 export default function CarteCabinet({ id }) {
   return (
@@ -34,13 +34,13 @@ export default function CarteCabinet({ id }) {
               </div>
             </div>
           </div>
-          {/* <div className="mt-12 sm:mt-16 lg:mt-0" style={{ height: "400px" }}>
+          <div className="mt-12 sm:mt-16 lg:mt-0" style={{ height: "400px" }}>
             <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative h-full ">
               <div className="h-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 overflow-hidden">
                 <Leaflet />
               </div>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
