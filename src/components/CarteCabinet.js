@@ -1,9 +1,11 @@
 import React from "react"
+import { useHasMounted } from "../hooks/useHasMounted"
 
 import { Map } from "./icons"
 import Leaflet from "./leafletMap"
 
 export default function CarteCabinet({ id }) {
+  const hasMounted = useHasMounted()
   return (
     <div id={id} className="relative bg-white pt-16 pb-32 overflow-hidden">
       <div className="relative">
@@ -37,7 +39,7 @@ export default function CarteCabinet({ id }) {
           <div className="mt-12 sm:mt-16 lg:mt-0" style={{ height: "400px" }}>
             <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative h-full ">
               <div className="h-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 overflow-hidden">
-                <Leaflet />
+                {hasMounted && <Leaflet />}
               </div>
             </div>
           </div>
