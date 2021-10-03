@@ -28,7 +28,7 @@ export default function Hero({ children }) {
       <Popover className="relative pt-6 pb-16 sm:pb-24">
         {({ open }) => (
           <>
-            <div className="sticky top-0 z-50 max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="sticky top-0 z-20 max-w-7xl mx-auto px-4 sm:px-6">
               <nav
                 className="relative flex items-center justify-between sm:h-10 md:justify-center"
                 aria-label="Global"
@@ -72,7 +72,7 @@ export default function Hero({ children }) {
               <Popover.Panel
                 focus
                 static
-                className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+                className="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
               >
                 <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
                   <div className="px-5 pt-4 flex items-center justify-between">
