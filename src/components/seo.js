@@ -23,7 +23,7 @@ const SEO = () => {
       <script src="https://www.google.com/recaptcha/api.js?render=6LfWZ7YfAAAAAPD7Q4zlI2TZU_mYatG48lJ97JzM"></script>
       <script>
         if(window.grecaptcha)
-        {grecaptcha.ready(function () {
+        {window.grecaptcha.ready(function () {
           {
             grecaptcha
               .execute("6LfWZ7YfAAAAAPD7Q4zlI2TZU_mYatG48lJ97JzM", {
