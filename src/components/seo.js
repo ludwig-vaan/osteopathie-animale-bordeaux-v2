@@ -22,14 +22,18 @@ const SEO = () => {
     >
       <script src="https://www.google.com/recaptcha/api.js?render=6LfWZ7YfAAAAAPD7Q4zlI2TZU_mYatG48lJ97JzM"></script>
       <script>
-        grecaptcha.ready(function(){" "}
-        {grecaptcha
-          .execute("6LfWZ7YfAAAAAPD7Q4zlI2TZU_mYatG48lJ97JzM", {
-            action: "homepage",
-          })
-          .then(function (token) {
-            document.getElementById("captchaResponse").value = token
-          })}
+        if(window.grecaptcha)
+        {grecaptcha.ready(function () {
+          {
+            grecaptcha
+              .execute("6LfWZ7YfAAAAAPD7Q4zlI2TZU_mYatG48lJ97JzM", {
+                action: "homepage",
+              })
+              .then(function (token) {
+                document.getElementById("captchaResponse").value = token
+              })
+          }
+        })}
         )
       </script>
       <meta name="description" content={seo.description} />
