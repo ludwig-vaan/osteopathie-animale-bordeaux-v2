@@ -54,7 +54,7 @@ const reasons = [
 
 export default function QuandConsulter({ id }) {
   return (
-    <div id={id} className="bg-gradient-to-r from-canard to-canard-light">
+    <div id={id} className="bg-gradient-to-l from-canard to-canard-light">
       <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
         <h2 className="text-3xl font-extrabold text-white tracking-tight">
           Quand consulter un ostéopathe ?

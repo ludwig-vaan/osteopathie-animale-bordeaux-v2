@@ -151,6 +151,11 @@ export default function Contact({ id }) {
                 className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-gold-500 focus:border-gold-500 border-gray-300 rounded-md"
                 placeholder="Message"
               ></textarea>
+              <input
+                type="hidden"
+                id="captchaResponse"
+                name="g-recaptcha-response"
+              />
               <button
                 type="submit"
                 onClick={handleClear}

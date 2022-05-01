@@ -25,10 +25,10 @@ export default function Hero({ children }) {
 
   return (
     <div className="h-screen bg-happy-dog bg-no-repeat bg-cover bg-center w-full ">
-      <Popover className="relative pt-6 pb-16 sm:pb-24">
+      <Popover className="relative pt-6 pb-16 sm:pb-24 ">
         {({ open }) => (
           <>
-            <div className="sticky top-0 z-20 max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="fixed top-0 z-40 flex md:justify-center justify-end py-4 md:py-0 w-full px-4 sm:px-6  md:bg-gradient-to-l to-canard from-canard-light">
               <nav
                 className="relative flex items-center justify-between sm:h-10 md:justify-center"
                 aria-label="Global"
@@ -44,7 +44,7 @@ export default function Hero({ children }) {
                     </div>
                   </div>
                 </div>
-                <div className="hidden md:flex md:space-x-10 ">
+                <div className="hidden md:flex md:space-x-10">
                   {navigation.map(item => (
                     <a
                       key={item.name}
@@ -58,7 +58,6 @@ export default function Hero({ children }) {
                 <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0"></div>
               </nav>
             </div>
-
             <Transition
               show={open}
               as={Fragment}
@@ -72,7 +71,7 @@ export default function Hero({ children }) {
               <Popover.Panel
                 focus
                 static
-                className="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+                className="absolute z-50 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
               >
                 <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
                   <div className="px-5 pt-4 flex items-center justify-between">
@@ -103,7 +102,6 @@ export default function Hero({ children }) {
                 </div>
               </Popover.Panel>
             </Transition>
-
             <main className=" relative mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
               <div className="text-center">
                 <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
