@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useState } from "react"
+import { GoogleReCaptcha } from "react-google-recaptcha-v3"
 
 export default function Contact({ id }) {
   const handleClear = () => {
@@ -6,6 +7,7 @@ export default function Contact({ id }) {
       document.contactForm.reset()
     }, 2500)
   }
+  const [token, setToken] = useState("")
   return (
     <div id={id} className="relative bg-white">
       <div className="absolute inset-0">
@@ -155,6 +157,12 @@ export default function Contact({ id }) {
                 type="hidden"
                 id="captchaResponse"
                 name="g-recaptcha-response"
+                value={token}
+              />
+              <GoogleReCaptcha
+                onVerify={token => {
+                  setToken(token)
+                }}
               />
               <button
                 type="submit"

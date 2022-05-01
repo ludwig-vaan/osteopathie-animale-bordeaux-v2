@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
+
 const SEO = () => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
@@ -20,22 +21,6 @@ const SEO = () => {
         lang: "fr",
       }}
     >
-      <script src="https://www.google.com/recaptcha/api.js?render=6LfWZ7YfAAAAAPD7Q4zlI2TZU_mYatG48lJ97JzM"></script>
-      <script>
-        if(window.grecaptcha)
-        {window.grecaptcha.ready(function () {
-          {
-            grecaptcha
-              .execute("6LfWZ7YfAAAAAPD7Q4zlI2TZU_mYatG48lJ97JzM", {
-                action: "homepage",
-              })
-              .then(function (token) {
-                document.getElementById("captchaResponse").value = token
-              })
-          }
-        })}
-        )
-      </script>
       <meta name="description" content={seo.description} />
       {seo.siteUrl && <meta property="og:url" content={seo.siteUrl} />}
       {seo.title && <meta property="og:title" content={seo.title} />}

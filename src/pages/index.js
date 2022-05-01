@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3"
 
 import "../components/layout.css"
 
@@ -40,7 +41,9 @@ const IndexPage = props => {
         <DeroulementConsultation />
         <OsteopathieAnimale id="osteopathie" />
         <QuiSuisJe />
-        <Contact id="contact" />
+        <GoogleReCaptchaProvider reCaptchaKey="6LfWZ7YfAAAAAPD7Q4zlI2TZU_mYatG48lJ97JzM">
+          <Contact id="contact" />
+        </GoogleReCaptchaProvider>
       </main>
       <Footer />
     </div>
