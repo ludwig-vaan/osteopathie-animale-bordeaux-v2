@@ -3,6 +3,7 @@ import { Popover, Transition } from "@headlessui/react"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
 import * as Icons from "./icons"
 import { openPopupWidget } from "react-calendly"
+import { Banner } from "./Banner"
 
 const navigation = [
   { name: "Animaux", href: "#animaux" },
@@ -19,8 +20,7 @@ const navigationSvg = {
 }
 
 export default function Hero({ children }) {
-  const url_calendly =
-    "https://calendly.com/osteopathe-animalier/consultation-osteopathique"
+  const url_calendly = "https://calendly.com/osteopathe-animalier"
   const onClick = () => openPopupWidget({ url: url_calendly })
 
   return (
