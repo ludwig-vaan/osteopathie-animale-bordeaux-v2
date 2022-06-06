@@ -6,6 +6,8 @@ export const Banner = () => {
 
   if (!visible) return null
 
+  if (!shouldShowBanner()) return null
+
   return (
     <div className="fixed top-0 inset-x-0 pt-2 md:pt-12 sm:pt-16 z-50">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
