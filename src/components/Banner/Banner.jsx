@@ -24,12 +24,12 @@ export const Banner = () => {
                 <span className="md:hidden">
                   Absence du 20 juin au 11 juillet, durant cette periode, prise
                   de rendez-vous uniquement en cabinet avec la remplaçante Lora
-                  Cloutet
+                  Cloutet (0760796457)
                 </span>
                 <span className="hidden md:inline">
                   Absence du 20 juin au 11 juillet, durant cette periode, prise
                   de rendez-vous uniquement en cabinet avec la remplaçante Lora
-                  Cloutet
+                  Cloutet (0760796457)
                 </span>
               </p>
             </div>
