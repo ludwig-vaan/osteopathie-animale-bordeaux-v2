@@ -1,5 +1,6 @@
 import React from "react"
 import { SpeakerphoneIcon, XIcon } from "@heroicons/react/outline"
+import { shouldShowBanner } from "./Banner.utils"
 
 export const Banner = () => {
   const [visible, setVisible] = React.useState(true)
