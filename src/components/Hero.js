@@ -19,7 +19,8 @@ const navigationSvg = {
 }
 
 export default function Hero({ children }) {
-  const url_calendly = "https://calendly.com/osteopathe-animalier"
+  const url_calendly =
+    "https://calendly.com/osteopathe-animalier/consultation-osteopathique"
   const onClick = () => openPopupWidget({ url: url_calendly })
 
   return (
