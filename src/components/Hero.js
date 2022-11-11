@@ -3,7 +3,6 @@ import { Popover, Transition } from "@headlessui/react"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
 import * as Icons from "./icons"
 import { openPopupWidget } from "react-calendly"
-import { Banner } from "./Banner"
 
 const navigation = [
   { name: "Animaux", href: "#animaux" },

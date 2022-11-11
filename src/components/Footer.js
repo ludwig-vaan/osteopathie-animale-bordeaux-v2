@@ -31,13 +31,15 @@ export default function Footer() {
             {`${year} Agathe Lescout, Ostéopathe Animalier. Tous droits
             réservés.`}
             <span>
-              <a
-                href="javascript:openAxeptioCookies()"
+              <button
+                onClick={() => {
+                  window.openAxeptioCookie && window.openAxeptioCookies()
+                }}
                 className="text-gray-400 hover:text-gray-400"
               >
                 {" "}
                 Vos préférences en matière de cookies
-              </a>
+              </button>
             </span>
           </p>
         </div>
