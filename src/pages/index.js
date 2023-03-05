@@ -16,7 +16,6 @@ import Contact from "../components/Contact"
 import Footer from "../components/Footer"
 import Seo from "../components/seo"
 import CarteCabinet from "../components/CarteCabinet"
-import { Banner } from "../components/Banner/Banner"
 
 const IndexPage = props => {
   const images = props.data.allFile.edges
@@ -32,7 +31,6 @@ const IndexPage = props => {
   return (
     <div>
       <main>
-        <Banner />
         <Seo />
         <Hero />
         <AnimalSection id="animaux" images={imagesTree} />
