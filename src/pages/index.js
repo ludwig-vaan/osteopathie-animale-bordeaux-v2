@@ -1,21 +1,22 @@
-import React from "react"
 import { graphql } from "gatsby"
+import React from "react"
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3"
 
 import "../components/layout.css"
 
-import Hero from "../components/Hero"
 import AnimalSection from "../components/AnimalSection/AnimalSection"
-import NouvelleAquitaine from "../components/NouvelleAquitaine"
-import QuandConsulter from "../components/QuandConsulter"
-import Prices from "../components/Prices"
-import DeroulementConsultation from "../components/DeroulementConsultation"
-import OsteopathieAnimale from "../components/OsteopathieAnimale"
-import QuiSuisJe from "../components/QuiSuisJe"
-import Contact from "../components/Contact"
-import Footer from "../components/Footer"
-import Seo from "../components/seo"
 import CarteCabinet from "../components/CarteCabinet"
+import Contact from "../components/Contact"
+import DeroulementConsultation from "../components/DeroulementConsultation"
+import Footer from "../components/Footer"
+import Hero from "../components/Hero"
+import NouvelleAquitaine from "../components/NouvelleAquitaine"
+import OsteopathieAnimale from "../components/OsteopathieAnimale"
+import Prices from "../components/Prices"
+import QuandConsulter from "../components/QuandConsulter"
+import QuiSuisJe from "../components/QuiSuisJe"
+import Seo from "../components/seo"
+import Banner from "../components/Banner/Banner"
 
 const IndexPage = props => {
   const images = props.data.allFile.edges
@@ -32,6 +33,7 @@ const IndexPage = props => {
     <div>
       <main>
         <Seo />
+        <Banner />
         <Hero />
         <AnimalSection id="animaux" images={imagesTree} />
         <NouvelleAquitaine />

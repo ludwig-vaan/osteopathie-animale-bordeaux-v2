@@ -140,13 +140,13 @@ function Hero() {
                       onClick={onClick}
                       className="flex w-full items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gold-600 bg-white hover:bg-opacity-70 sm:px-8"
                     >
-                      Prendre rendez-vous en cabinet
+                      Prendre rendez-vous en ligne
                     </button>
                     <a
                       href="#contact"
                       className="flex items-center text-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gold-500 hover:bg-opacity-70 sm:px-8"
                     >
-                      Prendre rendez-vous à domicile
+                      Prendre rendez-vous par téléphone
                     </a>
                   </div>
                 </div>

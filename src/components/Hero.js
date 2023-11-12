@@ -1,8 +1,8 @@
-import React, { Fragment } from "react"
 import { Popover, Transition } from "@headlessui/react"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
-import * as Icons from "./icons"
+import React, { Fragment } from "react"
 import { openPopupWidget } from "react-calendly"
+import * as Icons from "./icons"
 
 const navigation = [
   { name: "Animaux", href: "#animaux" },
@@ -18,9 +18,10 @@ const navigationSvg = {
   "#osteopathie": <Icons.Osteopathie />,
 }
 
+const url_calendly =
+  "https://calendly.com/osteopathe-animalier/"
+
 export default function Hero({ children }) {
-  const url_calendly =
-    "https://calendly.com/osteopathe-animalier/consultation-osteopathique"
   const onClick = () => openPopupWidget({ url: url_calendly })
 
   return (
@@ -30,7 +31,7 @@ export default function Hero({ children }) {
           <>
             <div className="fixed top-0 z-40 flex md:justify-center justify-end py-4 md:py-0 w-full px-4 sm:px-6  md:bg-gradient-to-l to-canard from-canard-light">
               <nav
-                className="relative flex items-center justify-between sm:h-10 md:justify-center"
+                className="relative flex items-center justify-between sm:h-10 md:justify-center py-6"
                 aria-label="Global"
               >
                 <div className="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
@@ -118,25 +119,19 @@ export default function Hero({ children }) {
                     ostéopathe animalier
                   </span>
                 </h1>
-                <p
-                  className="mt-6 max-w-lg mx-auto text-center text-xl text-white sm:max-w-3xl"
-                  style={{ textShadow: "#143545 1px 0 10px" }}
-                >
-                  consultation à domicile et en cabinet
-                </p>
                 <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
                   <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
                     <button
                       onClick={onClick}
                       className="flex w-full items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gold-600 bg-white hover:bg-opacity-70 sm:px-8"
                     >
-                      Prendre rendez-vous en cabinet
+                      Prendre rendez-vous en ligne
                     </button>
                     <a
                       href="#contact"
                       className="flex items-center text-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gold-500 hover:bg-opacity-70 sm:px-8"
                     >
-                      Prendre rendez-vous à domicile
+                      Prendre rendez-vous par téléphone
                     </a>
                   </div>
                 </div>
