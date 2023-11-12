@@ -1,4 +1,15 @@
 module.exports = {
+  headers: [
+    {
+      source: `/`,
+      headers: [
+        {
+          key: `Referrer-Policy`,
+          value: `strict-origin-when-cross-origin`,
+        },
+      ],
+    },
+  ],
   siteMetadata: {
     title: `Osteopathe Animalier Bordeaux - Agathe Lescout`,
     titleTemplate: 'A|O· osteopathie animale',
