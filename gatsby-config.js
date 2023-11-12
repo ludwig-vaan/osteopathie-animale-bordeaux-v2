@@ -1,3 +1,5 @@
+const adapter = require('gatsby-adapter-netlify');
+
 module.exports = {
   headers: [
     {
@@ -17,6 +19,14 @@ module.exports = {
       "L'Ostéopathe animalier Agathe Lescout, intervenant sur Bordeaux et Gironde!",
     siteUrl: 'https://www.osteopathie-animale-bordeaux.fr', // No trailing slash allowed!
   },
+  adapter: adapter({
+    headers: [
+      {
+        key: `Referrer-Policy`,
+        value: `strict-origin-when-cross-origin`,
+      },
+    ],
+  }),
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
