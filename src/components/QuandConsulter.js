@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 import {
   Bilan,
   BreakBone,
@@ -7,50 +7,50 @@ import {
   Thunder,
   Gate,
   Lungs,
-} from "./icons"
+} from './icons';
 
 const reasons = [
   {
-    title: "Bilan annuel",
+    title: 'Bilan annuel',
     description:
       "Une à deux consultations par an permet de prévenir des pathologies liées à la croissance, à l'activité et à l'âge",
     icon: () => <Bilan />,
   },
   {
-    title: "Réeducation",
+    title: 'Réeducation',
     description:
-      "Post-chirurgicale ou post-traumatique (fracture, tendinite, entorse etc.)",
+      'Post-chirurgicale ou post-traumatique (fracture, tendinite, entorse etc.)',
     icon: () => <BreakBone />,
   },
   {
-    title: "Troubles ostéo-articulaire",
+    title: 'Troubles ostéo-articulaire',
     description:
       "Boiterie, arthrose, contracture, irrégularité d'allure, dorsalgie etc.",
     icon: () => <Articulation />,
   },
   {
-    title: "Croissance",
+    title: 'Croissance',
     description: "Défaut d'aplombs, malformation, dysplasie etc.",
     icon: () => <Grow />,
   },
   {
-    title: "Troubles du comportement",
-    description: "Craintes excessives, agressivité, tics etc.",
+    title: 'Troubles du comportement',
+    description: 'Craintes excessives, agressivité, tics etc.',
     icon: () => <Thunder />,
   },
   {
-    title: "Sport",
+    title: 'Sport',
     description:
-      "Baisse des performances, préparation à la compétition et récupération",
+      'Baisse des performances, préparation à la compétition et récupération',
     icon: () => <Gate />,
   },
   {
-    title: "Troubles fonctionnels",
+    title: 'Troubles fonctionnels',
     description:
-      "Systèmes respiratoire, nerveux, digestif, vasculaire, reproducteur, urinaire et hormonal",
+      'Systèmes respiratoire, nerveux, digestif, vasculaire, reproducteur, urinaire et hormonal',
     icon: () => <Lungs />,
   },
-]
+];
 
 export default function QuandConsulter({ id }) {
   return (
@@ -108,7 +108,7 @@ export default function QuandConsulter({ id }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 function Reason({ title, description, icon }) {
@@ -124,5 +124,5 @@ function Reason({ title, description, icon }) {
         <p className="mt-2 text-base text-white">{description}</p>
       </div>
     </div>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 
 export default function Animal() {
   return (
@@ -18,5 +18,5 @@ export default function Animal() {
         fill="#ffffff"
       />
     </svg>
-  )
+  );
 }

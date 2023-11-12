@@ -5,7 +5,7 @@
  */
 
 // You can delete this file if you're not using it
-import smoothscroll from "smoothscroll-polyfill"
+import smoothscroll from 'smoothscroll-polyfill';
 
 // kick off the polyfill!
-smoothscroll.polyfill()
+smoothscroll.polyfill();

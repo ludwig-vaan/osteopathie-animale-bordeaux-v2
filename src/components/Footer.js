@@ -1,7 +1,7 @@
-import React from "react"
+import React from 'react';
 
 export default function Footer() {
-  const year = new Date().getFullYear()
+  const year = new Date().getFullYear();
   return (
     <footer className="bg-gray-50">
       <div className="max-w-7xl mx-auto pt-4 pb-4 px-4 sm:px-6 lg:pt-4 lg:px-4">
@@ -27,17 +27,17 @@ export default function Footer() {
             </a>
           </div>
           <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-            &copy;{" "}
+            &copy;{' '}
             {`${year} Agathe Lescout, Ostéopathe Animalier. Tous droits
             réservés.`}
             <span>
               <button
                 onClick={() => {
-                  window.openAxeptioCookie && window.openAxeptioCookies()
+                  window.openAxeptioCookie && window.openAxeptioCookies();
                 }}
                 className="text-gray-400 hover:text-gray-400"
               >
-                {" "}
+                {' '}
                 Vos préférences en matière de cookies
               </button>
             </span>
@@ -45,5 +45,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

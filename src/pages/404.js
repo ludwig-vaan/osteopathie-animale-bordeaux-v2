@@ -1,30 +1,29 @@
-import Seo from "../components/seo"
+import Seo from '../components/seo';
 
 /* This example requires Tailwind CSS v2.0+ */
-import React, { Fragment } from "react"
-import { Popover, Transition } from "@headlessui/react"
-import { MenuIcon, XIcon } from "@heroicons/react/outline"
-import * as Icons from "../components/icons"
-import { openPopupWidget } from "react-calendly"
+import { Popover, Transition } from '@headlessui/react';
+import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import React, { Fragment } from 'react';
+import { PopupButton } from 'react-calendly';
+import * as Icons from '../components/icons';
 
 const navigation = [
-  { name: "Animaux", href: "#animaux" },
-  { name: "Quand consulter ?", href: "#quand-consulter" },
-  { name: "Tarifs", href: "#tarifs" },
-  { name: "Ostéopathie", href: "#osteopathie" },
-]
+  { name: 'Animaux', href: '#animaux' },
+  { name: 'Quand consulter ?', href: '#quand-consulter' },
+  { name: 'Tarifs', href: '#tarifs' },
+  { name: 'Ostéopathie', href: '#osteopathie' },
+];
 
 const navigationSvg = {
-  "#animaux": <Icons.Animal />,
-  "#quand-consulter": <Icons.QuandConsulter />,
-  "#tarifs": <Icons.Tarifs />,
-  "#osteopathie": <Icons.Osteopathie />,
-}
+  '#animaux': <Icons.Animal />,
+  '#quand-consulter': <Icons.QuandConsulter />,
+  '#tarifs': <Icons.Tarifs />,
+  '#osteopathie': <Icons.Osteopathie />,
+};
 
 function Hero() {
   const url_calendly =
-    "https://calendly.com/osteopathe-animalier/consultation-osteopathique"
-  const onClick = () => openPopupWidget({ url: url_calendly })
+    'https://calendly.com/osteopathe-animalier/consultation-osteopathique';
 
   return (
     <div className="h-screen bg-happy-dog bg-no-repeat bg-cover bg-center w-full ">
@@ -48,7 +47,7 @@ function Hero() {
                   </div>
                 </div>
                 <div className="hidden md:flex md:space-x-10">
-                  {navigation.map(item => (
+                  {navigation.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
@@ -88,7 +87,7 @@ function Hero() {
                     </div>
                   </div>
                   <div className="px-2 pt-2 pb-3">
-                    {navigation.map(item => (
+                    {navigation.map((item) => (
                       <a
                         key={item.name}
                         href={item.href}
@@ -107,18 +106,18 @@ function Hero() {
               </Popover.Panel>
             </Transition>
 
-            <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
+            <div className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
               <div className="text-center">
                 <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                   <span
                     className="block text-white"
-                    style={{ textShadow: "#143545  1px 0 10px" }}
+                    style={{ textShadow: '#143545  1px 0 10px' }}
                   >
                     Agathe Lescout
-                  </span>{" "}
+                  </span>{' '}
                   <span
                     className="block text-gold-500"
-                    style={{ textShadow: "#143545 1px 0 10px" }}
+                    style={{ textShadow: '#143545 1px 0 10px' }}
                   >
                     ostéopathe animalier
                   </span>
@@ -130,18 +129,18 @@ function Hero() {
                 </p>
                 <p
                   className="mt-6 max-w-lg mx-auto text-center text-xl text-white sm:max-w-3xl"
-                  style={{ textShadow: "#143545 1px 0 10px" }}
+                  style={{ textShadow: '#143545 1px 0 10px' }}
                 >
                   consultation à domicile et en cabinet
                 </p>
                 <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
                   <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-                    <button
-                      onClick={onClick}
+                    <PopupButton
+                      url={url_calendly}
+                      rootElement={document.getElementById('root')}
+                      text="Prendre rendez-vous en ligne"
                       className="flex w-full items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gold-600 bg-white hover:bg-opacity-70 sm:px-8"
-                    >
-                      Prendre rendez-vous en ligne
-                    </button>
+                    />
                     <a
                       href="#contact"
                       className="flex items-center text-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gold-500 hover:bg-opacity-70 sm:px-8"
@@ -151,12 +150,12 @@ function Hero() {
                   </div>
                 </div>
               </div>
-            </main>
+            </div>
           </>
         )}
       </Popover>
     </div>
-  )
+  );
 }
 
-export default Hero
+export default Hero;

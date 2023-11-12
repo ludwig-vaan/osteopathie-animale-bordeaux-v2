@@ -1,13 +1,13 @@
-import React, { useState } from "react"
-import { GoogleReCaptcha } from "react-google-recaptcha-v3"
+import React, { useState } from 'react';
+import { GoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 export default function Contact({ id }) {
   const handleClear = () => {
     setTimeout(() => {
-      document.contactForm.reset()
-    }, 2500)
-  }
-  const [token, setToken] = useState("")
+      document.contactForm.reset();
+    }, 2500);
+  };
+  const [token, setToken] = useState('');
   return (
     <div id={id} className="relative bg-white">
       <div className="absolute inset-0">
@@ -23,22 +23,29 @@ export default function Contact({ id }) {
               À domicile
             </h3>
             <p className="mt-2 text-lg leading-6 text-gray-500">
-              <span className="font-bold">Lundi au Vendredi :</span> 09h à 19h
+              <span className="font-bold">Mardi et Mercredi :</span> 11h à 19h30
             </p>
             <h3 className="mt-6 text-lg font-extrabold tracking-tight text-gold-500 sm:text-xl">
               En cabinet
             </h3>
-            <p className="mt-3 text-lg leading-6 text-gray-500">
-              <span className="font-bold">Lundi :</span> 09h30 à 12h30
+            <h4 className="mt-3 text-lg leading-6 text-gray-500 font-bold">
+              Bègles :
+            </h4>
+            <p className="ml-2 mt-3 text-lg leading-6 text-gray-500">
+              Lundi et Jeudi : 11h à 19h30
             </p>
-            <p className="mt-2 text-lg leading-6 text-gray-500">
-              <span className="font-bold">Mardi :</span> 14h à 18h
-            </p>
-            <p className="mt-2 text-lg leading-6 text-gray-500">
-              <span className="font-bold">Vendredi :</span> 10h à 18h30
+            <h4 className="mt-3 text-lg leading-6 text-gray-500 font-bold">
+              Saint-Aubin-de-Médoc :
+            </h4>
+            <p className="ml-2 mt-3 text-lg leading-6 text-gray-500">
+              Vendredi : 9h30 à 18h30
             </p>
             <dl className="mt-8 text-base text-gray-500">
-              <a href="tel:+33665550792" className="text-gray-500">
+              <a
+                href="tel:+33665550792"
+                className="text-gray-500"
+                alt="telephone"
+              >
                 <div className="mt-6">
                   <dt className="sr-only">Téléphone</dt>
                   <dd className="flex">
@@ -64,6 +71,7 @@ export default function Contact({ id }) {
               <a
                 href="mailto:agathe.lescout.osteo@gmail.com"
                 className="text-gray-500"
+                alt="email"
               >
                 <div className="mt-3">
                   <dt className="sr-only">Email</dt>
@@ -160,8 +168,8 @@ export default function Contact({ id }) {
                 value={token}
               />
               <GoogleReCaptcha
-                onVerify={token => {
-                  setToken(token)
+                onVerify={(token) => {
+                  setToken(token);
                 }}
               />
               <button
@@ -176,5 +184,5 @@ export default function Contact({ id }) {
         </div>
       </div>
     </div>
-  )
+  );
 }

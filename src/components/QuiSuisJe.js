@@ -1,5 +1,5 @@
-import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
+import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 
 export default function QuiSuisJe() {
   return (
@@ -30,28 +30,28 @@ export default function QuiSuisJe() {
                       </div>
                       <div className="text-lg">
                         <p className="text-gray-500">
-                          Ostéopathe animalier en région Aquitaine, je réalise
-                          des consultations à domicile sur les chiens, les
-                          chats, les NAC, les chevaux et les vaches. Après un
-                          master en physiologie et comportement animal je décide
-                          de me consacrer entièrement au bien être animal. Je me
-                          forme pendant 4 ans à l'ostéopathie animale sur tous
-                          les animaux au CNESOA. Ces années d'études me
-                          permettent de pratiquer et de me perfectionner sur de
-                          nombreuses techniques tel que le structurel, les
-                          étirements musculaires, le viscéral, le tissulaire,
-                          les techniques crânio-sacrées, les techniques réflexes
-                          et les points d'acupressures, afin d'appliquer au
-                          mieux le traitement adapté à votre animal et à sa
-                          pathologie. Toujours désireuse de me perfectionner et
-                          de vous offrir le meilleur en terme de bien être
-                          animal, j'ai pu valider mon travail auprès de l'Ordre
-                          National des Vétérinaires (CNOV) et ainsi être
-                          inscrite au Registre National d'Aptitude en
-                          ostéopathie animale, seule liste certifiant les
-                          ostéopathes animaliers en France et visible sur{" "}
+                          Passionnée par le bien-être animal, je suis Agathe
+                          Lescout, ostéopathe dédiée aux animaux en région
+                          Aquitaine. Forte d'un master en physiologie et
+                          comportement animal, j'ai approfondi ma vocation en me
+                          spécialisant en ostéopathie animale au CNESOA pendant
+                          4 ans. <br />
+                          Ma pratique englobe une gamme étendue de techniques -
+                          du structurel aux étirements musculaires, en passant
+                          par le viscéral, le tissulaire, les approches
+                          crânio-sacrées, les techniques réflexes et
+                          l'acupressure. <br />
+                          <br />
+                          Mon objectif ? <br />
+                          Offrir des soins personnalisés et adaptés à chaque
+                          animal, qu'il s'agisse de chiens, chats, NAC, chevaux
+                          ou vaches, en cabinet ou à domicile. Mon engagement
+                          pour l'excellence dans le bien-être animal est
+                          certifié par mon inscription au Registre National
+                          d'Aptitude en ostéopathie animale, validé par l'Ordre
+                          National des Vétérinaires (CNOV){' '}
                           <a
-                            href="https://www.veterinaire.fr/les-autres-metiers/liste-des-personnes-non-veterinaires-pouvant-realiser-des-actes-dosteopathie-animale/registre-national-daptitude-rna.html"
+                            href="https://extranet.veterinaire.fr/annuaires/osteopathes-rna"
                             target="_blank"
                             rel="noreferrer"
                           >
@@ -68,5 +68,5 @@ export default function QuiSuisJe() {
         </div>
       </div>
     </div>
-  )
+  );
 }

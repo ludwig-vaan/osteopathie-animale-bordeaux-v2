@@ -1,45 +1,47 @@
-import { graphql } from "gatsby"
-import React from "react"
-import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3"
+import { graphql } from 'gatsby';
+import React from 'react';
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
-import "../components/layout.css"
+import '../components/layout.css';
 
-import AnimalSection from "../components/AnimalSection/AnimalSection"
-import CarteCabinet from "../components/CarteCabinet"
-import Contact from "../components/Contact"
-import DeroulementConsultation from "../components/DeroulementConsultation"
-import Footer from "../components/Footer"
-import Hero from "../components/Hero"
-import NouvelleAquitaine from "../components/NouvelleAquitaine"
-import OsteopathieAnimale from "../components/OsteopathieAnimale"
-import Prices from "../components/Prices"
-import QuandConsulter from "../components/QuandConsulter"
-import QuiSuisJe from "../components/QuiSuisJe"
-import Seo from "../components/seo"
-import Banner from "../components/Banner/Banner"
+import AnimalSection from '../components/AnimalSection/AnimalSection';
+import Banner from '../components/Banner/Banner';
+import CarteCabinet from '../components/CarteCabinet';
+import Consultations from '../components/Consultations';
+import Contact from '../components/Contact';
+import DeroulementConsultation from '../components/DeroulementConsultation';
+import Footer from '../components/Footer';
+import Hero from '../components/Hero';
+import CabinetStAubin from '../components/CabinetStAubin';
+import OsteopathieAnimale from '../components/OsteopathieAnimale';
+import Prix from '../components/Prix';
+import QuandConsulter from '../components/QuandConsulter';
+import QuiSuisJe from '../components/QuiSuisJe';
+import Seo from '../components/seo';
 
-const IndexPage = props => {
-  const images = props.data.allFile.edges
+const IndexPage = (props) => {
+  const images = props.data.allFile.edges;
   const imagesTree = images?.reduce((previousValue, currentValue) => {
     const newValue = {
       ...previousValue,
       [currentValue.node.name]:
         currentValue.node.childImageSharp.gatsbyImageData,
-    }
-    return newValue
-  }, {})
+    };
+    return newValue;
+  }, {});
 
   return (
     <div>
-      <main>
+      <main id="root">
         <Seo />
         <Banner />
         <Hero />
         <AnimalSection id="animaux" images={imagesTree} />
-        <NouvelleAquitaine />
+        <Consultations />
+        <CabinetStAubin />
         <CarteCabinet />
         <QuandConsulter id="quand-consulter" />
-        <Prices id="tarifs" images={imagesTree} />
+        <Prix id="tarifs" images={imagesTree} />
         <DeroulementConsultation />
         <OsteopathieAnimale id="osteopathie" />
         <QuiSuisJe />
@@ -49,8 +51,8 @@ const IndexPage = props => {
       </main>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
 export const pageQuery = graphql`
   query Image {
@@ -65,6 +67,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default IndexPage
+export default IndexPage;

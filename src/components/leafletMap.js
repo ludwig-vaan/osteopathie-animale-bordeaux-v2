@@ -1,7 +1,7 @@
-import React from "react"
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
+import React from 'react';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
-import { isDomAvailable } from "../lib/utils"
+import { isDomAvailable } from '../lib/utils';
 
 const Leaflet = () => {
   if (!isDomAvailable()) {
@@ -9,7 +9,7 @@ const Leaflet = () => {
       <div>
         <p>Loading map...</p>
       </div>
-    )
+    );
   }
 
   return (
@@ -33,7 +33,7 @@ const Leaflet = () => {
         </Popup>
       </Marker>
     </MapContainer>
-  )
-}
+  );
+};
 
-export default Leaflet
+export default Leaflet;

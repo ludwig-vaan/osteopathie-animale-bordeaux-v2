@@ -1,7 +1,7 @@
-import React from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
+import React from 'react';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
-export default function Section({ name, text, image, alt = "" }) {
+export default function Section({ name, text, image, alt = '' }) {
   return (
     <>
       <div className="mt-6">
@@ -22,5 +22,5 @@ export default function Section({ name, text, image, alt = "" }) {
         </div>
       </div>
     </>
-  )
+  );
 }

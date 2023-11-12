@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `Osteopathe Animalier Bordeaux - Agathe Lescout`,
-    titleTemplate: "A|O· osteopathie animale",
+    titleTemplate: 'A|O· osteopathie animale',
     description:
       "L'Ostéopathe animalier Agathe Lescout, intervenant sur Bordeaux et Gironde!",
-    siteUrl: "https://www.osteopathie-animale-bordeaux.fr", // No trailing slash allowed!
+    siteUrl: 'https://www.osteopathie-animale-bordeaux.fr', // No trailing slash allowed!
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -23,9 +23,9 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Osteo Bordeaux`,
-        lang: "fr",
-        orientation: "portrait-primary",
-        dir: "rtl",
+        lang: 'fr',
+        orientation: 'portrait-primary',
+        dir: 'rtl',
         short_name: `OsteoBDX`,
         start_url: `/`,
         background_color: `#ffffff`,
@@ -39,7 +39,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
-        postCssPlugins: [require("tailwindcss"), require("autoprefixer")],
+        postCssPlugins: [require('tailwindcss'), require('autoprefixer')],
       },
     },
     {
@@ -50,11 +50,5 @@ module.exports = {
         tailwind: true,
       },
     },
-    {
-      resolve: "gatsby-plugin-react-leaflet",
-      options: {
-        linkStyles: true, // (default: true) Enable/disable loading stylesheets via CDN
-      },
-    },
   ],
-}
+};

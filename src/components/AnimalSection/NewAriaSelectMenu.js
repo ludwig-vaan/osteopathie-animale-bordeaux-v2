@@ -1,32 +1,32 @@
 /* This example requires Tailwind CSS v2.0+ */
-import React, { Fragment, useState } from "react"
-import { Listbox, Transition } from "@headlessui/react"
-import { CheckIcon, SelectorIcon } from "@heroicons/react/solid"
+import React, { Fragment, useState } from 'react';
+import { Listbox, Transition } from '@headlessui/react';
+import { CheckIcon, SelectorIcon } from '@heroicons/react/solid';
 
 const option = {
-  chien: "Le chien",
-  chat: "Le chat",
-  cheval: "Le cheval",
-  vache: "La vache",
-  nac: "Les nouveaux animaux de compagnie",
-}
+  chien: 'Le chien',
+  chat: 'Le chat',
+  cheval: 'Le cheval',
+  vache: 'La vache',
+  nac: 'Les nouveaux animaux de compagnie',
+};
 
-const animals = Object.entries(option)
+const animals = Object.entries(option);
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(" ")
+  return classes.filter(Boolean).join(' ');
 }
 
 export default function AriaSelectMenu({ initialAnimal, setAnimal }) {
-  const [selected, setSelected] = useState(initialAnimal)
+  const [selected, setSelected] = useState(initialAnimal);
 
   return (
     <div className="sm:hidden mt-8">
       <Listbox
         value={selected}
-        onChange={e => {
-          setAnimal(e)
-          setSelected(e)
+        onChange={(e) => {
+          setAnimal(e);
+          setSelected(e);
         }}
       >
         {({ open }) => (
@@ -53,13 +53,13 @@ export default function AriaSelectMenu({ initialAnimal, setAnimal }) {
                   static
                   className="absolute mt-1 w-full bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm"
                 >
-                  {animals.map(animal => (
+                  {animals.map((animal) => (
                     <Listbox.Option
                       key={animal[0]}
                       className={({ active }) =>
                         classNames(
-                          active ? "text-white bg-gold-600" : "text-gray-900",
-                          "cursor-default select-none relative py-2 pl-8 pr-4"
+                          active ? 'text-white bg-gold-600' : 'text-gray-900',
+                          'cursor-default select-none relative py-2 pl-8 pr-4'
                         )
                       }
                       value={animal[0]}
@@ -68,8 +68,8 @@ export default function AriaSelectMenu({ initialAnimal, setAnimal }) {
                         <>
                           <span
                             className={classNames(
-                              selected ? "font-semibold" : "font-normal",
-                              "block truncate"
+                              selected ? 'font-semibold' : 'font-normal',
+                              'block truncate'
                             )}
                           >
                             {animal[1]}
@@ -78,8 +78,8 @@ export default function AriaSelectMenu({ initialAnimal, setAnimal }) {
                           {selected ? (
                             <span
                               className={classNames(
-                                active ? "text-white" : "text-gold-600",
-                                "absolute inset-y-0 left-0 flex items-center pl-1.5"
+                                active ? 'text-white' : 'text-gold-600',
+                                'absolute inset-y-0 left-0 flex items-center pl-1.5'
                               )}
                             >
                               <CheckIcon
@@ -99,5 +99,5 @@ export default function AriaSelectMenu({ initialAnimal, setAnimal }) {
         )}
       </Listbox>
     </div>
-  )
+  );
 }

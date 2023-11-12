@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 
 export default function Bilan() {
   return (
@@ -19,5 +19,5 @@ export default function Bilan() {
       <rect x="9" y="3" width="6" height="4" rx="2" />
       <path d="M9 14l2 2l4 -4" />
     </svg>
-  )
+  );
 }

@@ -1,21 +1,21 @@
-import React, { useState, useRef, useEffect } from "react"
-import Section from "./Section"
-import { configuration } from "./configutation"
+import React, { useState, useRef, useEffect } from 'react';
+import Section from './Section';
+import { configuration } from './configutation';
 // import AriaSelecMenu from "./AriaSelectMenu"
-import AriaSelecMenu from "./NewAriaSelectMenu"
-import AriaSelecMenuWeb from "./AriaSelectMenuWeb"
+import AriaSelecMenu from './NewAriaSelectMenu';
+import AriaSelecMenuWeb from './AriaSelectMenuWeb';
 
 export default function AnimalSection({ id, images }) {
-  const [animal, setAnimal] = useState("chien")
-  const [height, setHeight] = useState(0)
-  const ref = useRef(null)
+  const [animal, setAnimal] = useState('chien');
+  const [height, setHeight] = useState(0);
+  const ref = useRef(null);
 
   useEffect(() => {
-    ref.current && setHeight(ref.current.clientHeight)
-  }, [])
+    ref.current && setHeight(ref.current.clientHeight);
+  }, []);
 
-  const currentAnimal = configuration[animal]
-  const image = images[currentAnimal.key]
+  const currentAnimal = configuration[animal];
+  const image = images[currentAnimal.key];
 
   return (
     <div
@@ -39,5 +39,5 @@ export default function AnimalSection({ id, images }) {
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 
 export default function Thunder() {
   return (
@@ -14,5 +14,5 @@ export default function Thunder() {
         fill="#E9B857"
       />
     </svg>
-  )
+  );
 }

@@ -1,7 +1,7 @@
 export const configuration = {
   chien: {
-    name: "Le chien",
-    key: "sectionChien",
+    name: 'Le chien',
+    key: 'sectionChien',
     text: `Tout comme nous, le corps du chien subit les contraintes de la
       vie quotidienne. Agility, canicross, simples jeux ou promenade,
       quelle que soit son activité votre chien est soumis à des
@@ -22,11 +22,11 @@ export const configuration = {
       meilleures allures au travail. Tout ce qu’il faut pour que lui
       et vous puissiez continuer à prendre du plaisir dans votre
       activité !`,
-    alt: "deux chiens",
+    alt: 'deux chiens',
   },
   chat: {
-    name: "Le chat",
-    key: "sectionChat",
+    name: 'Le chat',
+    key: 'sectionChat',
     text: `Malgré sa souplesse légendaire, le chat est pourtant le premier
       à subir les chutes, les faux mouvements et autres petits
       traumatismes du quotidien, et il sera le dernier à montrer les
@@ -38,11 +38,11 @@ export const configuration = {
       avec tic de léchage, la rééducation post-traumatique suite à une
       chute, l’arthrose, les troubles respiratoires et l’insuffisance
       rénale.`,
-    alt: "un chat",
+    alt: 'un chat',
   },
   cheval: {
-    name: "Le cheval",
-    key: "sectionCheval",
+    name: 'Le cheval',
+    key: 'sectionCheval',
     text: `"Nous avons presque oublié combien il est étonnant qu'un animal
       aussi grand, aussi puissant et aussi intelligent puisse accepter
       sur son dos un autre animal tellement plus faible!" Peter Gray.
@@ -60,11 +60,11 @@ export const configuration = {
       préparer à des épreuves importantes ou améliorer ses
       performances. Ils peuvent également le consulter en prévention
       afin d’éviter tendinites, arthroses ou entorses à répétition.`,
-    alt: "un cheval",
+    alt: 'un cheval',
   },
   vache: {
-    name: "La vache",
-    key: "sectionVache",
+    name: 'La vache',
+    key: 'sectionVache',
     text: `Qu’elle soit laitière ou allaitante la vache en milieu d’élevage
       est souvent sujette aux glissades, peut se coincer dans les
       logettes ou les cornadis et ainsi se blesser, se bloquer le dos
@@ -80,11 +80,11 @@ export const configuration = {
       pour les bovins sont les boiteries, les troubles digestifs et
       respiratoires, les vêlages difficiles, la vache couchée, le veau
       qui ne tête pas ou qui ne se lève pas.`,
-    alt: "une vache",
+    alt: 'une vache',
   },
   nac: {
-    name: "Les nouveaux animaux de compagnie",
-    key: "sectionLapin",
+    name: 'Les nouveaux animaux de compagnie',
+    key: 'sectionLapin',
     text: `Rongeurs, lapins, furets, tous ces nouveaux animaux domestiques
       font désormais partie de nos vies et subissent tout autant que
       les autres espèces les contraintes de la vie quotidienne. Ses
@@ -96,6 +96,6 @@ export const configuration = {
       post-traumatiques (chute, coincé dans la cage etc…), les
       troubles digestifs et respiratoires, une perte d’état général et
       un changement de comportement.`,
-    alt: "un lapin",
+    alt: 'un lapin',
   },
-}
+};

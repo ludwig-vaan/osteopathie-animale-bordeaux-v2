@@ -1,63 +1,63 @@
-import React, { useEffect, useState } from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
+import React, { useEffect, useState } from 'react';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 const prestations = [
   {
-    id: "chien-chat",
-    title: "Chien & Chat",
-    imageName: "chienetchat",
-    alt: "chien et chat",
-    basePrice: "60",
-    domicilePrice: "70",
+    id: 'chien-chat',
+    title: 'Chien & Chat',
+    imageName: 'chienetchat',
+    alt: 'chien et chat',
+    basePrice: '60',
+    domicilePrice: '80',
     variants: [
-      { description: "adulte", basePrice: "60", domicilePrice: "70" },
-      { description: "moins de 6 mois", basePrice: "50", domicilePrice: "60" },
-      { description: "moins de 3 mois", basePrice: "40", domicilePrice: "50" },
+      { description: 'adulte', basePrice: '60', domicilePrice: '80' },
+      { description: 'moins de 6 mois', basePrice: '50', domicilePrice: '70' },
+      { description: 'moins de 3 mois', basePrice: '40', domicilePrice: '60' },
     ],
   },
   {
-    id: "cheval",
-    title: "Cheval",
-    imageName: "cheval",
-    alt: "cheval",
-    domicilePrice: "90",
+    id: 'cheval',
+    title: 'Cheval',
+    imageName: 'cheval',
+    alt: 'cheval',
+    domicilePrice: '100',
     basePrice: null,
   },
   {
-    id: "nac",
-    title: "N.A.C",
-    imageName: "furet",
-    alt: "furet",
-    basePrice: "50",
-    domicilePrice: "60",
+    id: 'nac',
+    title: 'N.A.C',
+    imageName: 'furet',
+    alt: 'furet',
+    basePrice: '50',
+    domicilePrice: '70',
   },
   {
-    id: "forfait",
-    title: "Forfait",
-    imageName: "forfaitmensuel",
+    id: 'forfait',
+    title: 'Forfait',
+    imageName: 'forfaitmensuel',
     alt: null,
-    basePrice: "40",
-    domicilePrice: "50",
+    basePrice: '40',
+    domicilePrice: '60',
   },
-]
+];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(" ")
+  return classes.filter(Boolean).join(' ');
 }
 
-function Prices(props) {
-  const [option, setOption] = useState("cabinet")
-  const [displayedPrestation, setDisplayedPrestation] = useState(prestations)
+function Prix(props) {
+  const [option, setOption] = useState('cabinet');
+  const [displayedPrestation, setDisplayedPrestation] = useState(prestations);
 
   useEffect(() => {
-    if (option === "cabinet") {
+    if (option === 'cabinet') {
       setDisplayedPrestation(
-        prestations.filter(prestation => prestation.id !== "cheval")
-      )
+        prestations.filter((prestation) => prestation.id !== 'cheval')
+      );
     } else {
-      setDisplayedPrestation(prestations)
+      setDisplayedPrestation(prestations);
     }
-  }, [option])
+  }, [option]);
 
   return (
     <div id={props.id} className="bg-white">
@@ -71,24 +71,24 @@ function Prices(props) {
             <button
               type="button"
               className={classNames(
-                "relative w-1/2 rounded-md py-2 text-sm font-medium whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-gold-500 focus:z-10 sm:w-auto sm:px-8 shadow-sm border",
-                option === "cabinet"
-                  ? "bg-white border-gold-300 text-gray-900"
-                  : "border-transparent text-gray-700"
+                'relative w-1/2 rounded-md py-2 text-sm font-medium whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-gold-500 focus:z-10 sm:w-auto sm:px-8 shadow-sm border',
+                option === 'cabinet'
+                  ? 'bg-white border-gold-300 text-gray-900'
+                  : 'border-transparent text-gray-700'
               )}
-              onClick={() => setOption("cabinet")}
+              onClick={() => setOption('cabinet')}
             >
               En cabinet
             </button>
             <button
               type="button"
               className={classNames(
-                "relative w-1/2 rounded-md py-2 text-sm font-medium whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-gold-500 focus:z-10 sm:w-auto sm:px-8 shadow-sm border",
-                option === "domicile"
-                  ? "bg-white border border-gold-300 text-gray-900"
-                  : " border-transparent text-gray-700"
+                'relative w-1/2 rounded-md py-2 text-sm font-medium whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-gold-500 focus:z-10 sm:w-auto sm:px-8 shadow-sm border',
+                option === 'domicile'
+                  ? 'bg-white border border-gold-300 text-gray-900'
+                  : ' border-transparent text-gray-700'
               )}
-              onClick={() => setOption("domicile")}
+              onClick={() => setOption('domicile')}
             >
               À domicile
             </button>
@@ -96,8 +96,8 @@ function Prices(props) {
         </div>
         <div
           className={classNames(
-            "mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0",
-            option === "cabinet" ? "xl:grid-cols-3" : "xl:grid-cols-4"
+            'mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0',
+            option === 'cabinet' ? 'xl:grid-cols-3' : 'xl:grid-cols-4'
           )}
         >
           {displayedPrestation.map(
@@ -117,19 +117,19 @@ function Prices(props) {
                   key={id}
                   title={title}
                   description={description}
-                  price={option === "cabinet" ? basePrice : domicilePrice}
+                  price={option === 'cabinet' ? basePrice : domicilePrice}
                   image={props?.images[imageName]}
                   alt={alt}
                   variants={variants}
                   option={option}
                 />
-              )
+              );
             }
           )}
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 function Card({ id, title, price, image, alt, variants, option }) {
@@ -156,10 +156,10 @@ function Card({ id, title, price, image, alt, variants, option }) {
           <h2 className="text-xl leading-6 font-bold text-gold-500">{title}</h2>
         </div>
         <div className="flex flex-1 flex-col  content-end justify-end">
-          {id === "forfait" && (
+          {id === 'forfait' && (
             <div className="mt-4">
               <p className="text-lg leading-6 font-bold text-gray-700">
-                Éleveurs{" "}
+                Éleveurs{' '}
                 <span className="text-base">à partir de 3 animaux</span>
               </p>
               <p className="mt-2 text-lg leading-6 font-bold text-gray-700">
@@ -174,16 +174,16 @@ function Card({ id, title, price, image, alt, variants, option }) {
             variants.map(({ description, basePrice, domicilePrice }, index) => (
               <p
                 className={classNames(
-                  "mt-4 text-right",
-                  index === variants.lenght ? "mt-4" : "mt-2"
+                  'mt-4 text-right',
+                  index === variants.lenght ? 'mt-4' : 'mt-2'
                 )}
               >
                 <span className="text-lg font-bold text-gray-700">
                   {description}
-                  {"   "}
+                  {'   '}
                 </span>
                 <span className="text-4xl font-extrabold text-gold-500">
-                  {option === "cabinet" ? basePrice : domicilePrice}
+                  {option === 'cabinet' ? basePrice : domicilePrice}
                 </span>
                 <span className="text-base font-medium text-gold-600">€</span>
               </p>
@@ -199,7 +199,7 @@ function Card({ id, title, price, image, alt, variants, option }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Prices
+export default Prix;

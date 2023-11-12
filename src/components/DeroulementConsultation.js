@@ -1,5 +1,5 @@
-import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
+import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 
 export default function DeroulementConsultation() {
   return (
@@ -269,5 +269,5 @@ export default function DeroulementConsultation() {
         </div>
       </div>
     </div>
-  )
+  );
 }

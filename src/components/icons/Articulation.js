@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 
 export default function Articulation() {
   return (
@@ -22,5 +22,5 @@ export default function Articulation() {
         fill="#E9B857"
       />
     </svg>
-  )
+  );
 }
