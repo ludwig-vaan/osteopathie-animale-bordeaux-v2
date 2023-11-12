@@ -3,6 +3,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import React, { Fragment } from 'react';
 import { PopupButton } from 'react-calendly';
 import * as Icons from './icons';
+import { isDomAvailable } from '../lib/utils';
 
 const navigation = [
   { name: 'Animaux', href: '#animaux' },
@@ -120,7 +121,11 @@ export default function Hero({ children }) {
                   <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
                     <PopupButton
                       url={url_calendly}
-                      rootElement={document.getElementById('root')}
+                      rootElement={
+                        !isDomAvailable()
+                          ? undefined
+                          : document.getElementById('root')
+                      }
                       text="Prendre rendez-vous en ligne"
                       className="flex w-full items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gold-600 bg-white hover:bg-opacity-70 sm:px-8"
                     />
