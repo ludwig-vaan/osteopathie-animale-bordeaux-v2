@@ -28,6 +28,19 @@ module.exports = {
     ],
   }),
   plugins: [
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: 'GTM-KCM49LQ',
+
+        // Include GTM in development.
+        includeInDevelopment: false,
+
+        // Specify where to place the tracking script
+        // true in the head, false in the body
+        defaultDataLayer: { platform: 'gatsby' },
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     {
