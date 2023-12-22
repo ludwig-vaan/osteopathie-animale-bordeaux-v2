@@ -20,8 +20,7 @@ export default function Banner() {
         <div className="pointer-events-auto flex items-center justify-between gap-x-6 bg-gray-900 px-6 py-2.5 sm:rounded-xl sm:py-3 sm:pl-4 sm:pr-3.5">
           <p className="text-sm leading-6 text-white">
             Nouveau Cabinet d'Ostéopathie Animale à{' '}
-            <strong className="font-semibold">Saint-Aubin-de-Médoc</strong> -
-            Ouverture Prochaine !
+            <strong className="font-semibold">Saint-Aubin-de-Médoc</strong> !
           </p>
           <button
             type="button"
