@@ -19,7 +19,7 @@ const navigationSvg = {
   '#osteopathie': <Icons.Osteopathie />,
 };
 
-const url_calendly = 'https://calendly.com/osteopathe-animalier/';
+const url_calendly = 'https://calendly.com/d/5bg-bmp-kvy'; // 'https://calendly.com/osteopathe-animalier/';
 
 export default function Hero({ children }) {
   return (
