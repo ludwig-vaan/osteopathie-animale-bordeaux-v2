@@ -76,7 +76,7 @@ function Prix(props) {
             </button>
           </div>
         </div>
-        <div className="relative h-16">
+        <div className="relative h-24">
           <Transition
             show={option === 'domicile'}
             enter="transition-all duration-200 ease-in-out"
