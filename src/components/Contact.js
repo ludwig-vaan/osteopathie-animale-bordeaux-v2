@@ -23,7 +23,8 @@ export default function Contact({ id }) {
               À domicile
             </h3>
             <p className="mt-2 text-lg leading-6 text-gray-500">
-              <span className="font-bold">Mardi et Mercredi :</span> 11h à 19h30
+              <span className="font-bold">Sur rendez-vous, </span>je m'adapte à
+              votre emploi du temps du lundi au vendredi.
             </p>
             <h3 className="mt-6 text-lg font-extrabold tracking-tight text-gold-500 sm:text-xl">
               En cabinet

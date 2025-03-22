@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import { Transition } from '@headlessui/react';
 
 const prestations = [
   {
@@ -10,18 +11,10 @@ const prestations = [
     basePrice: '60',
     domicilePrice: '80',
     variants: [
-      { description: 'adulte', basePrice: '60', domicilePrice: '80' },
-      { description: 'moins de 6 mois', basePrice: '50', domicilePrice: '70' },
-      { description: 'moins de 3 mois', basePrice: '40', domicilePrice: '60' },
+      { description: 'adulte', basePrice: '60', domicilePrice: '60' },
+      { description: 'moins de 6 mois', basePrice: '50', domicilePrice: '50' },
+      { description: 'moins de 3 mois', basePrice: '40', domicilePrice: '40' },
     ],
-  },
-  {
-    id: 'cheval',
-    title: 'Cheval',
-    imageName: 'cheval',
-    alt: 'cheval',
-    domicilePrice: '100',
-    basePrice: null,
   },
   {
     id: 'nac',
@@ -29,7 +22,7 @@ const prestations = [
     imageName: 'furet',
     alt: 'furet',
     basePrice: '50',
-    domicilePrice: '70',
+    domicilePrice: '50',
   },
   {
     id: 'forfait',
@@ -37,7 +30,7 @@ const prestations = [
     imageName: 'forfaitmensuel',
     alt: null,
     basePrice: '40',
-    domicilePrice: '60',
+    domicilePrice: '40',
   },
 ];
 
@@ -47,17 +40,6 @@ function classNames(...classes) {
 
 function Prix(props) {
   const [option, setOption] = useState('cabinet');
-  const [displayedPrestation, setDisplayedPrestation] = useState(prestations);
-
-  useEffect(() => {
-    if (option === 'cabinet') {
-      setDisplayedPrestation(
-        prestations.filter((prestation) => prestation.id !== 'cheval')
-      );
-    } else {
-      setDisplayedPrestation(prestations);
-    }
-  }, [option]);
 
   return (
     <div id={props.id} className="bg-white">
@@ -94,13 +76,33 @@ function Prix(props) {
             </button>
           </div>
         </div>
+        <div className="relative h-16">
+          <Transition
+            show={option === 'domicile'}
+            enter="transition-all duration-200 ease-in-out"
+            enterFrom="opacity-0 transform -translate-y-1"
+            enterTo="opacity-100 transform translate-y-0"
+            leave="transition-all duration-150 ease-in-out"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="absolute w-full flex justify-center">
+              <p className="mt-4 text-gray-600 text-md sm:text-center max-w-xl">
+                *Pour votre confort, je me déplace à votre domicile sur toute la
+                région bordelaise. Un forfait déplacement de{' '}
+                <span className="font-bold text-lg text-gray-900">10€</span>{' '}
+                s'applique, vous permettant de profiter d'une consultation dans
+                l'environnement familier de votre animal.
+              </p>
+            </div>
+          </Transition>
+        </div>
         <div
           className={classNames(
-            'mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0',
-            option === 'cabinet' ? 'xl:grid-cols-3' : 'xl:grid-cols-4'
+            'mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0 xl:grid-cols-3'
           )}
         >
-          {displayedPrestation.map(
+          {prestations.map(
             ({
               id,
               title,
@@ -118,6 +120,7 @@ function Prix(props) {
                   title={title}
                   description={description}
                   price={option === 'cabinet' ? basePrice : domicilePrice}
+                  isDomicile={option === 'domicile'}
                   image={props?.images[imageName]}
                   alt={alt}
                   variants={variants}
@@ -132,7 +135,7 @@ function Prix(props) {
   );
 }
 
-function Card({ id, title, price, image, alt, variants, option }) {
+function Card({ id, title, price, image, alt, variants, option, isDomicile }) {
   return (
     <div
       className="flex flex-col rounded-lg shadow-lg overflow-hidden"
@@ -185,7 +188,9 @@ function Card({ id, title, price, image, alt, variants, option }) {
                 <span className="text-4xl font-extrabold text-gold-500">
                   {option === 'cabinet' ? basePrice : domicilePrice}
                 </span>
-                <span className="text-base font-medium text-gold-600">€</span>
+                <span className="text-base font-medium text-gold-600">
+                  €{option === 'domicile' && '*'}
+                </span>
               </p>
             ))
           ) : (
@@ -193,7 +198,9 @@ function Card({ id, title, price, image, alt, variants, option }) {
               <span className="text-4xl font-extrabold text-gold-500">
                 {price}
               </span>
-              <span className="text-base font-medium text-gold-600">€</span>
+              <span className="text-base font-medium text-gold-600">
+                €{option === 'domicile' && '*'}
+              </span>
             </p>
           )}
         </div>

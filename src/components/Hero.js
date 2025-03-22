@@ -116,6 +116,13 @@ export default function Hero({ children }) {
                   >
                     ostéopathe animalier
                   </span>
+                  <span
+                    className="block text-white text-2xl mt-2 font-medium"
+                    style={{ textShadow: '#143545 1px 0 10px' }}
+                  >
+                    Votre experte pour le bien-être de vos chiens, chats et
+                    N.A.C.
+                  </span>
                 </h1>
                 <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
                   <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">

@@ -5,7 +5,6 @@ import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import '../components/layout.css';
 
 import AnimalSection from '../components/AnimalSection/AnimalSection';
-import Banner from '../components/Banner/Banner';
 import CarteCabinet from '../components/CarteCabinet';
 import Consultations from '../components/Consultations';
 import Contact from '../components/Contact';
@@ -34,7 +33,6 @@ const IndexPage = (props) => {
     <div>
       <main id="root">
         <Seo />
-        <Banner />
         <Hero />
         <AnimalSection id="animaux" images={imagesTree} />
         <Consultations />
