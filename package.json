@@ -68,5 +68,6 @@
   },
   "bugs": {
     "url": "https://github.com/kosvrouvas/gatsby-tailwindcss-starter/issues"
-  }
+  },
+  "packageManager": "yarn@1.22.22"
 }

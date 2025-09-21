@@ -33,13 +33,7 @@ export default function Contact({ id }) {
               Bègles :
             </h4>
             <p className="ml-2 mt-3 text-lg leading-6 text-gray-500">
-              Lundi et Jeudi : 11h à 19h30
-            </p>
-            <h4 className="mt-3 text-lg leading-6 text-gray-500 font-bold">
-              Saint-Aubin-de-Médoc :
-            </h4>
-            <p className="ml-2 mt-3 text-lg leading-6 text-gray-500">
-              Vendredi : 9h30 à 18h30
+              Lundi et Jeudi : 9h à 19h
             </p>
             <dl className="mt-8 text-base text-gray-500">
               <a
