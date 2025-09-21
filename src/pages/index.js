@@ -11,7 +11,6 @@ import Contact from '../components/Contact';
 import DeroulementConsultation from '../components/DeroulementConsultation';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
-import CabinetStAubin from '../components/CabinetStAubin';
 import OsteopathieAnimale from '../components/OsteopathieAnimale';
 import Prix from '../components/Prix';
 import QuandConsulter from '../components/QuandConsulter';
@@ -36,7 +35,6 @@ const IndexPage = (props) => {
         <Hero />
         <AnimalSection id="animaux" images={imagesTree} />
         <Consultations />
-        <CabinetStAubin />
         <CarteCabinet />
         <QuandConsulter id="quand-consulter" />
         <Prix id="tarifs" images={imagesTree} />
