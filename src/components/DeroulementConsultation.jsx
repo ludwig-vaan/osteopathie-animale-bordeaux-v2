@@ -1,5 +1,7 @@
 import React from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
+import ResponsiveImage from './ResponsiveImage';
+import youngCatImage from '../images/yougncat.jpeg';
+import correctionImage from '../images/correction.jpg';
 
 export default function DeroulementConsultation() {
   return (
@@ -131,13 +133,13 @@ export default function DeroulementConsultation() {
                 fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)"
               />
             </svg>
-            <StaticImage
-              className="relative mx-auto rounded-lg"
-              width="490"
-              src="../images/yougncat.jpeg"
-              alt="high five with yougn cat"
-              imgStyle={{ borderRadius: 8 }}
-              style={{ borderRadius: 8 }}
+            <ResponsiveImage
+              className="relative mx-auto rounded-lg object-cover"
+              image={youngCatImage}
+              alt="high five with young cat"
+              widths={[320, 480, 640, 768, 960]}
+              sizes="(max-width: 1024px) 90vw, 480px"
+              fit="cover"
             />
           </div>
         </div>
@@ -256,13 +258,13 @@ export default function DeroulementConsultation() {
                   fill="url(#e80155a9-dfde-425a-b5ea-1f6fadd20131)"
                 />
               </svg>
-              <StaticImage
-                className="relative mx-auto rounded-lg"
-                width="490"
-                src="../images/correction.jpg"
-                alt="osteopathe with horse"
-                imgStyle={{ borderRadius: 8 }}
-                style={{ borderRadius: 8 }}
+              <ResponsiveImage
+                className="relative mx-auto rounded-lg object-cover"
+                image={correctionImage}
+                alt="ostéopathe avec un cheval"
+                widths={[320, 480, 640, 768, 960]}
+                sizes="(max-width: 1024px) 90vw, 480px"
+                fit="cover"
               />
             </div>
           </div>

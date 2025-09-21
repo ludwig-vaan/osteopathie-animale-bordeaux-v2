@@ -4,8 +4,21 @@ import { configuration } from './configutation';
 // import AriaSelecMenu from "./AriaSelectMenu"
 import AriaSelecMenu from './NewAriaSelectMenu';
 import AriaSelecMenuWeb from './AriaSelectMenuWeb';
+import sectionChien from '../../images/sectionChien.jpeg';
+import sectionChat from '../../images/sectionChat.jpeg';
+import sectionCheval from '../../images/sectionCheval.jpeg';
+import sectionVache from '../../images/sectionVache.jpeg';
+import sectionLapin from '../../images/sectionLapin.jpeg';
 
-export default function AnimalSection({ id, images }) {
+const animalImages = {
+  sectionChien,
+  sectionChat,
+  sectionCheval,
+  sectionVache,
+  sectionLapin,
+};
+
+export default function AnimalSection({ id }) {
   const [animal, setAnimal] = useState('chien');
   const [height, setHeight] = useState(0);
   const ref = useRef(null);
@@ -15,7 +28,7 @@ export default function AnimalSection({ id, images }) {
   }, []);
 
   const currentAnimal = configuration[animal];
-  const image = images[currentAnimal.key];
+  const image = animalImages[currentAnimal.key];
 
   return (
     <div

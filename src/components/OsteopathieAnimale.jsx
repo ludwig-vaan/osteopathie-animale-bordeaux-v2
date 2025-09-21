@@ -1,5 +1,6 @@
 import React from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
+import ResponsiveImage from './ResponsiveImage';
+import bulldogImage from '../images/bulldog.jpeg';
 
 export default function OsteopathieAnimale({ id }) {
   return (
@@ -39,12 +40,13 @@ export default function OsteopathieAnimale({ id }) {
           </div>
           <div className="mt-12 sm:mt-16 lg:mt-0">
             <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-              <StaticImage
-                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="../images/bulldog.jpeg"
+              <ResponsiveImage
+                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none object-cover"
+                image={bulldogImage}
                 alt="bulldog"
-                imgStyle={{ borderRadius: 12 }}
-                style={{ borderRadius: 12 }}
+                widths={[320, 480, 640, 768, 1024, 1280]}
+                sizes="(max-width: 1024px) 100vw, 540px"
+                fit="cover"
               />
             </div>
           </div>

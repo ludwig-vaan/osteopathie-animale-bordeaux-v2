@@ -1,5 +1,6 @@
 import React from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
+import ResponsiveImage from './ResponsiveImage';
+import agatheImage from '../images/agathe.jpg';
 
 export default function QuiSuisJe() {
   return (
@@ -11,12 +12,13 @@ export default function QuiSuisJe() {
               <li className="sm:py-8">
                 <div className="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
                   <div className="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
-                    <StaticImage
-                      className="shadow-lg rounded-lg overflow-hidden"
-                      src="../images/agathe.jpg"
+                    <ResponsiveImage
+                      className="shadow-lg rounded-lg overflow-hidden object-cover w-full h-full"
+                      image={agatheImage}
                       alt="Agathe Lescout"
-                      imgStyle={{ borderRadius: 8 }}
-                      style={{ borderRadius: 8 }}
+                      widths={[320, 480, 640, 768]}
+                      sizes="(max-width: 1024px) 100vw, 360px"
+                      fit="cover"
                     />
                   </div>
                   <div className="sm:col-span-2">

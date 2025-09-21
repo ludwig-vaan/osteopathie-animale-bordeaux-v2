@@ -1,5 +1,5 @@
 import React from 'react';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import ResponsiveImage from '../ResponsiveImage';
 
 export default function Section({ name, text, image, alt = '' }) {
   return (
@@ -11,13 +11,14 @@ export default function Section({ name, text, image, alt = '' }) {
         <p className="mt-2 text-base text-white">{text}</p>
       </div>
       <div className="mt-12 sm:mt-16 lg:mt-0">
-        <div className=" -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-          <GatsbyImage
-            className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full  lg:max-w-none"
+        <div className="-mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+          <ResponsiveImage
+            className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:max-w-none object-cover"
             image={image}
             alt={alt}
-            imgStyle={{ borderRadius: 12 }}
-            style={{ borderRadius: 12 }}
+            widths={[320, 480, 640, 768, 1024, 1280]}
+            sizes="(max-width: 1024px) 100vw, 540px"
+            fit="cover"
           />
         </div>
       </div>

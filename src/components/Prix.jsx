@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
-import { GatsbyImage } from 'gatsby-plugin-image';
 import { Transition } from '@headlessui/react';
+import ResponsiveImage from './ResponsiveImage';
+import chienEtChatImage from '../images/chienetchat.jpeg';
+import furetImage from '../images/furet.jpeg';
+import forfaitImage from '../images/forfaitmensuel.jpeg';
 
 const prestations = [
   {
@@ -34,15 +37,21 @@ const prestations = [
   },
 ];
 
+const priceImages = {
+  chienetchat: chienEtChatImage,
+  furet: furetImage,
+  forfaitmensuel: forfaitImage,
+};
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-function Prix(props) {
+function Prix({ id }) {
   const [option, setOption] = useState('cabinet');
 
   return (
-    <div id={props.id} className="bg-white">
+    <div id={id} className="bg-white">
       <div className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
         <div className="sm:flex sm:flex-col sm:align-center">
           <h1 className="text-5xl font-extrabold text-gold-500 sm:text-center">
@@ -121,7 +130,7 @@ function Prix(props) {
                   description={description}
                   price={option === 'cabinet' ? basePrice : domicilePrice}
                   isDomicile={option === 'domicile'}
-                  image={props?.images[imageName]}
+                  image={priceImages[imageName]}
                   alt={alt}
                   variants={variants}
                   option={option}
@@ -143,12 +152,13 @@ function Card({ id, title, price, image, alt, variants, option, isDomicile }) {
     >
       <div className="flex-shrink-0">
         {image ? (
-          <GatsbyImage
+          <ResponsiveImage
             className="h-48 w-full object-cover overflow-hidden"
-            imgClassName=""
             image={image}
-            alt={alt}
-            imgStyle={{ borderTopRightRadius: 8, borderTopLeftRadius: 8 }}
+            alt={alt || ''}
+            widths={[320, 480, 640, 768, 960]}
+            sizes="(max-width: 1024px) 100vw, 360px"
+            fit="cover"
           />
         ) : (
           <div className="h-48 w-full object-cover bg-pink-200" />
@@ -176,9 +186,10 @@ function Card({ id, title, price, image, alt, variants, option, isDomicile }) {
           {variants ? (
             variants.map(({ description, basePrice, domicilePrice }, index) => (
               <p
+                key={`${id}-${description}`}
                 className={classNames(
                   'mt-4 text-right',
-                  index === variants.lenght ? 'mt-4' : 'mt-2'
+                  index === 0 ? 'mt-4' : 'mt-2'
                 )}
               >
                 <span className="text-lg font-bold text-gray-700">
