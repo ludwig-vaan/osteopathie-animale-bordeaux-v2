@@ -10,6 +10,12 @@ import sectionCheval from '../../images/sectionCheval.jpeg';
 import sectionVache from '../../images/sectionVache.jpeg';
 import sectionLapin from '../../images/sectionLapin.jpeg';
 
+type AnimalSectionProps = {
+  id?: string;
+};
+
+type AnimalKey = 'chien' | 'chat' | 'cheval' | 'vache' | 'nac';
+
 const animalImages = {
   sectionChien,
   sectionChat,
@@ -18,17 +24,21 @@ const animalImages = {
   sectionLapin,
 };
 
-export default function AnimalSection({ id }) {
-  const [animal, setAnimal] = useState('chien');
+export default function AnimalSection({ id }: AnimalSectionProps) {
+  const [animal, setAnimalState] = useState<AnimalKey>('chien');
+
+  const setAnimal = (animalKey: string) => {
+    setAnimalState(animalKey as AnimalKey);
+  };
   const [height, setHeight] = useState(0);
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     ref.current && setHeight(ref.current.clientHeight);
   }, []);
 
   const currentAnimal = configuration[animal];
-  const image = animalImages[currentAnimal.key];
+  const image = animalImages[currentAnimal.key as keyof typeof animalImages];
 
   return (
     <div

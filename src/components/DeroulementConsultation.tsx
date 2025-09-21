@@ -139,7 +139,6 @@ export default function DeroulementConsultation() {
               alt="high five with young cat"
               widths={[320, 480, 640, 768, 960]}
               sizes="(max-width: 1024px) 90vw, 480px"
-              fit="cover"
             />
           </div>
         </div>
@@ -264,7 +263,6 @@ export default function DeroulementConsultation() {
                 alt="ostéopathe avec un cheval"
                 widths={[320, 480, 640, 768, 960]}
                 sizes="(max-width: 1024px) 90vw, 480px"
-                fit="cover"
               />
             </div>
           </div>

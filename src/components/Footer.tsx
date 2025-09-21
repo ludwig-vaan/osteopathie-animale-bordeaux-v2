@@ -33,7 +33,8 @@ export default function Footer() {
             <span>
               <button
                 onClick={() => {
-                  window.openAxeptioCookie && window.openAxeptioCookies();
+                  window.openAxeptioCookie?.();
+                  window.openAxeptioCookies?.();
                 }}
                 className="text-gray-400 hover:text-gray-400"
               >

@@ -7,7 +7,11 @@ import MapBox from './MapBox';
 const LNG = -0.548706;
 const LAT = 44.807147;
 
-export default function CarteCabinet({ id }) {
+type CarteCabinetProps = {
+  id?: string;
+};
+
+export default function CarteCabinet({ id }: CarteCabinetProps) {
   const hasMounted = useHasMounted();
   return (
     <div id={id} className="relative bg-white pb-32 overflow-hidden">

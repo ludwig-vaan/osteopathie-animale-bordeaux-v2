@@ -5,6 +5,27 @@ import chienEtChatImage from '../images/chienetchat.jpeg';
 import furetImage from '../images/furet.jpeg';
 import forfaitImage from '../images/forfaitmensuel.jpeg';
 
+type PrixProps = {
+  id?: string;
+};
+
+type CardProps = {
+  id: string;
+  title: string;
+  price: string;
+  image: string;
+  alt: string | null;
+  variants:
+    | Array<{
+        description: string;
+        basePrice: string;
+        domicilePrice: string;
+      }>
+    | undefined;
+  option: string;
+  isDomicile: boolean;
+};
+
 const prestations = [
   {
     id: 'chien-chat',
@@ -37,17 +58,18 @@ const prestations = [
   },
 ];
 
-const priceImages = {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const priceImages: { [key: string]: any } = {
   chienetchat: chienEtChatImage,
   furet: furetImage,
   forfaitmensuel: forfaitImage,
 };
 
-function classNames(...classes) {
+function classNames(...classes: (string | boolean | undefined | null)[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-function Prix({ id }) {
+function Prix({ id }: PrixProps) {
   const [option, setOption] = useState('cabinet');
 
   return (
@@ -115,7 +137,6 @@ function Prix({ id }) {
             ({
               id,
               title,
-              description,
               imageName,
               alt,
               basePrice,
@@ -127,7 +148,6 @@ function Prix({ id }) {
                   id={id}
                   key={id}
                   title={title}
-                  description={description}
                   price={option === 'cabinet' ? basePrice : domicilePrice}
                   isDomicile={option === 'domicile'}
                   image={priceImages[imageName]}
@@ -144,21 +164,26 @@ function Prix({ id }) {
   );
 }
 
-function Card({ id, title, price, image, alt, variants, option, isDomicile }) {
+function Card({
+  id,
+  title,
+  price,
+  image,
+  alt,
+  variants,
+  option,
+  isDomicile: _isDomicile,
+}: CardProps) {
   return (
-    <div
-      className="flex flex-col rounded-lg shadow-lg overflow-hidden"
-      href="#contact"
-    >
+    <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
       <div className="flex-shrink-0">
         {image ? (
           <ResponsiveImage
             className="h-48 w-full object-cover overflow-hidden"
             image={image}
-            alt={alt || ''}
+            alt={alt ?? ''}
             widths={[320, 480, 640, 768, 960]}
             sizes="(max-width: 1024px) 100vw, 360px"
-            fit="cover"
           />
         ) : (
           <div className="h-48 w-full object-cover bg-pink-200" />

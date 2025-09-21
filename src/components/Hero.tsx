@@ -3,6 +3,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import React, { Fragment } from 'react';
 import { PopupButton } from 'react-calendly';
 import * as Icons from './icons';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { isDomAvailable } from '../lib/utils';
 
 const navigation = [
@@ -19,9 +20,14 @@ const navigationSvg = {
   '#osteopathie': <Icons.Osteopathie />,
 };
 
-const url_calendly = 'https://calendly.com/osteopathe-animalier/consultation-osteopathique'; // 'https://calendly.com/osteopathe-animalier/';
+const url_calendly =
+  'https://calendly.com/osteopathe-animalier/consultation-osteopathique'; // 'https://calendly.com/osteopathe-animalier/';
 
-export default function Hero({ children }) {
+type HeroProps = {
+  children?: React.ReactNode;
+};
+
+export default function Hero({ children }: HeroProps) {
   return (
     <div className="h-screen bg-happy-dog bg-no-repeat bg-cover bg-center w-full ">
       <Popover className="relative pt-6 pb-16 sm:pb-24 ">
@@ -90,7 +96,11 @@ export default function Hero({ children }) {
                         className={`-m-3 p-3 flex flex-row items-center rounded-lg hover:bg-gold-300 text-gold-600 hover:text-white`}
                       >
                         <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-gold-400 to-gold-500 text-white">
-                          {navigationSvg[item.href]}
+                          {
+                            navigationSvg[
+                              item.href as keyof typeof navigationSvg
+                            ]
+                          }
                         </div>
                         <div className="ml-4 text-base font-medium ">
                           {item.name}
@@ -129,9 +139,7 @@ export default function Hero({ children }) {
                     <PopupButton
                       url={url_calendly}
                       rootElement={
-                        !isDomAvailable()
-                          ? undefined
-                          : document.getElementById('root')
+                        document.getElementById('root') as HTMLElement
                       }
                       text="Prendre rendez-vous en ligne"
                       className="flex w-full items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gold-600 bg-white hover:bg-opacity-70 sm:px-8"

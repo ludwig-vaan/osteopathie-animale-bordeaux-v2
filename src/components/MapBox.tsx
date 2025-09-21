@@ -10,14 +10,20 @@ const mapContainerStyle = {
   height: '100%',
 };
 
-const MapBox = ({ lng, lat, label }) => {
-  const mapContainerRef = useRef(null);
+type MapBoxProps = {
+  lng: number;
+  lat: number;
+  label: string;
+};
 
-  const [, setMap] = useState(null);
+const MapBox = ({ lng, lat, label }: MapBoxProps) => {
+  const mapContainerRef = useRef<HTMLDivElement>(null);
+
+  const [, setMap] = useState<mapboxgl.Map | null>(null);
 
   useEffect(() => {
     const map = new mapboxgl.Map({
-      container: mapContainerRef.current,
+      container: mapContainerRef.current!,
       accessToken: MAPBOX_TOKEN,
       style: 'mapbox://styles/mapbox/streets-v11',
       center: [lng, lat],

@@ -9,6 +9,16 @@ import {
   Lungs,
 } from './icons';
 
+type QuandConsulterProps = {
+  id?: string;
+};
+
+type ReasonProps = {
+  title: string;
+  description: string;
+  icon: () => React.ReactElement;
+};
+
 const reasons = [
   {
     title: 'Bilan annuel',
@@ -52,7 +62,7 @@ const reasons = [
   },
 ];
 
-export default function QuandConsulter({ id }) {
+export default function QuandConsulter({ id }: QuandConsulterProps) {
   return (
     <div id={id} className="bg-gradient-to-l from-canard to-canard-light">
       <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
@@ -111,7 +121,7 @@ export default function QuandConsulter({ id }) {
   );
 }
 
-function Reason({ title, description, icon }) {
+function Reason({ title, description, icon }: ReasonProps) {
   return (
     <div>
       <div>

@@ -12,7 +12,15 @@ const customStyles = {
   },
 };
 
-export default function ContactModal({ isOpen, onRequestClose }) {
+type ContactModalProps = {
+  isOpen: boolean;
+  onRequestClose: () => void;
+};
+
+export default function ContactModal({
+  isOpen,
+  onRequestClose,
+}: ContactModalProps) {
   return (
     <Modal
       isOpen={isOpen}

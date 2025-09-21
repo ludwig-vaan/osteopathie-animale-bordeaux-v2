@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import { Item } from '@react-stately/collections';
 import { mergeProps } from '@react-aria/utils';
@@ -5,13 +6,31 @@ import { useFocus } from '@react-aria/interactions';
 import { useTreeState } from '@react-stately/tree';
 import { useMenu, useMenuItem } from '@react-aria/menu';
 
-function Menu(props) {
+type MenuProps = {
+  children: React.ReactNode;
+  onAction?: (key: any) => void;
+  'aria-label'?: string;
+};
+
+function Menu(props: MenuProps) {
   // Create state based on the incoming props
-  let state = useTreeState({ ...props, selectionMode: 'none' });
+  // React Aria's TreeState expects CollectionChildren<object>, but we pass ReactNode
+  // This is safe because we're using the Item component from @react-stately/collections
+  const treeStateProps = {
+    children: props.children as any,
+    selectionMode: 'none' as const,
+  };
+
+  let state = useTreeState(treeStateProps);
 
   // Get props for the menu element
-  let ref = React.useRef();
-  let { menuProps } = useMenu(props, state, ref);
+  let ref = React.useRef<HTMLUListElement>(null);
+  // useMenu expects specific props interface, but we only need aria-label
+  let { menuProps } = useMenu(
+    { 'aria-label': props['aria-label'] } as any,
+    state,
+    ref as any // Ref type mismatch between React and React Aria
+  );
 
   return (
     <ul {...menuProps} ref={ref} className="-mb-px flex flex-row">
@@ -20,26 +39,34 @@ function Menu(props) {
           key={item.key}
           item={item}
           state={state}
-          onAction={props.onAction}
+          onAction={props.onAction ?? (() => {})}
         />
       ))}
     </ul>
   );
 }
 
-function MenuItem({ item, state, onAction }) {
+type MenuItemProps = {
+  item: any;
+  state: any;
+  onAction: (key: any) => void;
+};
+
+function MenuItem({ item, state, onAction }: MenuItemProps) {
   // Get props for the menu item element
-  let ref = React.useRef();
+  let ref = React.useRef<HTMLLIElement>(null);
   let isDisabled = state.disabledKeys.has(item.key);
 
+  // useMenuItem expects a more complex props interface than what we provide
+  // and a RefObject<FocusableElement> but we provide RefObject<HTMLLIElement>
   let { menuItemProps } = useMenuItem(
     {
       key: item.key,
       isDisabled,
-      onAction,
-    },
+      onAction: onAction ?? (() => {}),
+    } as any,
     state,
-    ref
+    ref as any
   );
 
   // Handle focus events so we can apply highlighted
@@ -63,7 +90,11 @@ function MenuItem({ item, state, onAction }) {
     </li>
   );
 }
-export default function AriaSelecMenuWeb({ setAnimal }) {
+type AriaSelecMenuWebProps = {
+  setAnimal: (animal: string) => void;
+};
+
+export default function AriaSelecMenuWeb({ setAnimal }: AriaSelecMenuWebProps) {
   return (
     <div className="hidden sm:block ">
       <Menu onAction={setAnimal} aria-label="Tabs">

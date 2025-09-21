@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import { GoogleReCaptcha } from 'react-google-recaptcha-v3';
 
-export default function Contact({ id }) {
+type ContactProps = {
+  id?: string;
+};
+
+export default function Contact({ id }: ContactProps) {
   const handleClear = () => {
     setTimeout(() => {
-      document.contactForm.reset();
+      const form = document.getElementById('contactForm') as HTMLFormElement;
+      if (form) form.reset();
     }, 2500);
   };
   const [token, setToken] = useState('');
@@ -36,11 +41,7 @@ export default function Contact({ id }) {
               Lundi et Jeudi : 9h à 19h
             </p>
             <dl className="mt-8 text-base text-gray-500">
-              <a
-                href="tel:+33665550792"
-                className="text-gray-500"
-                alt="telephone"
-              >
+              <a href="tel:+33665550792" className="text-gray-500">
                 <div className="mt-6">
                   <dt className="sr-only">Téléphone</dt>
                   <dd className="flex">
@@ -66,7 +67,6 @@ export default function Contact({ id }) {
               <a
                 href="mailto:agathe.lescout.osteo@gmail.com"
                 className="text-gray-500"
-                alt="email"
               >
                 <div className="mt-3">
                   <dt className="sr-only">Email</dt>
@@ -152,7 +152,7 @@ export default function Contact({ id }) {
               <textarea
                 id="message"
                 name="message"
-                rows="4"
+                rows={4}
                 className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-gold-500 focus:border-gold-500 border-gray-300 rounded-md"
                 placeholder="Message"
               ></textarea>

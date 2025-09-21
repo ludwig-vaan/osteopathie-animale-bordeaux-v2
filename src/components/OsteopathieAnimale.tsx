@@ -2,7 +2,11 @@ import React from 'react';
 import ResponsiveImage from './ResponsiveImage';
 import bulldogImage from '../images/bulldog.jpeg';
 
-export default function OsteopathieAnimale({ id }) {
+type OsteopathieAnimaleProps = {
+  id?: string;
+};
+
+export default function OsteopathieAnimale({ id }: OsteopathieAnimaleProps) {
   return (
     <div id={id} className="relative bg-white pt-16 pb-32 overflow-hidden">
       <div className="relative">
@@ -46,7 +50,6 @@ export default function OsteopathieAnimale({ id }) {
                 alt="bulldog"
                 widths={[320, 480, 640, 768, 1024, 1280]}
                 sizes="(max-width: 1024px) 100vw, 540px"
-                fit="cover"
               />
             </div>
           </div>

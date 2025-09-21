@@ -1,7 +1,16 @@
 import React from 'react';
 import ResponsiveImage from '../ResponsiveImage';
 
-export default function Section({ name, text, image, alt = '' }) {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+type SectionProps = {
+  name: string;
+  text: string;
+  image: any;
+  alt?: string;
+};
+/* eslint-enable @typescript-eslint/no-explicit-any */
+
+export default function Section({ name, text, image, alt = '' }: SectionProps) {
   return (
     <>
       <div className="mt-6">
@@ -18,7 +27,6 @@ export default function Section({ name, text, image, alt = '' }) {
             alt={alt}
             widths={[320, 480, 640, 768, 1024, 1280]}
             sizes="(max-width: 1024px) 100vw, 540px"
-            fit="cover"
           />
         </div>
       </div>

@@ -18,7 +18,6 @@ export default function QuiSuisJe() {
                       alt="Agathe Lescout"
                       widths={[320, 480, 640, 768]}
                       sizes="(max-width: 1024px) 100vw, 360px"
-                      fit="cover"
                     />
                   </div>
                   <div className="sm:col-span-2">

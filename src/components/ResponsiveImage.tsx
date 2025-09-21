@@ -2,6 +2,19 @@ import React from 'react';
 
 const DEFAULT_WIDTHS = [320, 480, 640, 768, 1024, 1280];
 
+type ResponsiveImageProps = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  image: string | any; // Peut être une string ou un objet Astro
+  alt?: string;
+  className?: string;
+  widths?: number[];
+  sizes?: string;
+  loading?: 'lazy' | 'eager';
+  decoding?: 'async' | 'sync';
+  quality?: number;
+  priority?: boolean;
+} & React.ImgHTMLAttributes<HTMLImageElement>;
+
 export default function ResponsiveImage({
   image,
   alt,
@@ -10,10 +23,10 @@ export default function ResponsiveImage({
   sizes = '100vw',
   loading = 'lazy',
   decoding = 'async',
-  quality = 80,
+  quality: _quality = 80,
   priority = false,
   ...imgProps
-}) {
+}: ResponsiveImageProps) {
   if (!image) {
     return null;
   }
@@ -24,7 +37,7 @@ export default function ResponsiveImage({
       <img
         className={className}
         src={image}
-        alt={alt || ''}
+        alt={alt ?? ''}
         loading={priority ? 'eager' : loading}
         decoding={priority ? 'sync' : decoding}
         sizes={sizes}
@@ -34,7 +47,7 @@ export default function ResponsiveImage({
   }
 
   // Pour les images importées avec astro:assets
-  const baseSrc = image.src || image;
+  const baseSrc = image.src ?? image;
   const maxWidth = Math.max(...widths);
 
   // Dans Astro moderne, on utilise directement l'URL de l'image
@@ -43,7 +56,7 @@ export default function ResponsiveImage({
     <img
       className={className}
       src={baseSrc}
-      alt={alt || ''}
+      alt={alt ?? ''}
       loading={priority ? 'eager' : loading}
       decoding={priority ? 'sync' : decoding}
       sizes={sizes}
