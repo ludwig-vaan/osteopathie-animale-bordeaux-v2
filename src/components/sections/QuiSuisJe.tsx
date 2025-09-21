@@ -1,6 +1,6 @@
 import React from 'react';
-import ResponsiveImage from './ResponsiveImage';
-import agatheImage from '../images/agathe.jpg';
+import ResponsiveImage from '../common/ResponsiveImage';
+import agatheImage from '../../images/agathe.jpg';
 
 export default function QuiSuisJe() {
   return (

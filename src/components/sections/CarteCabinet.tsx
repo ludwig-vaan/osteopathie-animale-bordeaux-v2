@@ -1,8 +1,8 @@
 import React from 'react';
-import { useHasMounted } from '../hooks/useHasMounted';
+import { useHasMounted } from '../../hooks/useHasMounted';
 
-import { Map } from './icons';
-import MapBox from './MapBox';
+import { Map } from '../common/icons';
+import MapBox from '../contact/MapBox';
 
 const LNG = -0.548706;
 const LAT = 44.807147;

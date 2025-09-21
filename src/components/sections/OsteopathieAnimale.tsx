@@ -1,6 +1,6 @@
 import React from 'react';
-import ResponsiveImage from './ResponsiveImage';
-import bulldogImage from '../images/bulldog.jpeg';
+import ResponsiveImage from '../common/ResponsiveImage';
+import bulldogImage from '../../images/bulldog.jpeg';
 
 type OsteopathieAnimaleProps = {
   id?: string;

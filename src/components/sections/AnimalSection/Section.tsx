@@ -1,5 +1,5 @@
 import React from 'react';
-import ResponsiveImage from '../ResponsiveImage';
+import ResponsiveImage from '../../common/ResponsiveImage';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 type SectionProps = {

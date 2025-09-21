@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Transition } from '@headlessui/react';
-import ResponsiveImage from './ResponsiveImage';
-import chienEtChatImage from '../images/chienetchat.jpeg';
-import furetImage from '../images/furet.jpeg';
-import forfaitImage from '../images/forfaitmensuel.jpeg';
+import ResponsiveImage from '../common/ResponsiveImage';
+import chienEtChatImage from '../../images/chienetchat.jpeg';
+import furetImage from '../../images/furet.jpeg';
+import forfaitImage from '../../images/forfaitmensuel.jpeg';
 
 type PrixProps = {
   id?: string;

@@ -4,11 +4,11 @@ import { configuration } from './configutation';
 // import AriaSelecMenu from "./AriaSelectMenu"
 import AriaSelecMenu from './NewAriaSelectMenu';
 import AriaSelecMenuWeb from './AriaSelectMenuWeb';
-import sectionChien from '../../images/sectionChien.jpeg';
-import sectionChat from '../../images/sectionChat.jpeg';
-import sectionCheval from '../../images/sectionCheval.jpeg';
-import sectionVache from '../../images/sectionVache.jpeg';
-import sectionLapin from '../../images/sectionLapin.jpeg';
+import sectionChien from '@/images/sectionChien.jpeg';
+import sectionChat from '@/images/sectionChat.jpeg';
+import sectionCheval from '@/images/sectionCheval.jpeg';
+import sectionVache from '@/images/sectionVache.jpeg';
+import sectionLapin from '@/images/sectionLapin.jpeg';
 
 type AnimalSectionProps = {
   id?: string;

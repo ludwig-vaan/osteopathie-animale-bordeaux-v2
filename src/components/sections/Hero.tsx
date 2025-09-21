@@ -2,9 +2,9 @@ import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import React, { Fragment } from 'react';
 import { PopupButton } from 'react-calendly';
-import * as Icons from './icons';
+import * as Icons from '../common/icons';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { isDomAvailable } from '../lib/utils';
+import { isDomAvailable } from '../../lib/utils';
 
 const navigation = [
   { name: 'Animaux', href: '#animaux' },

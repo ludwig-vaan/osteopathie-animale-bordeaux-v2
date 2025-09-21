@@ -1,7 +1,7 @@
 import React from 'react';
-import ResponsiveImage from './ResponsiveImage';
-import youngCatImage from '../images/yougncat.jpeg';
-import correctionImage from '../images/correction.jpg';
+import ResponsiveImage from '../common/ResponsiveImage';
+import youngCatImage from '../../images/yougncat.jpeg';
+import correctionImage from '../../images/correction.jpg';
 
 export default function DeroulementConsultation() {
   return (
