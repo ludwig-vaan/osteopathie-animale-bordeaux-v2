@@ -24,7 +24,7 @@ export default function Contact({ id }) {
             </h3>
             <p className="mt-2 text-lg leading-6 text-gray-500">
               <span className="font-bold">Sur rendez-vous, </span>je m'adapte à
-              votre emploi du temps du lundi au vendredi.
+              votre emploi du temps du Lundi au Vendredi.
             </p>
             <h3 className="mt-6 text-lg font-extrabold tracking-tight text-gold-500 sm:text-xl">
               En cabinet
@@ -33,7 +33,7 @@ export default function Contact({ id }) {
               Bègles :
             </h4>
             <p className="ml-2 mt-3 text-lg leading-6 text-gray-500">
-              Lundi et Jeudi : 9h à 19h
+              du Lundi au Vendredi : 9h à 19h
             </p>
             <dl className="mt-8 text-base text-gray-500">
               <a
