@@ -6,11 +6,11 @@ type SectionProps = {
 };
 
 const animalImages: { [key: string]: string } = {
-  sectionChien: '/images/sectionChien.jpeg',
-  sectionChat: '/images/sectionChat.jpeg',
-  sectionCheval: '/images/sectionCheval.jpeg',
-  sectionVache: '/images/sectionVache.jpeg',
-  sectionLapin: '/images/sectionLapin.jpeg',
+  sectionChien: '/images/sectionChien.jpg',
+  sectionChat: '/images/sectionChat.jpg',
+  sectionCheval: '/images/sectionCheval.jpg',
+  sectionVache: '/images/sectionVache.jpg',
+  sectionLapin: '/images/sectionLapin.jpg',
 };
 
 export default function Section({ name, text, imageKey, alt }: SectionProps) {

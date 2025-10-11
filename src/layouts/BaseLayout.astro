@@ -22,10 +22,13 @@ const { title, description = "L'Ostéopathe animalier Agathe Lescout, intervenan
     <meta name="theme-color" content="#c0823f" />
     <link rel="icon" type="image/png" href="/icon.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
-    <link
-      href="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css"
-      rel="stylesheet"
-    />
+
+    <!-- Preconnect to third-party domains for faster loading -->
+    <link rel="preconnect" href="https://api.mapbox.com" />
+    <link rel="preconnect" href="https://www.google.com" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://calendly.com" />
+
     <script is:inline>
       {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

@@ -2,7 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/sections/Hero';
 import AnimalSection from '../components/sections/AnimalSection/AnimalSection';
-import Consultations from '../components/sections/Consultations';
 import CarteCabinet from '../components/sections/CarteCabinet';
 import QuandConsulter from '../components/sections/QuandConsulter';
 import OsteopathieAnimale from '../components/sections/OsteopathieAnimale';
@@ -23,17 +22,16 @@ const description = "L'Ostéopathe animalier Agathe Lescout, intervenant sur Bor
       <div id="animaux">
         <AnimalSection client:only="react" />
       </div>
-      <Consultations client:only="react" />
-      <CarteCabinet client:only="react" />
-      <QuandConsulter id="quand-consulter" client:only="react" />
-      <Prix id="tarifs" client:only="react" />
-      <DeroulementConsultation client:only="react" />
-      <OsteopathieAnimale id="osteopathie" client:only="react" />
-      <QuiSuisJe client:only="react" />
+      <CarteCabinet client:visible />
+      <QuandConsulter id="quand-consulter" client:visible />
+      <Prix id="tarifs" client:visible />
+      <DeroulementConsultation client:visible />
+      <OsteopathieAnimale id="osteopathie" client:visible />
+      <QuiSuisJe client:visible />
       <div class="recaptcha-wrapper">
-        <ContactWrapper id="contact" client:only="react" />
+        <ContactWrapper id="contact" client:visible />
       </div>
     </main>
-    <Footer client:only="react" />
+    <Footer client:visible />
   </div>
 </BaseLayout>
