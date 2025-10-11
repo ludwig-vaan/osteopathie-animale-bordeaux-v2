@@ -1,5 +1,3 @@
-import React from 'react';
-import ResponsiveImage from '../common/ResponsiveImage';
 import youngCatImage from '../../images/yougncat.jpeg';
 import correctionImage from '../../images/correction.jpg';
 
@@ -133,12 +131,14 @@ export default function DeroulementConsultation() {
                 fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)"
               />
             </svg>
-            <ResponsiveImage
-              className="relative mx-auto rounded-lg object-cover"
-              image={youngCatImage}
-              alt="high five with young cat"
-              widths={[320, 480, 640, 768, 960]}
-              sizes="(max-width: 1024px) 90vw, 480px"
+            <img
+              src={youngCatImage.src}
+              alt="Chaton tigré donnant la patte lors d'un examen ostéopathique"
+              width={youngCatImage.width}
+              height={youngCatImage.height}
+              loading="lazy"
+              decoding="async"
+              className="relative mx-auto rounded-lg w-full object-cover"
             />
           </div>
         </div>
@@ -257,12 +257,14 @@ export default function DeroulementConsultation() {
                   fill="url(#e80155a9-dfde-425a-b5ea-1f6fadd20131)"
                 />
               </svg>
-              <ResponsiveImage
-                className="relative mx-auto rounded-lg object-cover"
-                image={correctionImage}
-                alt="ostéopathe avec un cheval"
-                widths={[320, 480, 640, 768, 960]}
-                sizes="(max-width: 1024px) 90vw, 480px"
+              <img
+                src={correctionImage.src}
+                alt="Ostéopathe pratiquant une manipulation vertébrale sur un cheval"
+                width={correctionImage.width}
+                height={correctionImage.height}
+                loading="lazy"
+                decoding="async"
+                className="relative mx-auto rounded-lg w-full object-cover"
               />
             </div>
           </div>

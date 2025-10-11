@@ -1,27 +1,12 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Section from './Section';
-import { configuration } from './configutation';
+import { configuration, type AnimalKey } from './configuration';
 // import AriaSelecMenu from "./AriaSelectMenu"
 import AriaSelecMenu from './NewAriaSelectMenu';
 import AriaSelecMenuWeb from './AriaSelectMenuWeb';
-import sectionChien from '@/images/sectionChien.jpeg';
-import sectionChat from '@/images/sectionChat.jpeg';
-import sectionCheval from '@/images/sectionCheval.jpeg';
-import sectionVache from '@/images/sectionVache.jpeg';
-import sectionLapin from '@/images/sectionLapin.jpeg';
 
 type AnimalSectionProps = {
   id?: string;
-};
-
-type AnimalKey = 'chien' | 'chat' | 'cheval' | 'vache' | 'nac';
-
-const animalImages = {
-  sectionChien,
-  sectionChat,
-  sectionCheval,
-  sectionVache,
-  sectionLapin,
 };
 
 export default function AnimalSection({ id }: AnimalSectionProps) {
@@ -38,7 +23,6 @@ export default function AnimalSection({ id }: AnimalSectionProps) {
   }, []);
 
   const currentAnimal = configuration[animal];
-  const image = animalImages[currentAnimal.key as keyof typeof animalImages];
 
   return (
     <div
@@ -58,7 +42,7 @@ export default function AnimalSection({ id }: AnimalSectionProps) {
           className={`mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-16 `}
           style={{ minHeight: height !== 0 ? height : undefined }}
         >
-          <Section {...configuration[animal]} image={image} />
+          <Section {...currentAnimal} />
         </div>
       </div>
     </div>

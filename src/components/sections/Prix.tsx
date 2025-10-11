@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Transition } from '@headlessui/react';
-import ResponsiveImage from '../common/ResponsiveImage';
 import chienEtChatImage from '../../images/chienetchat.jpeg';
 import furetImage from '../../images/furet.jpeg';
 import forfaitImage from '../../images/forfaitmensuel.jpeg';
@@ -13,7 +12,6 @@ type CardProps = {
   id: string;
   title: string;
   price: string;
-  image: string;
   alt: string | null;
   variants:
     | Array<{
@@ -24,16 +22,17 @@ type CardProps = {
     | undefined;
   option: string;
   isDomicile: boolean;
+  image: any;
 };
 
 const prestations = [
   {
     id: 'chien-chat',
     title: 'Chien & Chat',
-    imageName: 'chienetchat',
-    alt: 'chien et chat',
+    alt: 'Chien et chat ensemble représentant les consultations pour ces animaux',
     basePrice: '60',
     domicilePrice: '80',
+    image: chienEtChatImage,
     variants: [
       { description: 'adulte', basePrice: '60', domicilePrice: '60' },
       { description: 'moins de 6 mois', basePrice: '50', domicilePrice: '50' },
@@ -43,27 +42,20 @@ const prestations = [
   {
     id: 'nac',
     title: 'N.A.C',
-    imageName: 'furet',
-    alt: 'furet',
+    alt: 'Furet représentant les Nouveaux Animaux de Compagnie (NAC)',
     basePrice: '50',
     domicilePrice: '50',
+    image: furetImage,
   },
   {
     id: 'forfait',
     title: 'Forfait',
-    imageName: 'forfaitmensuel',
-    alt: null,
+    alt: 'Illustration du forfait mensuel pour les éleveurs',
     basePrice: '40',
     domicilePrice: '40',
+    image: forfaitImage,
   },
 ];
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const priceImages: { [key: string]: any } = {
-  chienetchat: chienEtChatImage,
-  furet: furetImage,
-  forfaitmensuel: forfaitImage,
-};
 
 function classNames(...classes: (string | boolean | undefined | null)[]) {
   return classes.filter(Boolean).join(' ');
@@ -134,15 +126,7 @@ function Prix({ id }: PrixProps) {
           )}
         >
           {prestations.map(
-            ({
-              id,
-              title,
-              imageName,
-              alt,
-              basePrice,
-              domicilePrice,
-              variants,
-            }) => {
+            ({ id, title, alt, basePrice, domicilePrice, variants, image }) => {
               return (
                 <Card
                   id={id}
@@ -150,10 +134,10 @@ function Prix({ id }: PrixProps) {
                   title={title}
                   price={option === 'cabinet' ? basePrice : domicilePrice}
                   isDomicile={option === 'domicile'}
-                  image={priceImages[imageName]}
                   alt={alt}
                   variants={variants}
                   option={option}
+                  image={image}
                 />
               );
             }
@@ -168,26 +152,24 @@ function Card({
   id,
   title,
   price,
-  image,
   alt,
   variants,
   option,
   isDomicile: _isDomicile,
+  image,
 }: CardProps) {
   return (
     <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
       <div className="flex-shrink-0">
-        {image ? (
-          <ResponsiveImage
-            className="h-48 w-full object-cover overflow-hidden"
-            image={image}
-            alt={alt ?? ''}
-            widths={[320, 480, 640, 768, 960]}
-            sizes="(max-width: 1024px) 100vw, 360px"
-          />
-        ) : (
-          <div className="h-48 w-full object-cover bg-pink-200" />
-        )}
+        <img
+          src={image.src}
+          alt={alt || ''}
+          width={image.width}
+          height={image.height}
+          loading="lazy"
+          decoding="async"
+          className="h-48 w-full object-cover"
+        />
       </div>
       <div className="p-6  flex-1 flex flex-col">
         <div className="flex-none">

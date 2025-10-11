@@ -1,12 +1,14 @@
 // API Keys et configuration externe
+// Les clés sont maintenant chargées depuis les variables d'environnement
 export const API_CONFIG = {
   recaptcha: {
-    siteKey: '6LfWZ7YfAAAAAPD7Q4zlI2TZU_mYatG48lJ97JzM', // À déplacer dans variables d'environnement
+    siteKey: import.meta.env['PUBLIC_RECAPTCHA_KEY'],
   },
   mapbox: {
+    token: import.meta.env['PUBLIC_MAPBOX_TOKEN'],
     cssUrl: 'https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css',
   },
   gtm: {
-    id: 'GTM-KCM49LQ',
+    id: import.meta.env['PUBLIC_GTM_ID'],
   },
 } as const;

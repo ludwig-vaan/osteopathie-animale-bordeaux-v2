@@ -22,7 +22,7 @@ module.exports = {
         'canard-light': '#215772',
       },
       backgroundImage: (theme) => ({
-        'happy-dog': "url('../images/dog-homepage.jpg')",
+        'happy-dog': "url('/images/dog-homepage.jpg')",
       }),
     },
   },

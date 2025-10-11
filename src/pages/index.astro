@@ -1,11 +1,39 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import HomePage from '../components/pages/Home.jsx';
+import Hero from '../components/sections/Hero';
+import AnimalSection from '../components/sections/AnimalSection/AnimalSection';
+import Consultations from '../components/sections/Consultations';
+import CarteCabinet from '../components/sections/CarteCabinet';
+import QuandConsulter from '../components/sections/QuandConsulter';
+import OsteopathieAnimale from '../components/sections/OsteopathieAnimale';
+import QuiSuisJe from '../components/sections/QuiSuisJe';
+import Prix from '../components/sections/Prix';
+import DeroulementConsultation from '../components/sections/DeroulementConsultation';
+import ContactWrapper from '../components/contact/ContactWrapper';
+import Footer from '../components/layout/Footer';
 
 const title = 'Osteopathe Animalier Bordeaux - Agathe Lescout';
 const description = "L'Ostéopathe animalier Agathe Lescout, intervenant sur Bordeaux et Gironde!";
 ---
 
 <BaseLayout title={title} description={description}>
-  <HomePage client:only="react" />
+  <div>
+    <main id="root">
+      <Hero client:only="react" />
+      <div id="animaux">
+        <AnimalSection client:only="react" />
+      </div>
+      <Consultations client:only="react" />
+      <CarteCabinet client:only="react" />
+      <QuandConsulter id="quand-consulter" client:only="react" />
+      <Prix id="tarifs" client:only="react" />
+      <DeroulementConsultation client:only="react" />
+      <OsteopathieAnimale id="osteopathie" client:only="react" />
+      <QuiSuisJe client:only="react" />
+      <div class="recaptcha-wrapper">
+        <ContactWrapper id="contact" client:only="react" />
+      </div>
+    </main>
+    <Footer client:only="react" />
+  </div>
 </BaseLayout>

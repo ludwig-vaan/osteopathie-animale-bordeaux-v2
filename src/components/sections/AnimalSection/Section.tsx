@@ -1,16 +1,20 @@
-import React from 'react';
-import ResponsiveImage from '../../common/ResponsiveImage';
-
-/* eslint-disable @typescript-eslint/no-explicit-any */
 type SectionProps = {
   name: string;
   text: string;
-  image: any;
-  alt?: string;
+  imageKey: string;
+  alt: string;
 };
-/* eslint-enable @typescript-eslint/no-explicit-any */
 
-export default function Section({ name, text, image, alt = '' }: SectionProps) {
+const animalImages: { [key: string]: string } = {
+  sectionChien: '/images/sectionChien.jpeg',
+  sectionChat: '/images/sectionChat.jpeg',
+  sectionCheval: '/images/sectionCheval.jpeg',
+  sectionVache: '/images/sectionVache.jpeg',
+  sectionLapin: '/images/sectionLapin.jpeg',
+};
+
+export default function Section({ name, text, imageKey, alt }: SectionProps) {
+  const imageSrc = animalImages[imageKey];
   return (
     <>
       <div className="mt-6">
@@ -21,12 +25,12 @@ export default function Section({ name, text, image, alt = '' }: SectionProps) {
       </div>
       <div className="mt-12 sm:mt-16 lg:mt-0">
         <div className="-mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-          <ResponsiveImage
-            className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:max-w-none object-cover"
-            image={image}
+          <img
+            src={imageSrc}
             alt={alt}
-            widths={[320, 480, 640, 768, 1024, 1280]}
-            sizes="(max-width: 1024px) 100vw, 540px"
+            loading="lazy"
+            decoding="async"
+            className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:max-w-none object-cover"
           />
         </div>
       </div>

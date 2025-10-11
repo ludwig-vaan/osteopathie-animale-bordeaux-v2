@@ -1,5 +1,3 @@
-import React from 'react';
-import ResponsiveImage from '../common/ResponsiveImage';
 import agatheImage from '../../images/agathe.jpg';
 
 export default function QuiSuisJe() {
@@ -12,12 +10,14 @@ export default function QuiSuisJe() {
               <li className="sm:py-8">
                 <div className="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
                   <div className="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
-                    <ResponsiveImage
-                      className="shadow-lg rounded-lg overflow-hidden object-cover w-full h-full"
-                      image={agatheImage}
-                      alt="Agathe Lescout"
-                      widths={[320, 480, 640, 768]}
-                      sizes="(max-width: 1024px) 100vw, 360px"
+                    <img
+                      src={agatheImage.src}
+                      alt="Portrait d'Agathe Lescout, ostéopathe spécialisée dans les animaux"
+                      width={agatheImage.width}
+                      height={agatheImage.height}
+                      loading="lazy"
+                      decoding="async"
+                      className="shadow-lg rounded-lg w-full h-full object-cover"
                     />
                   </div>
                   <div className="sm:col-span-2">
