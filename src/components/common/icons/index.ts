@@ -10,3 +10,5 @@ export { default as Grow } from './Grow';
 export { default as Thunder } from './Thunder';
 export { default as Gate } from './Gate';
 export { default as Lungs } from './Lungs';
+export { default as Phone } from './Phone';
+export { default as Email } from './Email';

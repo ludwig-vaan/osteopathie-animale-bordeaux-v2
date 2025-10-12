@@ -52,10 +52,19 @@ export default function CarteCabinet({ id }: CarteCabinetProps) {
                   Bègles
                 </h2>
                 <p className="mt-4 text-lg text-gray-500">
-                  5 place du 14 juillet
+                  34 rue du Mérachel Joffre
                 </p>
                 <p className="mt-2 text-lg text-gray-500">
-                  Parking gratuit place du bi-centenaire
+                  Parking gratuit place du bi-centenaire <br />
+                  ou{' '}
+                  <a
+                    href="https://maps.app.goo.gl/bZdtom3PSSN1TjZE9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gold-500 hover:text-gold-600 underline"
+                  >
+                    Parking du Stade André Moga
+                  </a>
                 </p>
                 <p className="mt-2 text-lg text-gray-500">
                   Accès rocade sortie 20 Cadaujac / Bègles.
@@ -67,10 +76,12 @@ export default function CarteCabinet({ id }: CarteCabinetProps) {
                   onClick={() => {
                     navigator.geolocation.getCurrentPosition((position) => {
                       const { latitude, longitude } = position.coords;
-                      const googleMapsUrl = `https://www.google.fr/maps/dir/?api=1&origin=${latitude},${longitude}&destination=${encodeURIComponent(
-                        'osteopathie animale, 5 Pl. du 14 Juillet, 33130 Bègles'
-                      )}&travelmode=driving`;
-                      window.open(googleMapsUrl, '_blank');
+                      const googleMapsUrl = `https://www.google.fr/maps/dir/?api=1&origin=${latitude},${longitude}&destination=44.805434,-0.550281&travelmode=driving`;
+                      window.open(
+                        googleMapsUrl,
+                        '_blank',
+                        'noopener,noreferrer'
+                      );
                     });
                   }}
                   className="inline-flex mt-4 justify-center py-2 px-4 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-gold-500 hover:bg-gold-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gold-500"
