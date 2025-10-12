@@ -5,11 +5,27 @@ import { configuration, type AnimalKey } from './configuration';
 import AriaSelecMenu from './NewAriaSelectMenu';
 import AriaSelecMenuWeb from './AriaSelectMenuWeb';
 
-type AnimalSectionProps = {
-  id?: string;
+type ImageData = {
+  src: string;
+  srcSet: {
+    attribute: string;
+  };
+  attributes?: Record<string, unknown>;
 };
 
-export default function AnimalSection({ id }: AnimalSectionProps) {
+type OptimizedImages = {
+  [key: string]: ImageData;
+};
+
+type AnimalSectionProps = {
+  id?: string;
+  optimizedImages: OptimizedImages;
+};
+
+export default function AnimalSection({
+  id,
+  optimizedImages,
+}: AnimalSectionProps) {
   const [animal, setAnimalState] = useState<AnimalKey>('chien');
 
   const setAnimal = (animalKey: string) => {
@@ -23,6 +39,11 @@ export default function AnimalSection({ id }: AnimalSectionProps) {
   }, []);
 
   const currentAnimal = configuration[animal];
+  const currentImage = optimizedImages[currentAnimal.imageKey];
+
+  if (!currentImage) {
+    return null; // Ou un placeholder
+  }
 
   return (
     <div
@@ -42,7 +63,7 @@ export default function AnimalSection({ id }: AnimalSectionProps) {
           className={`mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-16 `}
           style={{ minHeight: height !== 0 ? height : undefined }}
         >
-          <Section {...currentAnimal} />
+          <Section {...currentAnimal} imageData={currentImage} />
         </div>
       </div>
     </div>

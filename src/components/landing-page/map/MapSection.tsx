@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
-import { useHasMounted } from '../../hooks/useHasMounted';
+import { useHasMounted } from '../../../lib/hooks/useHasMounted';
 
-import { Map } from '../common/icons';
-import MapBox from '../contact/MapBox';
+import { Map } from '../../common/icons';
+import MapBox from './MapBox';
 
 const LNG = -0.548706;
 const LAT = 44.807147;

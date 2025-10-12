@@ -1,20 +1,20 @@
+type ImageData = {
+  src: string;
+  srcSet: {
+    attribute: string;
+  };
+  attributes?: Record<string, unknown>;
+};
+
 type SectionProps = {
   name: string;
   text: string;
   imageKey: string;
   alt: string;
+  imageData: ImageData;
 };
 
-const animalImages: { [key: string]: string } = {
-  sectionChien: '/images/sectionChien.jpg',
-  sectionChat: '/images/sectionChat.jpg',
-  sectionCheval: '/images/sectionCheval.jpg',
-  sectionVache: '/images/sectionVache.jpg',
-  sectionLapin: '/images/sectionLapin.jpg',
-};
-
-export default function Section({ name, text, imageKey, alt }: SectionProps) {
-  const imageSrc = animalImages[imageKey];
+export default function Section({ name, text, alt, imageData }: SectionProps) {
   return (
     <>
       <div className="mt-6">
@@ -26,7 +26,8 @@ export default function Section({ name, text, imageKey, alt }: SectionProps) {
       <div className="mt-12 sm:mt-16 lg:mt-0">
         <div className="-mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
           <img
-            src={imageSrc}
+            src={imageData.src}
+            srcSet={imageData.srcSet.attribute}
             alt={alt}
             loading="lazy"
             decoding="async"

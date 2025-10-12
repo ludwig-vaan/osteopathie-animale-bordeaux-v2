@@ -21,9 +21,6 @@ module.exports = {
         canard: '#143545',
         'canard-light': '#215772',
       },
-      backgroundImage: (theme) => ({
-        'happy-dog': "url('/images/dog-homepage.jpg')",
-      }),
     },
   },
   plugins: [require('@tailwindcss/forms')],

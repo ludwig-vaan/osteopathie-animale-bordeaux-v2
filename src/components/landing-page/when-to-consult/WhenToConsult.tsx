@@ -7,7 +7,7 @@ import {
   Thunder,
   Gate,
   Lungs,
-} from '../common/icons';
+} from '../../common/icons';
 
 type QuandConsulterProps = {
   id?: string;

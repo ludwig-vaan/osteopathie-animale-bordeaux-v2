@@ -1,14 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Hero from '../components/sections/Hero';
-import AnimalSection from '../components/sections/AnimalSection/AnimalSection';
-import CarteCabinet from '../components/sections/CarteCabinet';
-import QuandConsulter from '../components/sections/QuandConsulter';
-import OsteopathieAnimale from '../components/sections/OsteopathieAnimale';
-import QuiSuisJe from '../components/sections/QuiSuisJe';
-import Prix from '../components/sections/Prix';
-import DeroulementConsultation from '../components/sections/DeroulementConsultation';
-import ContactWrapper from '../components/contact/ContactWrapper';
+import HeroWrapper from '../layouts/wrappers/HeroWrapper.astro';
+import AnimalSectionWrapper from '../layouts/wrappers/AnimalSectionWrapper.astro';
+import MapSection from '../components/landing-page/map/MapSection';
+import WhenToConsult from '../components/landing-page/when-to-consult/WhenToConsult';
+import OsteopathieAnimaleWrapper from '../layouts/wrappers/OsteopathieAnimaleWrapper.astro';
+import QuiSuisJeWrapper from '../layouts/wrappers/QuiSuisJeWrapper.astro';
+import PrixWrapper from '../layouts/wrappers/PrixWrapper.astro';
+import DeroulementConsultationWrapper from '../layouts/wrappers/DeroulementConsultationWrapper.astro';
+import ContactWrapper from '../components/landing-page/contact/ContactWrapper';
 import Footer from '../components/layout/Footer';
 
 const title = 'Osteopathe Animalier Bordeaux - Agathe Lescout';
@@ -18,16 +18,16 @@ const description = "L'Ostéopathe animalier Agathe Lescout, intervenant sur Bor
 <BaseLayout title={title} description={description}>
   <div>
     <main id="root">
-      <Hero client:only="react" />
+      <HeroWrapper />
       <div id="animaux">
-        <AnimalSection client:only="react" />
+        <AnimalSectionWrapper />
       </div>
-      <CarteCabinet client:visible />
-      <QuandConsulter id="quand-consulter" client:visible />
-      <Prix id="tarifs" client:visible />
-      <DeroulementConsultation client:visible />
-      <OsteopathieAnimale id="osteopathie" client:visible />
-      <QuiSuisJe client:visible />
+      <MapSection client:visible />
+      <WhenToConsult id="quand-consulter" client:visible />
+      <PrixWrapper id="tarifs" />
+      <DeroulementConsultationWrapper />
+      <OsteopathieAnimaleWrapper id="osteopathie" />
+      <QuiSuisJeWrapper />
       <div class="recaptcha-wrapper">
         <ContactWrapper id="contact" client:visible />
       </div>

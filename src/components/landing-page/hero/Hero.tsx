@@ -2,9 +2,9 @@ import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import React, { Fragment } from 'react';
 import { PopupButton } from 'react-calendly';
-import * as Icons from '../common/icons';
+import * as Icons from '../../common/icons';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { isDomAvailable } from '../../lib/utils';
+import { isDomAvailable } from '../../../lib/utils';
 
 const navigation = [
   { name: 'Animaux', href: '#animaux' },
@@ -23,13 +23,31 @@ const navigationSvg = {
 const url_calendly =
   'https://calendly.com/osteopathe-animalier/consultation-osteopathique'; // 'https://calendly.com/osteopathe-animalier/';
 
-type HeroProps = {
-  children?: React.ReactNode;
+type ImageData = {
+  src: string;
+  srcSet: {
+    attribute: string;
+  };
+  attributes?: Record<string, unknown>;
 };
 
-export default function Hero({ children }: HeroProps) {
+type HeroProps = {
+  children?: React.ReactNode;
+  backgroundImage?: ImageData;
+};
+
+export default function Hero({ children, backgroundImage }: HeroProps) {
+  const bgStyle = backgroundImage
+    ? {
+        backgroundImage: `url(${backgroundImage.src})`,
+      }
+    : {};
+
   return (
-    <div className="h-screen bg-happy-dog bg-no-repeat bg-cover bg-center w-full ">
+    <div
+      className="h-screen bg-no-repeat bg-cover bg-center w-full"
+      style={bgStyle}
+    >
       <Popover className="relative pt-6 pb-16 sm:pb-24 ">
         {({ open }) => (
           <>

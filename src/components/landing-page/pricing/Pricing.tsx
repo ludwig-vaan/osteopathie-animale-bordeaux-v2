@@ -1,18 +1,27 @@
 import { useState } from 'react';
 import { Transition } from '@headlessui/react';
-import chienEtChatImage from '../../images/chienetchat.jpeg';
-import furetImage from '../../images/furet.jpeg';
-import forfaitImage from '../../images/forfaitmensuel.jpeg';
+
+// Type simplifié compatible avec GetImageResult d'Astro
+type ImageData = {
+  src: string;
+  srcSet: {
+    attribute: string;
+  };
+  attributes?: Record<string, unknown>;
+};
 
 type PrixProps = {
   id?: string;
+  chienetchatImg: ImageData;
+  furetImg: ImageData;
+  forfaitImg: ImageData;
 };
 
 type CardProps = {
   id: string;
   title: string;
   price: string;
-  alt: string | null;
+  alt: string;
   variants:
     | Array<{
         description: string;
@@ -22,7 +31,7 @@ type CardProps = {
     | undefined;
   option: string;
   isDomicile: boolean;
-  image: any;
+  image: ImageData;
 };
 
 const prestations = [
@@ -30,9 +39,9 @@ const prestations = [
     id: 'chien-chat',
     title: 'Chien & Chat',
     alt: 'Chien et chat ensemble représentant les consultations pour ces animaux',
+    imageKey: 'chienetchat' as const,
     basePrice: '60',
     domicilePrice: '80',
-    image: chienEtChatImage,
     variants: [
       { description: 'adulte', basePrice: '60', domicilePrice: '60' },
       { description: 'moins de 6 mois', basePrice: '50', domicilePrice: '50' },
@@ -43,17 +52,17 @@ const prestations = [
     id: 'nac',
     title: 'N.A.C',
     alt: 'Furet représentant les Nouveaux Animaux de Compagnie (NAC)',
+    imageKey: 'furet' as const,
     basePrice: '50',
     domicilePrice: '50',
-    image: furetImage,
   },
   {
     id: 'forfait',
     title: 'Forfait',
     alt: 'Illustration du forfait mensuel pour les éleveurs',
+    imageKey: 'forfait' as const,
     basePrice: '40',
     domicilePrice: '40',
-    image: forfaitImage,
   },
 ];
 
@@ -61,8 +70,14 @@ function classNames(...classes: (string | boolean | undefined | null)[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-function Prix({ id }: PrixProps) {
+function Prix({ id, chienetchatImg, furetImg, forfaitImg }: PrixProps) {
   const [option, setOption] = useState('cabinet');
+
+  const images = {
+    chienetchat: chienetchatImg,
+    furet: furetImg,
+    forfait: forfaitImg,
+  };
 
   return (
     <div id={id} className="bg-white">
@@ -126,18 +141,26 @@ function Prix({ id }: PrixProps) {
           )}
         >
           {prestations.map(
-            ({ id, title, alt, basePrice, domicilePrice, variants, image }) => {
+            ({
+              id,
+              title,
+              alt,
+              imageKey,
+              basePrice,
+              domicilePrice,
+              variants,
+            }) => {
               return (
                 <Card
                   id={id}
                   key={id}
                   title={title}
+                  alt={alt}
                   price={option === 'cabinet' ? basePrice : domicilePrice}
                   isDomicile={option === 'domicile'}
-                  alt={alt}
                   variants={variants}
                   option={option}
-                  image={image}
+                  image={images[imageKey]}
                 />
               );
             }
@@ -163,9 +186,8 @@ function Card({
       <div className="flex-shrink-0">
         <img
           src={image.src}
-          alt={alt || ''}
-          width={image.width}
-          height={image.height}
+          srcSet={image.srcSet.attribute}
+          alt={alt}
           loading="lazy"
           decoding="async"
           className="h-48 w-full object-cover"

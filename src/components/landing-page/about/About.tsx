@@ -1,6 +1,16 @@
-import agatheImage from '../../images/agathe.jpg';
+type ImageData = {
+  src: string;
+  srcSet: {
+    attribute: string;
+  };
+  attributes?: Record<string, unknown>;
+};
 
-export default function QuiSuisJe() {
+type QuiSuisJeProps = {
+  agatheImg: ImageData;
+};
+
+export default function QuiSuisJe({ agatheImg }: QuiSuisJeProps) {
   return (
     <div className="bg-gray-50">
       <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
@@ -11,10 +21,9 @@ export default function QuiSuisJe() {
                 <div className="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
                   <div className="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
                     <img
-                      src={agatheImage.src}
+                      src={agatheImg.src}
+                      srcSet={agatheImg.srcSet.attribute}
                       alt="Portrait d'Agathe Lescout, ostéopathe spécialisée dans les animaux"
-                      width={agatheImage.width}
-                      height={agatheImage.height}
                       loading="lazy"
                       decoding="async"
                       className="shadow-lg rounded-lg w-full h-full object-cover"

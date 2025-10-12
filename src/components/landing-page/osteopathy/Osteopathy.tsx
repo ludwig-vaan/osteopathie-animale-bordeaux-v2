@@ -1,10 +1,20 @@
-import bulldogImage from '../../images/bulldog.jpeg';
+type ImageData = {
+  src: string;
+  srcSet: {
+    attribute: string;
+  };
+  attributes?: Record<string, unknown>;
+};
 
 type OsteopathieAnimaleProps = {
   id?: string;
+  bulldogImg: ImageData;
 };
 
-export default function OsteopathieAnimale({ id }: OsteopathieAnimaleProps) {
+export default function OsteopathieAnimale({
+  id,
+  bulldogImg,
+}: OsteopathieAnimaleProps) {
   return (
     <div id={id} className="relative bg-white pt-16 pb-32 overflow-hidden">
       <div className="relative">
@@ -43,10 +53,9 @@ export default function OsteopathieAnimale({ id }: OsteopathieAnimaleProps) {
           <div className="mt-12 sm:mt-16 lg:mt-0">
             <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
               <img
-                src={bulldogImage.src}
+                src={bulldogImg.src}
+                srcSet={bulldogImg.srcSet.attribute}
                 alt="Bulldog anglais recevant un soin ostéopathique"
-                width={bulldogImage.width}
-                height={bulldogImage.height}
                 loading="lazy"
                 decoding="async"
                 className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none object-cover"

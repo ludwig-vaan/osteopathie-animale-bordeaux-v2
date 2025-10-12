@@ -1,6 +1,6 @@
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import Contact from './Contact';
-import { API_CONFIG } from '../../lib/constants/api';
+import { API_CONFIG } from '../../../lib/constants/api';
 
 type ContactWrapperProps = {
   id?: string | undefined;

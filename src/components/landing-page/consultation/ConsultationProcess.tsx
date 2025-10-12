@@ -1,7 +1,20 @@
-import youngCatImage from '../../images/yougncat.jpeg';
-import correctionImage from '../../images/correction.jpg';
+type ImageData = {
+  src: string;
+  srcSet: {
+    attribute: string;
+  };
+  attributes?: Record<string, unknown>;
+};
 
-export default function DeroulementConsultation() {
+type DeroulementConsultationProps = {
+  youngcatImg: ImageData;
+  correctionImg: ImageData;
+};
+
+export default function DeroulementConsultation({
+  youngcatImg,
+  correctionImg,
+}: DeroulementConsultationProps) {
   return (
     <div className="py-16 bg-gold-50 overflow-hidden lg:py-24">
       <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
@@ -132,10 +145,9 @@ export default function DeroulementConsultation() {
               />
             </svg>
             <img
-              src={youngCatImage.src}
+              src={youngcatImg.src}
+              srcSet={youngcatImg.srcSet.attribute}
               alt="Chaton tigré donnant la patte lors d'un examen ostéopathique"
-              width={youngCatImage.width}
-              height={youngCatImage.height}
               loading="lazy"
               decoding="async"
               className="relative mx-auto rounded-lg w-full object-cover"
@@ -258,10 +270,9 @@ export default function DeroulementConsultation() {
                 />
               </svg>
               <img
-                src={correctionImage.src}
+                src={correctionImg.src}
+                srcSet={correctionImg.srcSet.attribute}
                 alt="Ostéopathe pratiquant une manipulation vertébrale sur un cheval"
-                width={correctionImage.width}
-                height={correctionImage.height}
                 loading="lazy"
                 decoding="async"
                 className="relative mx-auto rounded-lg w-full object-cover"
